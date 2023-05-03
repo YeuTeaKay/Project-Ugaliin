@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StreetBattle : MonoBehaviour
+public class IniateBattle : MonoBehaviour
 {
 
     public string sceneName;
