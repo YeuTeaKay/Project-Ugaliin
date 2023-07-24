@@ -7,26 +7,24 @@ using UnityEngine.SceneManagement;
 public class EnemyAI : MonoBehaviour
 {
 
-    public NavMeshAgent agent;
+    public NavMeshAgent agent; 
     public float range; //radius of sphere
     public float speedRun = 9;
     public Transform player;
-    public string sceneName;
+    public string sceneName; //Transition to the other scene
 
     public Transform centrePoint; //centre of the area the agent wants to move around in
-    //instead of centrePoint you can set it as the transform of the agent if you don't care about a specific area
-    // Start is called before the first frame update
 
-    public LayerMask whatIsGrounded, whatIsPlayer; 
+    public LayerMask whatIsSpawnArea, whatIsPlayer; 
 
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
     void Start()
-    {
+    {   
+        Transform whatIsSpawnArea = centrePoint;
         player = GameObject.Find("Third Person").transform;
         agent = GetComponent<NavMeshAgent>();
-        
     }
     
 
@@ -90,5 +88,7 @@ public class EnemyAI : MonoBehaviour
     {
         agent.speed = speed;
     }
+
+    
 }
 

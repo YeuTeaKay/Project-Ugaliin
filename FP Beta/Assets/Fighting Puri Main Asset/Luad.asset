@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a1e866fa1fdec4d9d7e0aea9586527, type: 3}
+  m_Name: Luad
+  m_EditorClassIdentifier: 
+  name: Luad
+  description: Main Protagonist
+  artwork: {fileID: -1276795621, guid: 7a915d4281aa27a4885a414f3a5d0606, type: 3}
+  hp: 120
+  sp: 45
+  agility: 1
+  luck: 1
+  strength: 1
+  intelligence: 1
