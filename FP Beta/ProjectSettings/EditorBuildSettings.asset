@@ -6,18 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Main Menu.unity
+    path: Assets/Fighting Puri Main Asset/Scenes/Main Menu.unity
     guid: 072447f4865eca24798c2d902effce33
   - enabled: 1
-    path: Assets/Scenes/Demo 3D World.unity
+    path: Assets/Fighting Puri Main Asset/Scenes/Demo 3D World.unity
     guid: 5324da992db83524493a3a5c23f5a5ec
   - enabled: 1
-    path: Assets/Scenes/Demo Turnbased.unity
+    path: Assets/Fighting Puri Main Asset/Scenes/Demo Turnbased.unity
     guid: 4ffae2b657b55d644b96c99a66d364de
   - enabled: 0
-    path: Assets/Scenes/Turnbased.unity
+    path: Assets/Fighting Puri Main Asset/Scenes/Turnbased.unity
     guid: 7a647827f10c0394b98f38613d504bc1
   - enabled: 0
-    path: Assets/Scenes/Open world.unity
+    path: Assets/Fighting Puri Main Asset/Scenes/Open world.unity
     guid: 74c649a9f062aff44bc7a24ab4484a2e
   m_configObjects: {}

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6519716712176220432}
   - component: {fileID: 6519716712176220433}
-  - component: {fileID: 7014373374634703215}
   m_Layer: 0
   m_Name: Tambay Battle
   m_TagString: Untagged
@@ -85,23 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7014373374634703215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6519716712176220434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9da2050be58957c40b6780dc80c93d36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unitName: Tambay
-  unitLevel: 1
-  damage: 20
-  maxHP: 100
-  currentHP: 100
 --- !u!1 &7167822251933293719
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,6 +191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7167822252971576519}
+  - component: {fileID: 795764997927937891}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -233,3 +216,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &795764997927937891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7167822252971576518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da2050be58957c40b6780dc80c93d36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitName: Tambay
+  unitLevel: 2
+  damage: 20
+  maxHP: 100
+  currentHP: 100
