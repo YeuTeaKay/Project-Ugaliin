@@ -18,16 +18,18 @@ public class CharacterAnimHandler : MonoBehaviour
 
     public void AttackMove()
     {
-        anim.SetInteger("", 1);
+        
+        anim.SetInteger("State", 1);
         Debug.Log("Attacked");
         
     }
 
     public void DefendMove()
     {
-        anim.SetInteger("", 2);
+        anim.SetInteger("State", 2);
         Debug.Log("Defended");
     }
+
 
     
 }
