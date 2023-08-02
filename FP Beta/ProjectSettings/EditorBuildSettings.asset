@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Fighting Puri Main Asset/Scenes/Main Menu.unity
     guid: 072447f4865eca24798c2d902effce33
   - enabled: 1

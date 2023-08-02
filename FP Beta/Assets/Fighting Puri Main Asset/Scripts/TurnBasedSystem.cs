@@ -28,8 +28,17 @@ public class TurnBasedSystem : MonoBehaviour
 
     Animator anim;
 
+    private AudioSource  audioSource;
+    private AudioManager audioManager;
+
     public BattleState state;
     // Start is called before the first frame update
+
+    void Awake() {
+        audioSource = GetComponent<AudioSource>();
+        audioManager = AudioManager.Instance;
+    }
+
     void Start()
     {
         
@@ -64,9 +73,12 @@ public class TurnBasedSystem : MonoBehaviour
         
         enemyHUD.SetHP(enemyUnit.currentHP);
         Debug.Log("The attack is successful");
+    
         anim.SetInteger("State", 1);
+        
+        yield return new WaitForSeconds(2.5f);
+        audioManager.PlaySound("Punch");
 
-        yield return new WaitForSeconds(3f);
     
         if(isDead)
         {
@@ -76,6 +88,7 @@ public class TurnBasedSystem : MonoBehaviour
         }
         else
         {
+            
 
             anim.SetInteger("State", 0);
     
@@ -84,7 +97,7 @@ public class TurnBasedSystem : MonoBehaviour
             enemyHUD.SetHP(enemyUnit.currentHP);
 
             Debug.Log("You deal " + playerUnit.damage + " damage!");
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(5f);
             StartCoroutine(EnemyTurn());
 
         }
@@ -94,6 +107,7 @@ public class TurnBasedSystem : MonoBehaviour
     IEnumerator PlayerHeal()
     {
         playerUnit.Heal(10);
+        audioManager.PlaySound("Heal");
 
         playerHUD.SetHP(playerUnit.currentHP);
         Debug.Log("You have eaten a kwek kwek!");
@@ -110,6 +124,7 @@ public class TurnBasedSystem : MonoBehaviour
         
         playerHUD.SetHP(playerUnit.currentHP);
         anim.SetInteger("State", 2);
+        audioManager.PlaySound("Defend");
 
         yield return new WaitForSeconds(5f);
         
