@@ -66,7 +66,7 @@ public class TurnBasedSystem : MonoBehaviour
         Debug.Log("The attack is successful");
         anim.SetInteger("State", 1);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
     
         if(isDead)
         {
@@ -84,7 +84,7 @@ public class TurnBasedSystem : MonoBehaviour
             enemyHUD.SetHP(enemyUnit.currentHP);
 
             Debug.Log("You deal " + playerUnit.damage + " damage!");
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(3f);
             StartCoroutine(EnemyTurn());
 
         }
@@ -99,6 +99,9 @@ public class TurnBasedSystem : MonoBehaviour
         Debug.Log("You have eaten a kwek kwek!");
 
         yield return new WaitForSeconds(5f);
+        
+        state = BattleState.ENEMYTURN;
+        StartCoroutine(EnemyTurn());
     }
 
     IEnumerator PlayerDefend()
