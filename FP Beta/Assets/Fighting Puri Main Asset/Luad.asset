@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Luad
   m_EditorClassIdentifier: 
   name: Luad
-  description: Main Protagonist
-  artwork: {fileID: -1276795621, guid: 7a915d4281aa27a4885a414f3a5d0606, type: 3}
+  artwork: {fileID: 816301636, guid: 1a245c18ec5b0ab4782d13574446f692, type: 3}
   hp: 120
   sp: 45
   agility: 1

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class EnemyAI : MonoBehaviour
 {
-
+    
     public NavMeshAgent agent; 
     public float range; //radius of sphere
     public float speedRun = 9;
@@ -19,6 +19,13 @@ public class EnemyAI : MonoBehaviour
 
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
+
+    public bool isNextScene = true;  
+
+    [SerializeField]
+    public SceneInfo sceneInfo;
+
+
 
     void Start()
     {   
@@ -78,6 +85,7 @@ public class EnemyAI : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+            sceneInfo.isNextScene = isNextScene;
             SceneManager.LoadScene(sceneName);
             Destroy(gameObject);
         }

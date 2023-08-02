@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class BattleHandler : MonoBehaviour
 {
-    [SerializeField] private Transform pfCharacter;
+    [SerializeField] private Transform playerPrefab;
+    [SerializeField] private Transform enemyPrefab;
+
     
 
     private void Awake() {
@@ -22,8 +24,9 @@ public class BattleHandler : MonoBehaviour
         else
         {
             position = new Vector3(+55, 0, 30);
+            playerPrefab.localScale = new Vector3(-43, 43, 43);
         }
-        Instantiate(pfCharacter, position, Quaternion.identity);
+        Instantiate(playerPrefab, position, Quaternion.identity);
     }    
 
     

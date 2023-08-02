@@ -5,15 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class IniateBattle : MonoBehaviour
 {
-
+    
     public string sceneName;
+    public bool isNextScene = true;
+
+    [SerializeField]
+    public SceneInfo sceneInfo;
 
 
     void OnTriggerEnter(Collider other) 
     {
         if(other.CompareTag("Player"))
         {
-            //SceneManager.LoadScene(sceneName);
+            sceneInfo.isNextScene = isNextScene;
+            SceneManager.LoadScene(sceneName);
         }
 
     }

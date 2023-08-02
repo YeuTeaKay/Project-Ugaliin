@@ -104,14 +104,11 @@ MonoBehaviour:
   range: 12
   speedRun: 7
   player: {fileID: 0}
-  sceneName: TurnBased
+  sceneName: Demo Turnbased
   centrePoint: {fileID: 0}
   whatIsSpawnArea:
     serializedVersion: 2
     m_Bits: 512
-  whatIsGrounded:
-    serializedVersion: 2
-    m_Bits: 8
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -119,6 +116,8 @@ MonoBehaviour:
   attackRange: 1
   playerInSightRange: 0
   playerInAttackRange: 0
+  isNextScene: 1
+  sceneInfo: {fileID: 0}
 --- !u!1 &5990065789537549856
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,8 +143,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5990065789537549856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.005180359, y: -0.17168581, z: 0.033683777}
-  m_LocalScale: {x: 2.5910006, y: 2.591, z: 2.5910006}
+  m_LocalPosition: {x: -0.000013530254, y: 0.4415, z: 0.03370012}
+  m_LocalScale: {x: 4.5068045, y: 4.5068035, z: 4.5068045}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2007188801857255459}
