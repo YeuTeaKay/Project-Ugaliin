@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using Cinemachine;
 
 public class ThirdPersonMovement : NetworkBehaviour
 {
@@ -13,6 +14,8 @@ public class ThirdPersonMovement : NetworkBehaviour
 
     public float turnSmoothTime = 0.1f;
     float smoothVelocity;
+
+    [SerializeField] private CinemachineVirtualCamera playerCamera;
     
     public override void OnStartLocalPlayer()
     {
@@ -22,24 +25,13 @@ public class ThirdPersonMovement : NetworkBehaviour
         if (isLocalPlayer)
         {
             // Assign the camera only for the local player
-            AssignCamera();
+            playerCamera = CinemachineVirtualCamera.FindObjectOfType<CinemachineVirtualCamera>();
+            playerCamera.Follow = this.gameObject.transform;
+            playerCamera.LookAt = this.gameObject.transform;
         }
     }
 
-    void AssignCamera()
-    {
-        // Here, you can assign the camera to the 'cam' variable
-        // For example, assuming the camera is tagged as "MainCamera" in the scene
-        GameObject mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
-        if (mainCamera != null)
-        {
-            cam = mainCamera.transform;
-        }
-        else
-        {
-            Debug.LogError("MainCamera not found. Make sure your camera is tagged as 'MainCamera'.");
-        }
-    }
+
 
 
     // Update is called once per frame
