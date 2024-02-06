@@ -5,26 +5,32 @@ using Mirror;
 
 public class CustomNM : NetworkManager
 {
-    public GameObject player1Prefab;
-    public GameObject player2Prefab;
+    public GameObject clientPrefab; // Prefab for clients
+    public GameObject hostPrefab;   // Prefab for host
 
     public override void OnStartServer()
     {
-        spawnPrefabs.Add(player1Prefab);
-        spawnPrefabs.Add(player2Prefab);
+        spawnPrefabs.Clear(); // Clear default spawn prefabs
+        spawnPrefabs.Add(clientPrefab); // Add client prefab to spawn list
+
+        base.OnStartServer();
     }
 
     public override void OnServerAddPlayer(NetworkConnectionToClient conn)
     {
-        GameObject playerPrefabToSpawn = player1Prefab;
+        GameObject playerPrefab = hostPrefab; // Use host prefab by default
 
-        // Check if the connection is from the client
-        if (conn.identity.netId == 1)  // You may need to adjust this condition based on your network setup
+        // Check if the player is the host
+        if (conn.connectionId == 0)
         {
-            playerPrefabToSpawn = player2Prefab;
+            playerPrefab = hostPrefab;
+        }
+        else
+        {
+            playerPrefab = clientPrefab;
         }
 
-        GameObject player = Instantiate(playerPrefabToSpawn);
+        GameObject player = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
         NetworkServer.AddPlayerForConnection(conn, player);
     }
 }
