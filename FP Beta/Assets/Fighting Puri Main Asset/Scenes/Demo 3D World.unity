@@ -5031,7 +5031,7 @@ MonoBehaviour:
   offlineScene: 
   onlineScene: 
   transport: {fileID: 397353053}
-  networkAddress: localhost
+  networkAddress: 192.168.68.160
   maxConnections: 100
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
