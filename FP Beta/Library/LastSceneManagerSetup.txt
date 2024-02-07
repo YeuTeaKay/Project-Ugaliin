@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Fighting Puri Main Asset/Scenes/Demo Turnbased.unity
+- path: Assets/Fighting Puri Main Asset/Scenes/Main Menu.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
