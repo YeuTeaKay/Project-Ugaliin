@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Fighting Puri Main Asset/Scenes/Demo 3D World.unity
     guid: 5324da992db83524493a3a5c23f5a5ec
-  - enabled: 0
+  - enabled: 1
     path: Assets/Fighting Puri Main Asset/Scenes/Demo Turnbased.unity
     guid: 4ffae2b657b55d644b96c99a66d364de
   - enabled: 0

@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class Unit : MonoBehaviour
+public class Unit : NetworkBehaviour
 {
     public string unitName;
     public int unitLevel;

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 using Cinemachine;
 
 public class ThirdPersonMovement : NetworkBehaviour
@@ -19,6 +20,8 @@ public class ThirdPersonMovement : NetworkBehaviour
 
     [SerializeField] private CinemachineVirtualCamera playerCamera;
     
+    private bool hasCollided = false;
+
     public override void OnStartLocalPlayer()
     {
         base.OnStartLocalPlayer();
@@ -37,6 +40,14 @@ public class ThirdPersonMovement : NetworkBehaviour
 
     // Update is called once per frame
     void FixedUpdate()
+    {
+        if (!hasCollided) // Check if collision has not occurred
+        {
+            Move();
+        }
+    }
+
+    void Move()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
@@ -85,4 +96,26 @@ public class ThirdPersonMovement : NetworkBehaviour
 
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player")) // Replace "CollisionObject" with the tag of the object you want to trigger the scene transition
+        {
+            hasCollided = true;
+            CmdLoadNextScene(); // Call a command to load the next scene (this method should be implemented on the server)
+        }
+    }
+
+    [Command]
+    private void CmdLoadNextScene()
+    {
+        // Load the next scene on the server
+        RpcLoadNextScene();
+    }
+
+    [ClientRpc]
+    private void RpcLoadNextScene()
+    {
+        // Load the next scene on all clients
+        SceneManager.LoadScene("Demo Turnbased"); // Replace "YourNextSceneName" with the actual name of the scene you want to load
+    }
 }

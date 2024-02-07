@@ -107,7 +107,6 @@ public class TurnBasedSystem : MonoBehaviour
         player1HUD.SetHP(player1Unit.currentHP);
         Debug.Log("The attack is successful");
     
-        anim.SetInteger("State", 1);
         
         yield return new WaitForSeconds(2.5f);
         audioManager.PlaySound("Punch");
