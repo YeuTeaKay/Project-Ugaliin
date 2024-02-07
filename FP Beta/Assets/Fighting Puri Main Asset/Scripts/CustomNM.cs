@@ -1,36 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class CustomNM : NetworkManager
+public class CustomNetworkManager : NetworkManager
 {
-    public GameObject clientPrefab; // Prefab for clients
-    public GameObject hostPrefab;   // Prefab for host
+    public GameObject clientPlayerPrefab;
 
-    public override void OnStartServer()
-    {
-        spawnPrefabs.Clear(); // Clear default spawn prefabs
-        spawnPrefabs.Add(clientPrefab); // Add client prefab to spawn list
-
-        base.OnStartServer();
-    }
-
+    
     public override void OnServerAddPlayer(NetworkConnectionToClient conn)
     {
-        GameObject playerPrefab = hostPrefab; // Use host prefab by default
-
-        // Check if the player is the host
-        if (conn.connectionId == 0)
+        // Check if the player is the host (server)
+        if (conn.connectionId == 0) 
         {
-            playerPrefab = hostPrefab;
+            // Host uses the default player prefab
+            base.OnServerAddPlayer(conn);
         }
         else
         {
-            playerPrefab = clientPrefab;
+            // Other players use the clientPlayerPrefab
+            GameObject player = Instantiate(clientPlayerPrefab);
+            NetworkServer.AddPlayerForConnection(conn, player);
         }
-
-        GameObject player = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
-        NetworkServer.AddPlayerForConnection(conn, player);
     }
+
 }

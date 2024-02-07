@@ -30,7 +30,7 @@ public class ThirdPersonMovement : NetworkBehaviour
         if (isLocalPlayer)
         {
             // Assign the camera only for the local player
-            playerCamera = CinemachineVirtualCamera.FindObjectOfType<CinemachineVirtualCamera>();
+            playerCamera = GameObject.Find("CM VCam").GetComponent<CinemachineVirtualCamera>();
             playerCamera.Follow = this.gameObject.transform;
             playerCamera.LookAt = this.gameObject.transform;
 

@@ -4941,8 +4941,8 @@ GameObject:
   m_Component:
   - component: {fileID: 397353056}
   - component: {fileID: 397353058}
-  - component: {fileID: 397353053}
   - component: {fileID: 397353057}
+  - component: {fileID: 397353053}
   m_Layer: 0
   m_Name: Network Manager
   m_TagString: Untagged
@@ -5030,8 +5030,8 @@ MonoBehaviour:
   autoConnectClientBuild: 0
   offlineScene: 
   onlineScene: 
-  transport: {fileID: 397353053}
-  networkAddress: 192.168.68.160
+  transport: {fileID: 0}
+  networkAddress: localhost
   maxConnections: 100
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
