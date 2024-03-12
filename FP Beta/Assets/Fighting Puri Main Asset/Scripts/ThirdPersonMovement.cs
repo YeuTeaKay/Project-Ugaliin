@@ -1,12 +1,8 @@
-using Mirror;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using Cinemachine;
 
-public class ThirdPersonMovement : NetworkBehaviour
+public class ThirdPersonMovement : MonoBehaviour
 {
     
     public CharacterController controller;
@@ -22,29 +18,21 @@ public class ThirdPersonMovement : NetworkBehaviour
     
     private bool hasCollided = false;
 
-    public override void OnStartLocalPlayer()
+    public void Start()
     {
-        base.OnStartLocalPlayer();
+        playerCamera = GameObject.Find("CM VCam").GetComponent<CinemachineVirtualCamera>();
+        playerCamera.Follow = this.gameObject.transform;
+        playerCamera.LookAt = this.gameObject.transform;
 
-        // Check if this player is the local player
-        if (isLocalPlayer)
-        {
-            // Assign the camera only for the local player
-            playerCamera = GameObject.Find("CM VCam").GetComponent<CinemachineVirtualCamera>();
-            playerCamera.Follow = this.gameObject.transform;
-            playerCamera.LookAt = this.gameObject.transform;
-
-            animator = GetComponent<Animator>();
-        }
+        animator = GetComponent<Animator>();
     }
+
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (!hasCollided) // Check if collision has not occurred
-        {
             Move();
-        }
+
     }
 
     void Move()
@@ -98,24 +86,7 @@ public class ThirdPersonMovement : NetworkBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) // Replace "CollisionObject" with the tag of the object you want to trigger the scene transition
-        {
-            hasCollided = true;
-            CmdLoadNextScene(); // Call a command to load the next scene (this method should be implemented on the server)
-        }
+
     }
 
-    [Command]
-    private void CmdLoadNextScene()
-    {
-        // Load the next scene on the server
-        RpcLoadNextScene();
-    }
-
-    [ClientRpc]
-    private void RpcLoadNextScene()
-    {
-        // Load the next scene on all clients
-        SceneManager.LoadScene("Demo Turnbased"); // Replace "YourNextSceneName" with the actual name of the scene you want to load
-    }
 }
