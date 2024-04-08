@@ -32,7 +32,7 @@ public class ThirdPersonMovement : MonoBehaviour
     void FixedUpdate()
     {
             Move();
-
+ 
     }
 
     void Move()
@@ -84,9 +84,5 @@ public class ThirdPersonMovement : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-
-    }
 
 }
