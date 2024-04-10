@@ -4,7 +4,7 @@ using Cinemachine;
 
 public class ThirdPersonMovement : MonoBehaviour
 {
-    
+
     public CharacterController controller;
     [SerializeField] private Transform cam;
     public float speed = 6f;
@@ -15,7 +15,7 @@ public class ThirdPersonMovement : MonoBehaviour
     [SerializeField] private Animator animator;
 
     [SerializeField] private CinemachineVirtualCamera playerCamera;
-    
+
     private bool hasCollided = false;
 
     public void Start()
@@ -31,8 +31,8 @@ public class ThirdPersonMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-            Move();
- 
+        Move();
+
     }
 
     void Move()
@@ -41,7 +41,7 @@ public class ThirdPersonMovement : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
-        if(direction.magnitude >= 0.1f)
+        if (direction.magnitude >= 0.1f)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref smoothVelocity, turnSmoothTime);
@@ -72,8 +72,8 @@ public class ThirdPersonMovement : MonoBehaviour
             {
                 animator.SetInteger("Anim", 1); // Set the left-facing animation state
                 transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-                
-            }   
+
+            }
         }
         else
         {
@@ -83,6 +83,4 @@ public class ThirdPersonMovement : MonoBehaviour
         }
 
     }
-
-
 }
