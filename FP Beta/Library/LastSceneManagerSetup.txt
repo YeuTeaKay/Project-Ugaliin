@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Fighting Puri Main Asset/Scenes/Movement Test.unity
+- path: Assets/Ugaliin/Scenes/Experiment/Movement Test.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
