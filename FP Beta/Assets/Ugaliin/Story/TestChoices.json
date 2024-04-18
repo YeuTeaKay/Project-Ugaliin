@@ -1,0 +1,1 @@
+﻿{"inkVersion":21,"root":[["^Do you know Ninja died with Ligma?","\n","ev","str","^Ligma Balls","/str","/ev",{"*":"0.c-0","flg":20},"ev","str","^What's Ligma","/str","/ev",{"*":"0.c-1","flg":20},{"c-0":["\n","^No Fun","\n",{"->":"0.g-0"},{"#f":5}],"c-1":["\n","^LIGMA BALLS","\n",{"->":"0.g-0"},{"#f":5}],"g-0":["done",{"#f":5}]}],"done",{"#f":1}],"listDefs":{}}
