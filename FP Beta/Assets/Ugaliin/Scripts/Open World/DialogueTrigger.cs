@@ -17,13 +17,13 @@ public class DialogueTrigger : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        if (playerInRange)
+        if (playerInRange && !VNManager.GetInstance().dialogueIsPlaying)
         {
             visualCue.SetActive(true);
 
             if(InputManager.GetInstance().GetInteractPressed())
             {
-                Debug.Log(inkJSON.text);
+                VNManager.GetInstance().EnterVNMode(inkJSON);
             }
         }
         else

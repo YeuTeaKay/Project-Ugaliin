@@ -6,6 +6,7 @@ public class InputManager : MonoBehaviour
 {
     private Vector2 moveDirection = Vector2.zero;
     private bool interactPressed = false;
+    private bool continuePressed = false;
     private bool pausePressed = false;
 
     private static InputManager instance;
@@ -60,6 +61,18 @@ public class InputManager : MonoBehaviour
         }
     }
 
+    public void ContinueButtonPressed(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            continuePressed = true;
+        }
+        else if (context.canceled)
+        {
+            continuePressed = false;
+        }
+    }
+
     public Vector2 GetMoveDirection()
     {
         return moveDirection;
@@ -78,4 +91,17 @@ public class InputManager : MonoBehaviour
         pausePressed = false;
         return result;
     }
+
+    public bool GetContinuePressed()
+    {
+        bool result = continuePressed;
+        continuePressed = false;
+        return result;
+    }
+
+    public void RegisterContinuePressed()
+    {
+        continuePressed = true;
+    }
+
 }

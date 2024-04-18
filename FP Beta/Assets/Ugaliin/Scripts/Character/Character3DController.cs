@@ -25,6 +25,10 @@ public class Character3DController : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
+        if (VNManager.GetInstance().dialogueIsPlaying)
+        {
+            return;
+        }
         Handle3DMovement();
         ApplyGravity();
         HandleAnimation();
