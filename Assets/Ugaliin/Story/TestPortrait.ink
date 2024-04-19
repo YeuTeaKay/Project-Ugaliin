@@ -1,4 +1,4 @@
-Hello there! #speaker:Mother  #portrait:Character_Mother #layout:left
+Hello there! #speaker:Mother  #portrait:Mother_Default #layout:left
 -> main
 
 === main ===

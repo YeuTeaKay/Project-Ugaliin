@@ -4,14 +4,18 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Ink.Runtime;
+using Microsoft.Unity.VisualStudio.Editor;
 
 public class VNManager : MonoBehaviour
 {
 
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialogueBox;
+
+    [SerializeField] private GameObject dialogueBackground;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI speakerName;
+    [SerializeField] private Animator portraitAnimator;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
@@ -20,8 +24,6 @@ public class VNManager : MonoBehaviour
     private Story currentStory;
     private static VNManager instance;
     private const string SPEAKER_TAG = "speaker";
-    private const string SPEAKER_NAME = "speakerName";
-    
     private const string PORTRAIT_TAG = "portrait";
 
     private const string LAYOUT_TAG = "layout";
@@ -44,6 +46,7 @@ public class VNManager : MonoBehaviour
     {
         dialogueIsPlaying = false;
         dialogueBox.SetActive(false);
+        dialogueBackground.SetActive(false);
 
         choicesText = new TextMeshProUGUI[choices.Length];
         int i = 0;
@@ -73,6 +76,7 @@ public class VNManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialogueBox.SetActive(true);
+        dialogueBackground.SetActive(true);
         ContinueStory();
     }
 
@@ -81,6 +85,7 @@ public class VNManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         dialogueIsPlaying = false;
         dialogueBox.SetActive(false);
+        dialogueBackground.SetActive(false);
         dialogueText.text = "";
     }
     private void ContinueStory()
@@ -119,7 +124,7 @@ public class VNManager : MonoBehaviour
                     break;
 
                 case PORTRAIT_TAG:
-                    Debug.Log("Portrait: " + tagValue);
+                    portraitAnimator.Play(tagValue);
                     break;
 
                 case LAYOUT_TAG:
