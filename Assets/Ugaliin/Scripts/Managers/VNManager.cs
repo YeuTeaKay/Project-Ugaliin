@@ -9,23 +9,29 @@ using Microsoft.Unity.VisualStudio.Editor;
 public class VNManager : MonoBehaviour
 {
 
+    [Header("Parameters")]
+    [SerializeField] private float typingSpeed = 0.02f;
+
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialogueBox;
-
     [SerializeField] private GameObject dialogueBackground;
+
+    [SerializeField] private GameObject continueButton;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI speakerName;
     [SerializeField] private Animator portraitAnimator;
+    private Animator LayoutChanger;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
     private TextMeshProUGUI[] choicesText;
     public bool dialogueIsPlaying { get; private set; }
     private Story currentStory;
+    private bool canContinueToNextLine = false;
+    private Coroutine displayCoroutine;
     private static VNManager instance;
     private const string SPEAKER_TAG = "speaker";
     private const string PORTRAIT_TAG = "portrait";
-
     private const string LAYOUT_TAG = "layout";
 
     private void Awake()
@@ -48,6 +54,8 @@ public class VNManager : MonoBehaviour
         dialogueBox.SetActive(false);
         dialogueBackground.SetActive(false);
 
+        LayoutChanger = dialogueBox.GetComponent<Animator>();
+
         choicesText = new TextMeshProUGUI[choices.Length];
         int i = 0;
         foreach (GameObject choice in choices)
@@ -64,7 +72,7 @@ public class VNManager : MonoBehaviour
             return;
         }
 
-        if (InputManager.GetInstance().GetContinuePressed())
+        if (canContinueToNextLine && currentStory.currentChoices.Count == 0&& InputManager.GetInstance().GetContinuePressed())
         {
             ContinueStory();
         }
@@ -77,6 +85,11 @@ public class VNManager : MonoBehaviour
         dialogueIsPlaying = true;
         dialogueBox.SetActive(true);
         dialogueBackground.SetActive(true);
+
+        speakerName.text = "Blank";
+        portraitAnimator.Play("Default");
+        LayoutChanger.Play("Layout Default");
+        
         ContinueStory();
     }
 
@@ -88,12 +101,67 @@ public class VNManager : MonoBehaviour
         dialogueBackground.SetActive(false);
         dialogueText.text = "";
     }
+
+    private IEnumerator DisplayDialogue(string line)
+    {
+        dialogueText.text = "";
+
+        continueButton.SetActive(false);
+        HideChoices();
+
+        canContinueToNextLine = false;
+        bool isAddingRichTextTag = false;
+
+        foreach (char letter in line.ToCharArray())
+        {
+            if(InputManager.GetInstance().GetContinuePressed())
+            {
+                dialogueText.text = line;
+                break;
+            }
+
+            if (letter == '<' || isAddingRichTextTag) 
+            {
+                isAddingRichTextTag = true;
+                dialogueText.text += letter;
+                if (letter == '>')
+                {
+                    isAddingRichTextTag = false;
+                }
+            }
+            // if not rich text, add the next letter and wait a small time
+            else 
+            {
+                dialogueText.text += letter;
+                yield return new WaitForSeconds(typingSpeed);
+            }
+
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
+        }
+
+        DisplayChoices();
+
+        canContinueToNextLine = true;
+    }
+    private void HideChoices()
+    {
+        foreach (GameObject choiceButton in choices)
+        {
+            choiceButton.SetActive(false);
+        }
+    }
     private void ContinueStory()
     {
         if (currentStory.canContinue)
         {
-            dialogueText.text = currentStory.Continue();
-            DisplayChoices();
+
+            if (displayCoroutine != null)
+            {
+                StopCoroutine(displayCoroutine);
+            }
+            displayCoroutine = StartCoroutine(DisplayDialogue(currentStory.Continue()));
+            
 
             HandleTags(currentStory.currentTags);
         }
@@ -128,7 +196,7 @@ public class VNManager : MonoBehaviour
                     break;
 
                 case LAYOUT_TAG:
-                    Debug.Log("Layout: " + tagValue);
+                    LayoutChanger.Play(tagValue);
                     break;
 
                 default:
@@ -173,8 +241,13 @@ public class VNManager : MonoBehaviour
     }
 
     public void MakeChoice(int choiceIndex)
-    {
-        currentStory.ChooseChoiceIndex(choiceIndex);
-        ContinueStory();
+    {   
+        if (canContinueToNextLine)
+        {
+            currentStory.ChooseChoiceIndex(choiceIndex);
+            InputManager.GetInstance().RegisterContinuePressed();
+            ContinueStory();
+        }
+        
     }
 }
