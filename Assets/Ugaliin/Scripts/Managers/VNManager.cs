@@ -72,7 +72,7 @@ public class VNManager : MonoBehaviour
             return;
         }
 
-        if (canContinueToNextLine && currentStory.currentChoices.Count == 0&& InputManager.GetInstance().GetContinuePressed())
+        if (canContinueToNextLine && currentStory.currentChoices.Count == 0 && InputManager.GetInstance().GetContinuePressed())
         {
             ContinueStory();
         }
@@ -135,10 +135,9 @@ public class VNManager : MonoBehaviour
                 dialogueText.text += letter;
                 yield return new WaitForSeconds(typingSpeed);
             }
-
-            dialogueText.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
         }
+
+        continueButton.SetActive(true);
 
         DisplayChoices();
 
