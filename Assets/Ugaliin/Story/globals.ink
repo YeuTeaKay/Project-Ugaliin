@@ -1,0 +1,2 @@
+VAR myNumber = 5
+

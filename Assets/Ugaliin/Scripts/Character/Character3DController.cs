@@ -62,7 +62,7 @@ public class Character3DController : MonoBehaviour
 
     private void HandleAnimation()
     {
-        Vector2 moveDirection = InputManager.GetInstance().GetMoveDirection();
+                Vector2 moveDirection = InputManager.GetInstance().GetMoveDirection();
 
         // If there is no movement, stop the animation
         if (moveDirection.magnitude == 0)
@@ -75,28 +75,30 @@ public class Character3DController : MonoBehaviour
         float angle = Mathf.Atan2(moveDirection.x, moveDirection.y) * Mathf.Rad2Deg;
         float angleRelativeToPlayer = Mathf.DeltaAngle(transform.eulerAngles.y, angle);
 
-        // Moving forward
-        if (angleRelativeToPlayer > -45f && angleRelativeToPlayer <= 45f)
+        int animationIndex;
+
+        // Determine animation based on the angleRelativeToPlayer
+        int horizontalMovement = Mathf.RoundToInt(angleRelativeToPlayer / 90f);
+
+        switch (horizontalMovement)
         {
-            playerAnimator.SetInteger("Anim", 3);
+            case 0:
+                animationIndex = 3;
+                break;
+            case 1:
+                animationIndex = -1;
+                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                break;
+            case -1:
+                animationIndex = 1;
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                break;
+            default:
+                animationIndex = 2;
+                break;
         }
-        // Moving right
-        else if (angleRelativeToPlayer > 45f && angleRelativeToPlayer <= 135f)
-        {
-            playerAnimator.SetInteger("Anim", -1);
-            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        }
-        // Moving left
-        else if (angleRelativeToPlayer > -135f && angleRelativeToPlayer <= -45f)
-        {   
-            playerAnimator.SetInteger("Anim", 1);
-            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        }
-        // Moving backward
-        else 
-        {
-            playerAnimator.SetInteger("Anim", 2);
-        }
+        playerAnimator.SetInteger("Anim", animationIndex);
+
     }
 
 

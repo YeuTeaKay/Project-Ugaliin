@@ -1,18 +1,47 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject boyCharacter;
+    public GameObject girlCharacter;
+    private GameObject selectedCharacterPrefab;
+    
+    
+    public void SelectBoy()
     {
+        selectedCharacterPrefab = boyCharacter;
+        LoadNextScene();
+    }
+    public void SelectGirl()
+    {
+        selectedCharacterPrefab = girlCharacter;
+        LoadNextScene();
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void LoadNextScene()
     {
-        
+        PlayerCharacterSpawnManager.selectedCharacterPrefab = selectedCharacterPrefab;
+        SceneManager.LoadScene("OverWorldUgaliin");
+    }
+
+    public void Settings()
+    {
+
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+        Debug.LogWarning("Game Closed");
+    }
+
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }
