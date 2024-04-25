@@ -4,13 +4,17 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Ink.Runtime;
-using Microsoft.Unity.VisualStudio.Editor;
+using Ink.UnityIntegration;
+
 
 public class VNManager : MonoBehaviour
 {
 
     [Header("Parameters")]
     [SerializeField] private float typingSpeed = 0.02f;
+
+    [Header("Globals Ink File")]
+    [SerializeField] private InkFile globalsInkFile;
 
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialogueBox;
@@ -34,6 +38,8 @@ public class VNManager : MonoBehaviour
     private const string PORTRAIT_TAG = "portrait";
     private const string LAYOUT_TAG = "layout";
 
+    private DialogueVAR dialogueVAR;
+
     private void Awake()
     {
         if (instance != null)
@@ -41,6 +47,8 @@ public class VNManager : MonoBehaviour
             Debug.LogError("Found more than one Input Manager in the scene.");
         }
         instance = this;
+        
+        dialogueVAR = new DialogueVAR(globalsInkFile.filePath);
     }
 
     public static VNManager GetInstance()
@@ -86,6 +94,9 @@ public class VNManager : MonoBehaviour
         dialogueBox.SetActive(true);
         dialogueBackground.SetActive(true);
 
+        dialogueVAR.StartListening(currentStory);
+
+        
         speakerName.text = "Blank";
         portraitAnimator.Play("Default");
         LayoutChanger.Play("Layout Default");
@@ -93,14 +104,22 @@ public class VNManager : MonoBehaviour
         ContinueStory();
     }
 
+    
+
     private IEnumerator ExitVNMode()
     {
         yield return new WaitForSeconds(1f);
+
+        dialogueVAR.StopListening(currentStory);
+
+
         dialogueIsPlaying = false;
         dialogueBox.SetActive(false);
         dialogueBackground.SetActive(false);
         dialogueText.text = "";
     }
+
+    
 
     private IEnumerator DisplayDialogue(string line)
     {

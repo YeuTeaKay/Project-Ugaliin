@@ -1,8 +1,12 @@
+INCLUDE globals.ink
+
+{ dialogueEnd == false: -> main | -> endDialogue }
+
 Hello there! #speaker:Mother  #portrait:Mother_Default #layout:left
 -> main
 
 === main ===
-Hay salamat! Kaunti nalang ang mga gawain 
+Hay salamat! Kaunti nalang ang mga gawain #speaker:Mother  #portrait:Mother_Default #layout:left
 kaya pwede na tayo magpahinga pagkatapos nito.
 + [Ako na po sa mga natitirang gawain ‘nay para makapagpahinga na po kayo.]
     -> chosen
@@ -10,12 +14,20 @@ kaya pwede na tayo magpahinga pagkatapos nito.
     -> chosen
 
 === chosen ===
+
 Sige heto anak, libutin mo muna ang barangay parang
 makilala natin sila at makilala rin nila tayo. Ako na ang bahala dito sa bahay.
 Ito ang listahan ng mga dapat mong puntahan.
 
+
 +[Hayy sige na nga.]
-    ->DONE
+~ dialogueEnd = true
+    ->endDialogue
+~ dialogueEnd = true
 +[Sige po nay ako na bahala dito sa listahan.]
-    ->DONE
+    ->endDialogue
+
+=== endDialogue ===
+Batiin mo yung mga kapitbahay natin para makilala mo ng sila  #speaker:Mother  #portrait:Mother_Default #layout:left
+
 -> END

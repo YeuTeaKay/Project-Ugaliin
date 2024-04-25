@@ -1,2 +1,2 @@
-VAR myNumber = 5
-
+VAR dialogueEnd = false
+VAR ligmaCounter = 1
