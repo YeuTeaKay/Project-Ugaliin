@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Ink.Runtime;
-using Ink.UnityIntegration;
+
 
 
 public class VNManager : MonoBehaviour
@@ -13,8 +13,8 @@ public class VNManager : MonoBehaviour
     [Header("Parameters")]
     [SerializeField] private float typingSpeed = 0.02f;
 
-    [Header("Globals Ink File")]
-    [SerializeField] private InkFile globalsInkFile;
+    [Header("Load Globals JSON")]
+    [SerializeField] private TextAsset loadGlobalsJSON;
 
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialogueBox;
@@ -48,7 +48,7 @@ public class VNManager : MonoBehaviour
         }
         instance = this;
         
-        dialogueVAR = new DialogueVAR(globalsInkFile.filePath);
+        dialogueVAR = new DialogueVAR(loadGlobalsJSON);
     }
 
     public static VNManager GetInstance()
@@ -123,7 +123,8 @@ public class VNManager : MonoBehaviour
 
     private IEnumerator DisplayDialogue(string line)
     {
-        dialogueText.text = "";
+        dialogueText.text = line;
+        dialogueText.maxVisibleCharacters = 0;
 
         continueButton.SetActive(false);
         HideChoices();
@@ -135,14 +136,13 @@ public class VNManager : MonoBehaviour
         {
             if(InputManager.GetInstance().GetContinuePressed())
             {
-                dialogueText.text = line;
+                dialogueText.maxVisibleCharacters = line.Length;
                 break;
             }
 
             if (letter == '<' || isAddingRichTextTag) 
             {
                 isAddingRichTextTag = true;
-                dialogueText.text += letter;
                 if (letter == '>')
                 {
                     isAddingRichTextTag = false;
@@ -151,7 +151,7 @@ public class VNManager : MonoBehaviour
             // if not rich text, add the next letter and wait a small time
             else 
             {
-                dialogueText.text += letter;
+                dialogueText.maxVisibleCharacters++;
                 yield return new WaitForSeconds(typingSpeed);
             }
         }
@@ -267,5 +267,16 @@ public class VNManager : MonoBehaviour
             ContinueStory();
         }
         
+    }
+
+    public Ink.Runtime.Object GetVariableState(string variableName) 
+    {
+        Ink.Runtime.Object variableValue = null;
+        dialogueVAR.VAR.TryGetValue(variableName, out variableValue);
+        if (variableValue == null) 
+        {
+            Debug.LogWarning("Ink Variable was found to be null: " + variableName);
+        }
+        return variableValue;
     }
 }
