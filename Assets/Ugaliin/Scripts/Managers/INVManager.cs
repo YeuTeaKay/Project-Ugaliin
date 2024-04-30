@@ -21,6 +21,11 @@ public class INVManager : MonoBehaviour
         }
         instance = this;
     }
+
+    public static INVManager GetInstance()
+    {
+        return instance;
+    }
     
     public void AddItem(Item item)
     {
