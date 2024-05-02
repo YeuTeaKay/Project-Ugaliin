@@ -16,6 +16,9 @@ public class VNManager : MonoBehaviour
     [Header("Load Globals JSON")]
     [SerializeField] private TextAsset loadGlobalsJSON;
 
+    [Header("Main UI")]
+    [SerializeField] private GameObject MainUIPanel;
+
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private GameObject dialogueBackground;
@@ -93,6 +96,7 @@ public class VNManager : MonoBehaviour
         dialogueIsPlaying = true;
         dialogueBox.SetActive(true);
         dialogueBackground.SetActive(true);
+        MainUIPanel.SetActive(false);
 
         dialogueVAR.StartListening(currentStory);
 
@@ -116,6 +120,7 @@ public class VNManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialogueBox.SetActive(false);
         dialogueBackground.SetActive(false);
+        MainUIPanel.SetActive(true);
         dialogueText.text = "";
     }
 

@@ -1,2 +1,3 @@
 VAR dialogueEnd = false
-VAR ligmaCounter = 1
+VAR goodCounter = 1
+VAR rightChoice = false
