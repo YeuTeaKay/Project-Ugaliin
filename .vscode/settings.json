@@ -51,5 +51,11 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Fighting-Puri.sln"
+    "dotnet.defaultSolution": "Fighting-Puri.sln",
+    "cSpell.ignoreWords": [
+        "Bahay",
+        "Kapit",
+        "Ningas",
+        "Tita"
+    ]
 }

@@ -1,34 +1,40 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemHandler : MonoBehaviour
 {
-    public Item rightItem;
-    public Item otherItem;
+    [SerializeField] private Item choiceItem0;
+    [SerializeField] private Item choiceItem1;
+    [SerializeField] private Item choiceItem2;
 
-    public void Update()
+
+    private void Update()
     {
-        bool isRightChoice = ((Ink.Runtime.BoolValue) VNManager.GetInstance().GetVariableState("rightChoice")).value;
+        string IsplayerChoice = ((Ink.Runtime.StringValue) VNManager
+            .GetInstance()
+            .GetVariableState("playerChoice")).value;
 
-        if (isRightChoice == true)
+        switch (IsplayerChoice)
         {
-            GiveRightItem();
+            case "choiceItem0":
+                Debug.Log("player choice: " + IsplayerChoice);
+                break;
+            case "choiceItem1":
+                Debug.Log("player choice: " + IsplayerChoice);
+                break;
+            case "choiceItem2":
+                Debug.Log("player choice: " + IsplayerChoice);
+                break;
+            default:
+                Debug.LogWarning("Player Choice was not found: " + IsplayerChoice);
+                break;
         }
-        else
-        {
-            GiveOtherItem();
-        }
     }
 
-    public void GiveOtherItem()
+    private void GiveItem()
     {
-        INVManager.GetInstance().AddItem(otherItem);
+        //INVManager.GetInstance().AddItem(otherItem);
+
     }
 
-
-    public void GiveRightItem()
-    {
-        INVManager.GetInstance().AddItem(rightItem);
-    }
 }

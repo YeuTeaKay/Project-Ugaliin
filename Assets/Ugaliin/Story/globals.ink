@@ -1,3 +1,4 @@
 VAR dialogueEnd = false
-VAR goodCounter = 1
-VAR rightChoice = false
+VAR goodValuesCounter = 0
+VAR badValuesCounter = 0
+VAR playerChoice = ""
