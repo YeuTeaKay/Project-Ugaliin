@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f37095059750c148804ff8d0586afbc, type: 3}
-  m_Name: Kapit Bahay
+  m_Name: Family Ties
   m_EditorClassIdentifier: 
-  itemName: 
-  icon: {fileID: 0}
+  itemName: Family
+  icon: {fileID: 21300000, guid: a4a888ebe63fd594c95b7d3aa6997499, type: 3}
   description: 
