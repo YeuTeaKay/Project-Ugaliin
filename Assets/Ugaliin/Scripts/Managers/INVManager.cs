@@ -10,8 +10,11 @@ public class INVManager : MonoBehaviour
     public List<Item> inventory = new List<Item>();
     private List<Item> instantiatedItems = new List<Item>(); // Keep track of instantiated items
 
+    public Transform BackpackContent;
     public Transform ItemContent;
     public GameObject InventoryItem;
+
+    public GameObject BackpackItem;
 
     private void Awake()
     {
@@ -32,13 +35,6 @@ public class INVManager : MonoBehaviour
         inventory.Add(item);
     }
 
-    public void RemoveItem(Item item)
-    {
-        inventory.Remove(item);
-        // Remove item from instantiated items list if it exists
-        instantiatedItems.Remove(item);
-    }
-
     void Update()
     {
         ListItems();
@@ -57,6 +53,8 @@ public class INVManager : MonoBehaviour
                     Debug.LogError("Failed to instantiate InventoryItem prefab.");
                     continue; // Skip to the next iteration of the loop
                 }
+
+
 
                 var itemName = obj.transform.Find("ItemName").GetComponent<TMP_Text>();
                 if (itemName == null)
