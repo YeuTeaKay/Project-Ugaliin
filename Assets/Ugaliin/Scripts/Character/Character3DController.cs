@@ -62,7 +62,7 @@ public class Character3DController : MonoBehaviour
 
     private void HandleAnimation()
     {
-                Vector2 moveDirection = InputManager.GetInstance().GetMoveDirection();
+        Vector2 moveDirection = InputManager.GetInstance().GetMoveDirection();
 
         // If there is no movement, stop the animation
         if (moveDirection.magnitude == 0)

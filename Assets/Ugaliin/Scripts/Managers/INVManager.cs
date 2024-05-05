@@ -53,6 +53,12 @@ public class INVManager : MonoBehaviour
                     Debug.LogError("Failed to instantiate InventoryItem prefab.");
                     continue; // Skip to the next iteration of the loop
                 }
+                GameObject backpackObj = Instantiate(BackpackItem, BackpackContent);
+                if (backpackObj == null)
+                {
+                    Debug.LogError("Failed to instantiate BackpackItem prefab.");
+                    continue; // Skip to the next iteration of the loop
+                }
 
 
 
@@ -61,6 +67,13 @@ public class INVManager : MonoBehaviour
                 {
                     Debug.LogError("ItemName component not found on instantiated object.");
                     Destroy(obj); // Clean up the object
+                    continue; // Skip to the next iteration of the loop
+                }
+                var backpackName = backpackObj.transform.Find("ItemName").GetComponent<TMP_Text>();
+                if (backpackName == null)
+                {
+                    Debug.LogError("ItemName component not found on instantiated object.");
+                    Destroy(backpackObj); // Clean up the object
                     continue; // Skip to the next iteration of the loop
                 }
 
@@ -72,6 +85,16 @@ public class INVManager : MonoBehaviour
                     continue; // Skip to the next iteration of the loop
                 }
 
+                var backpackIcon = backpackObj.transform.Find("ItemIcon").GetComponent<Image>();
+                if (backpackIcon == null)
+                {
+                    Debug.LogError("ItemIcon component not found on instantiated object.");
+                    Destroy(backpackObj); // Clean up the object
+                    continue; // Skip to the next iteration of the loop
+                }
+
+                backpackName.text = item.itemName;
+                backpackIcon.sprite = item.icon;
                 itemName.text = item.itemName;
                 itemIcon.sprite = item.icon;
 

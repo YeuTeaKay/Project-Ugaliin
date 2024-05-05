@@ -347,6 +347,15 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UnPauseMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""451c9b14-e3c2-4f21-b45a-5119e6b41e65"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -767,6 +776,28 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
                     ""action"": ""TrackedDeviceOrientation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""add3e393-d6b5-477a-8f72-f20816d97fe8"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UnPauseMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""284f20aa-8157-41eb-b92a-65fa53b4f615"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UnPauseMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -791,6 +822,7 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
         m_UI_RightClick = m_UI.FindAction("RightClick", throwIfNotFound: true);
         m_UI_TrackedDevicePosition = m_UI.FindAction("TrackedDevicePosition", throwIfNotFound: true);
         m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
+        m_UI_UnPauseMenu = m_UI.FindAction("UnPauseMenu", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -932,6 +964,7 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_UI_RightClick;
     private readonly InputAction m_UI_TrackedDevicePosition;
     private readonly InputAction m_UI_TrackedDeviceOrientation;
+    private readonly InputAction m_UI_UnPauseMenu;
     public struct UIActions
     {
         private @InputControls m_Wrapper;
@@ -946,6 +979,7 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
         public InputAction @RightClick => m_Wrapper.m_UI_RightClick;
         public InputAction @TrackedDevicePosition => m_Wrapper.m_UI_TrackedDevicePosition;
         public InputAction @TrackedDeviceOrientation => m_Wrapper.m_UI_TrackedDeviceOrientation;
+        public InputAction @UnPauseMenu => m_Wrapper.m_UI_UnPauseMenu;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -985,6 +1019,9 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
             @TrackedDeviceOrientation.started += instance.OnTrackedDeviceOrientation;
             @TrackedDeviceOrientation.performed += instance.OnTrackedDeviceOrientation;
             @TrackedDeviceOrientation.canceled += instance.OnTrackedDeviceOrientation;
+            @UnPauseMenu.started += instance.OnUnPauseMenu;
+            @UnPauseMenu.performed += instance.OnUnPauseMenu;
+            @UnPauseMenu.canceled += instance.OnUnPauseMenu;
         }
 
         private void UnregisterCallbacks(IUIActions instance)
@@ -1019,6 +1056,9 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
             @TrackedDeviceOrientation.started -= instance.OnTrackedDeviceOrientation;
             @TrackedDeviceOrientation.performed -= instance.OnTrackedDeviceOrientation;
             @TrackedDeviceOrientation.canceled -= instance.OnTrackedDeviceOrientation;
+            @UnPauseMenu.started -= instance.OnUnPauseMenu;
+            @UnPauseMenu.performed -= instance.OnUnPauseMenu;
+            @UnPauseMenu.canceled -= instance.OnUnPauseMenu;
         }
 
         public void RemoveCallbacks(IUIActions instance)
@@ -1055,5 +1095,6 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
         void OnRightClick(InputAction.CallbackContext context);
         void OnTrackedDevicePosition(InputAction.CallbackContext context);
         void OnTrackedDeviceOrientation(InputAction.CallbackContext context);
+        void OnUnPauseMenu(InputAction.CallbackContext context);
     }
 }

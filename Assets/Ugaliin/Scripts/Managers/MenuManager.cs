@@ -8,8 +8,27 @@ public class MenuManager : MonoBehaviour
     public GameObject boyCharacter;
     public GameObject girlCharacter;
     private GameObject selectedCharacterPrefab;
+
     
     
+    
+    private void FixedUpdate()
+    {
+        if (InputManager.GetInstance().GetPausePressed())
+        {   
+            if (!PauseManager.GetInstance().isPaused)
+            {
+                PauseMenu();
+            }
+        }
+        else if (InputManager.GetInstance().GetUnpauseButtonPressed())
+        {
+            if (PauseManager.GetInstance().isPaused)
+            {
+                UnpauseMenu();
+            }
+        }
+    }
     public void SelectBoy()
     {
         selectedCharacterPrefab = boyCharacter;
@@ -28,9 +47,15 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("OverWorldUgaliin");
     }
 
-    public void Settings()
+    public void PauseMenu()
     {
+        PauseManager.GetInstance().Pause();
 
+    }
+
+    public void UnpauseMenu()
+    {
+        PauseManager.GetInstance().Unpause();
     }
 
     public void Quit()

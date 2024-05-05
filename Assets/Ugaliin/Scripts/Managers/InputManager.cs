@@ -9,10 +9,14 @@ public class InputManager : MonoBehaviour
     private bool continuePressed = false;
     private bool pausePressed = false;
 
+    private bool unpausePressed = false;
+
+    private PlayerInput playerInput;
     private static InputManager instance;
 
     private void Awake()
     {
+        playerInput = GetComponent<PlayerInput>();
         if (instance != null)
         {
             Debug.LogError("Found more than one Input Manager in the scene.");
@@ -60,7 +64,18 @@ public class InputManager : MonoBehaviour
             pausePressed = false;
         }
     }
-
+    
+    public void UnpauseButtonPressed(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            unpausePressed = true;
+        }
+        else if (context.canceled)
+        {
+            unpausePressed = false;
+        }
+    }
     public void ContinueButtonPressed(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -92,6 +107,13 @@ public class InputManager : MonoBehaviour
         return result;
     }
 
+    public bool GetUnpauseButtonPressed()
+    {
+        bool result = unpausePressed;
+        unpausePressed = false;
+        return result;
+    }
+
     public bool GetContinuePressed()
     {
         bool result = continuePressed;
@@ -102,6 +124,18 @@ public class InputManager : MonoBehaviour
     public void RegisterContinuePressed()
     {
         continuePressed = true;
+    }
+
+    public void SwitchActionMap(string actionMapName)
+    {
+        if (playerInput != null)
+        {
+            playerInput.SwitchCurrentActionMap(actionMapName);
+        }
+        else
+        {
+            Debug.LogError("PlayerInput component is missing.");
+        }
     }
 
 }
