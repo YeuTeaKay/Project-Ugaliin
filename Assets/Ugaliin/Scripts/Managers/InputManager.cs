@@ -11,12 +11,12 @@ public class InputManager : MonoBehaviour
 
     private bool unpausePressed = false;
 
-    private PlayerInput playerInput;
+    private PlayerInput InputControls;
     private static InputManager instance;
 
     private void Awake()
     {
-        playerInput = GetComponent<PlayerInput>();
+        InputControls = GetComponent<PlayerInput>();
         if (instance != null)
         {
             Debug.LogError("Found more than one Input Manager in the scene.");
@@ -128,9 +128,9 @@ public class InputManager : MonoBehaviour
 
     public void SwitchActionMap(string actionMapName)
     {
-        if (playerInput != null)
+        if (InputControls != null)
         {
-            playerInput.SwitchCurrentActionMap(actionMapName);
+            InputControls.SwitchCurrentActionMap(actionMapName);
         }
         else
         {

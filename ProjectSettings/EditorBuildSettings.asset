@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Ugaliin/Scenes/Final/MainMenu.unity
+    guid: 9ae581685e46fd84b9324c3b899468ce
+  - enabled: 1
     path: Assets/Ugaliin/Scenes/Experiment/Movement Test.unity
     guid: 1a6be2af1a6b6a24bbc88f75366c7ccf
   m_configObjects: {}

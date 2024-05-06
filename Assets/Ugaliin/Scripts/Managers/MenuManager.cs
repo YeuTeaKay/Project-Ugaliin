@@ -5,12 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    public GameObject boyCharacter;
-    public GameObject girlCharacter;
-    private GameObject selectedCharacterPrefab;
-
-    
-    
+    [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject inventoryBar;
     
     private void FixedUpdate()
     {
@@ -29,33 +25,19 @@ public class MenuManager : MonoBehaviour
             }
         }
     }
-    public void SelectBoy()
-    {
-        selectedCharacterPrefab = boyCharacter;
-        LoadNextScene();
-    }
-    public void SelectGirl()
-    {
-        selectedCharacterPrefab = girlCharacter;
-        LoadNextScene();
-        
-    }
-
-    private void LoadNextScene()
-    {
-        PlayerCharacterSpawnManager.selectedCharacterPrefab = selectedCharacterPrefab;
-        SceneManager.LoadScene("OverWorldUgaliin");
-    }
 
     public void PauseMenu()
     {
         PauseManager.GetInstance().Pause();
-
+        pauseMenu.SetActive(true);
+        inventoryBar.SetActive(false);
     }
 
     public void UnpauseMenu()
     {
         PauseManager.GetInstance().Unpause();
+        pauseMenu.SetActive(false);
+        inventoryBar.SetActive(true);
     }
 
     public void Quit()

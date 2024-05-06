@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4113262127009922397}
   serializedVersion: 2
   m_LocalRotation: {x: 0.29905024, y: -0.0053875237, z: 0.0016884357, w: 0.95422065}
-  m_LocalPosition: {x: 0.01461039, y: 0.83441556, z: -1.2938311}
+  m_LocalPosition: {x: 0.9102054, y: 4.5399933, z: -3.8761964}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 8996022462945509993}
   - component: {fileID: 5308818766860503622}
   m_Layer: 0
-  m_Name: Player
+  m_Name: MC Boy
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -158,7 +158,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.4, z: 0}
-  m_LocalScale: {x: 6.16, y: 6.16, z: 6.16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2326833502384065291}
@@ -183,10 +183,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.1260294
-  m_Height: 0.4350534
+  m_Radius: 0.5267054
+  m_Height: 2.8466039
   m_Direction: 1
-  m_Center: {x: -0.0060693976, y: 0.009487898, z: 0}
+  m_Center: {x: -0.013508916, y: 0.04429984, z: 0}
 --- !u!114 &3347991746750355735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,7 +271,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1995380575, guid: cd6c6baf94f04854da2f48660985fabf, type: 3}
+  m_Sprite: {fileID: 1690308347, guid: feb720e79cd46b7429326c1c6bfd855a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -292,7 +292,7 @@ Animator:
   m_GameObject: {fileID: 7962072225191893400}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0076644a83fae39449b5120fe92346b6, type: 2}
+  m_Controller: {fileID: 9100000, guid: df1334725e550694a8c16b7e70f9dd60, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

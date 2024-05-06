@@ -26,7 +26,7 @@ public class PlayerCharacterSpawnManager : MonoBehaviour
 
     private void SpawnCharacter()
     {
-        Instantiate(selectedCharacterPrefab, SpecialSpawnPoint.position, Quaternion.identity);
+       Instantiate(selectedCharacterPrefab, SpecialSpawnPoint.position, Quaternion.identity);
     }
 
 }
