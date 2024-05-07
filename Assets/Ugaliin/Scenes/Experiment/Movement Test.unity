@@ -3163,6 +3163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 184411097}
+  - component: {fileID: 184411098}
   m_Layer: 5
   m_Name: UI Dialogue
   m_TagString: Untagged
@@ -3191,6 +3192,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0.0010070801, y: 0.0012054443}
   m_SizeDelta: {x: 800, y: 450.54}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &184411098
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184411096}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4a687d97f2968cf47ab0d4eb6d69fcc1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &184955438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6429,6 +6451,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1912806526}
     m_Modifications:
+    - target: {fileID: 785074387626117702, guid: 793418c52b7486244ba372fde0c9ab7f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f83cd8c216852e240a951e1188b5ece0, type: 2}
     - target: {fileID: 2203056338552400600, guid: 793418c52b7486244ba372fde0c9ab7f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -11738,6 +11764,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1912806526}
     m_Modifications:
+    - target: {fileID: 785074387626117702, guid: 793418c52b7486244ba372fde0c9ab7f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: cd4d0ef253e220c4fa7964e780961154, type: 2}
     - target: {fileID: 2203056338552400600, guid: 793418c52b7486244ba372fde0c9ab7f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -12026,7 +12056,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exit
+  m_text: Quit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13438,7 +13468,7 @@ GameObject:
   - component: {fileID: 791286642}
   - component: {fileID: 791286641}
   m_Layer: 5
-  m_Name: Backpack
+  m_Name: Settings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13829,7 +13859,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 817672308}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1988619418}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainMenu
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &817672308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17992,7 +18034,7 @@ GameObject:
   - component: {fileID: 1067150595}
   - component: {fileID: 1067150594}
   m_Layer: 5
-  m_Name: Resume
+  m_Name: Backpack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20345,7 +20387,7 @@ GameObject:
   - component: {fileID: 1190438403}
   - component: {fileID: 1190438402}
   m_Layer: 5
-  m_Name: Exit
+  m_Name: Quit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20414,7 +20456,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1190438403}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1988619418}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1190438403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20526,7 +20580,7 @@ PrefabInstance:
     - target: {fileID: -5987373814133896340, guid: cde1a443a3450134e9fe9ad17f62470b, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 8843a298369462e40844fbc565809c88, type: 2}
+      objectReference: {fileID: 9100000, guid: 701fc48fc52a17e4f93e8995ab90f60a, type: 2}
     - target: {fileID: 455109233297231359, guid: cde1a443a3450134e9fe9ad17f62470b, type: 3}
       propertyPath: m_Size.x
       value: 2.821
@@ -20626,7 +20680,7 @@ PrefabInstance:
     - target: {fileID: 9116594037555644096, guid: cde1a443a3450134e9fe9ad17f62470b, type: 3}
       propertyPath: inkJSON
       value: 
-      objectReference: {fileID: 4900000, guid: 4406e4c1705c1634796db553213ad114, type: 3}
+      objectReference: {fileID: 4900000, guid: 5bab78aa0bd6ec84fa15073ee52b2425, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20645,6 +20699,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1912806526}
     m_Modifications:
+    - target: {fileID: 785074387626117702, guid: 793418c52b7486244ba372fde0c9ab7f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f83cd8c216852e240a951e1188b5ece0, type: 2}
     - target: {fileID: 2203056338552400600, guid: 793418c52b7486244ba372fde0c9ab7f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -21820,6 +21878,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1912806526}
     m_Modifications:
+    - target: {fileID: 785074387626117702, guid: 793418c52b7486244ba372fde0c9ab7f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: cd4d0ef253e220c4fa7964e780961154, type: 2}
     - target: {fileID: 2203056338552400600, guid: 793418c52b7486244ba372fde0c9ab7f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -24656,6 +24718,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1912806526}
     m_Modifications:
+    - target: {fileID: 785074387626117702, guid: 793418c52b7486244ba372fde0c9ab7f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f83cd8c216852e240a951e1188b5ece0, type: 2}
     - target: {fileID: 2203056338552400600, guid: 793418c52b7486244ba372fde0c9ab7f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -24939,14 +25005,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8301887, g: 0.6813813, b: 0.45817018, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 01d92aaf6b193f942a62739da1e147ca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -25051,6 +25117,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1912806526}
     m_Modifications:
+    - target: {fileID: 785074387626117702, guid: 793418c52b7486244ba372fde0c9ab7f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f83cd8c216852e240a951e1188b5ece0, type: 2}
     - target: {fileID: 2203056338552400600, guid: 793418c52b7486244ba372fde0c9ab7f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -25144,6 +25214,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1912806526}
     m_Modifications:
+    - target: {fileID: 785074387626117702, guid: 793418c52b7486244ba372fde0c9ab7f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: cd4d0ef253e220c4fa7964e780961154, type: 2}
     - target: {fileID: 2203056338552400600, guid: 793418c52b7486244ba372fde0c9ab7f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -26541,6 +26615,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1912806526}
     m_Modifications:
+    - target: {fileID: 785074387626117702, guid: 793418c52b7486244ba372fde0c9ab7f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: cd4d0ef253e220c4fa7964e780961154, type: 2}
     - target: {fileID: 2203056338552400600, guid: 793418c52b7486244ba372fde0c9ab7f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -30399,6 +30477,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1912806526}
     m_Modifications:
+    - target: {fileID: 785074387626117702, guid: 793418c52b7486244ba372fde0c9ab7f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: cd4d0ef253e220c4fa7964e780961154, type: 2}
     - target: {fileID: 2203056338552400600, guid: 793418c52b7486244ba372fde0c9ab7f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -33922,6 +34004,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1912806526}
     m_Modifications:
+    - target: {fileID: 785074387626117702, guid: 793418c52b7486244ba372fde0c9ab7f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f83cd8c216852e240a951e1188b5ece0, type: 2}
     - target: {fileID: 2203056338552400600, guid: 793418c52b7486244ba372fde0c9ab7f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -35546,7 +35632,7 @@ PrefabInstance:
     - target: {fileID: 9116594037555644096, guid: cde1a443a3450134e9fe9ad17f62470b, type: 3}
       propertyPath: inkJSON
       value: 
-      objectReference: {fileID: 4900000, guid: 4406e4c1705c1634796db553213ad114, type: 3}
+      objectReference: {fileID: 4900000, guid: f28926cf13e3079428fe8d6633279f3c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -1,0 +1,1 @@
+Kamusta ka #speaker:Xiaoyu #portrait:Xiaoyu_Default
