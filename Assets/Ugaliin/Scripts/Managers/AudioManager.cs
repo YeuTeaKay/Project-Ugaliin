@@ -41,7 +41,7 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
     
-    [SerializeField] Sound[] sfx;
+    [SerializeField] Sound[] SFX;
 
 
     void Awake(){
@@ -58,21 +58,21 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        for(int i = 0; i < sfx.Length; i++)
+        for(int i = 0; i < SFX.Length; i++)
         {
-            GameObject go = new GameObject("Sound_" + i + "_" + sfx[i].sfxName);
+            GameObject go = new GameObject("Sound_" + i + "_" + SFX[i].sfxName);
             go.transform.SetParent(transform);
-            sfx[i].SetSource(go.AddComponent<AudioSource>());
+            SFX[i].SetSource(go.AddComponent<AudioSource>());
         }
     }
 
     public void PlaySound (string name)
     {
-        for(int i = 0; i < sfx.Length; i++)
+        for(int i = 0; i < SFX.Length; i++)
         {
-            if(sfx[i].sfxName == name)
+            if(SFX[i].sfxName == name)
             {
-                sfx[i].Play();
+                SFX[i].Play();
                 return;
             }
         }

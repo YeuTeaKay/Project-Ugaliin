@@ -1,24 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEngine;
-using UnityEngine.EventSystems;
-using Ink.Runtime;
+    using System.Collections;
+    using System.Collections.Generic;
+    using TMPro;
+    using UnityEngine;
+    using UnityEngine.EventSystems;
+    using Ink.Runtime;
 
 
 
-public class VNManager : MonoBehaviour
-{
-
+    public class VNManager : MonoBehaviour
+    {
+    //MARK: VNManager Params
     [Header("Parameters")]
     [SerializeField] private float typingSpeed = 0.02f;
 
+    //MARK: Globals Variables
     [Header("Load Globals JSON")]
     [SerializeField] private TextAsset loadGlobalsJSON;
 
     [Header("Main UI")]
     [SerializeField] private GameObject MainUIPanel;
 
+    //MARK: Dialogue UI Variables
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private GameObject dialogueBackground;
@@ -28,6 +30,15 @@ public class VNManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI speakerName;
     [SerializeField] private Animator portraitAnimator;
     private Animator LayoutChanger;
+
+    [Header("Dialogue Audio & SFX")]
+
+    [SerializeField] private DialogueAudioInfoSO defaultAudioInfo;
+    [SerializeField] private DialogueAudioInfoSO[] audioInfos;
+
+    private DialogueAudioInfoSO currentAudioInfo;
+    private Dictionary<string, DialogueAudioInfoSO> audioInfoDictionary;
+    public AudioSource audioSource;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
@@ -40,7 +51,6 @@ public class VNManager : MonoBehaviour
     private const string SPEAKER_TAG = "speaker";
     private const string PORTRAIT_TAG = "portrait";
     private const string LAYOUT_TAG = "layout";
-
     private DialogueVAR dialogueVAR;
 
     private void Awake()
@@ -50,8 +60,10 @@ public class VNManager : MonoBehaviour
             Debug.LogError("Found more than one Input Manager in the scene.");
         }
         instance = this;
-        
+
         dialogueVAR = new DialogueVAR(loadGlobalsJSON);
+        audioSource = this.gameObject.AddComponent<AudioSource>();
+        currentAudioInfo = defaultAudioInfo;
     }
 
     public static VNManager GetInstance()
@@ -89,7 +101,7 @@ public class VNManager : MonoBehaviour
         }
     }
 
-
+    //MARK: Enter Dialogue
     public void EnterVNMode(TextAsset inkJSON)
     {
         currentStory = new Story(inkJSON.text);
@@ -100,16 +112,15 @@ public class VNManager : MonoBehaviour
 
         dialogueVAR.StartListening(currentStory);
 
-        
+
         speakerName.text = "Blank";
         portraitAnimator.Play("Default");
         LayoutChanger.Play("Layout Default");
-        
+
         ContinueStory();
     }
 
-    
-
+    //MARK: Exit Dialogue
     private IEnumerator ExitVNMode()
     {
         yield return new WaitForSeconds(1f);
@@ -124,8 +135,7 @@ public class VNManager : MonoBehaviour
         dialogueText.text = "";
     }
 
-    
-
+    //MARK: Display Dialogue
     private IEnumerator DisplayDialogue(string line)
     {
         dialogueText.text = line;
@@ -139,13 +149,13 @@ public class VNManager : MonoBehaviour
 
         foreach (char letter in line.ToCharArray())
         {
-            if(InputManager.GetInstance().GetContinuePressed())
+            if (InputManager.GetInstance().GetContinuePressed())
             {
                 dialogueText.maxVisibleCharacters = line.Length;
                 break;
             }
 
-            if (letter == '<' || isAddingRichTextTag) 
+            if (letter == '<' || isAddingRichTextTag)
             {
                 isAddingRichTextTag = true;
                 if (letter == '>')
@@ -154,8 +164,9 @@ public class VNManager : MonoBehaviour
                 }
             }
             // if not rich text, add the next letter and wait a small time
-            else 
+            else
             {
+                PlayNPCSound(dialogueText.maxVisibleCharacters);
                 dialogueText.maxVisibleCharacters++;
                 yield return new WaitForSeconds(typingSpeed);
             }
@@ -167,6 +178,35 @@ public class VNManager : MonoBehaviour
 
         canContinueToNextLine = true;
     }
+
+    private void PlayNPCSound(int currentDisplayCharacterCount)
+    {   
+        AudioClip[] npcTypingSoundSFXs = currentAudioInfo.npcTypingSoundSFXs;
+        int frequencyLevel = currentAudioInfo.frequencyLevel;
+        float minPitch = currentAudioInfo.minPitch;
+        float maxPitch = currentAudioInfo.maxPitch;
+        bool stopAudioSource = currentAudioInfo.stopAudioSource;
+
+        if(currentDisplayCharacterCount % frequencyLevel == 0)
+        {
+            if(stopAudioSource)
+            {
+                audioSource.Stop();
+            }
+            int randomIndex = Random.Range(0, npcTypingSoundSFXs.Length);
+            AudioClip soundClip = npcTypingSoundSFXs[randomIndex];
+
+            audioSource.pitch = Random.Range(minPitch, maxPitch);
+            audioSource.PlayOneShot(soundClip);
+        }
+    }
+
+    private void PlayVoiceOverSound()
+    {
+        
+    }
+
+    //MARK: Hide Choices
     private void HideChoices()
     {
         foreach (GameObject choiceButton in choices)
@@ -174,6 +214,8 @@ public class VNManager : MonoBehaviour
             choiceButton.SetActive(false);
         }
     }
+
+    //MARK: Continue Story
     private void ContinueStory()
     {
         if (currentStory.canContinue)
@@ -184,7 +226,7 @@ public class VNManager : MonoBehaviour
                 StopCoroutine(displayCoroutine);
             }
             displayCoroutine = StartCoroutine(DisplayDialogue(currentStory.Continue()));
-            
+
 
             HandleTags(currentStory.currentTags);
         }
@@ -194,6 +236,7 @@ public class VNManager : MonoBehaviour
         }
     }
 
+    //MARK: Handling Ink Tags
     private void HandleTags(List<string> currentTags)
     {
         foreach (string tag in currentTags)
@@ -223,39 +266,41 @@ public class VNManager : MonoBehaviour
                     break;
 
                 default:
-                Debug.LogWarning("Tag came in but was not recoginzed: " + tag);
-                break;
+                    Debug.LogWarning("Tag came in but was not recoginzed: " + tag);
+                    break;
 
             }
         }
     }
 
+    //MARK: Display Choices
     private void DisplayChoices()
     {
         List<Choice> currentChoices = currentStory.currentChoices;
 
-        if(currentChoices.Count > choices.Length)
+        if (currentChoices.Count > choices.Length)
         {
-            Debug.LogError("More choices were given than the UI can display. Number of choices: " 
+            Debug.LogError("More choices were given than the UI can display. Number of choices: "
                 + currentChoices.Count);
         }
 
         int i = 0;
-        foreach(Choice choice in currentChoices)
+        foreach (Choice choice in currentChoices)
         {
             choices[i].gameObject.SetActive(true);
             choicesText[i].text = choice.text;
             i++;
         }
-        
-        for(int j = i; j < choices.Length; j++)
+
+        for (int j = i; j < choices.Length; j++)
         {
             choices[j].gameObject.SetActive(false);
         }
-        
+
         StartCoroutine(SelectFirstChoice());
     }
 
+    //MARK: Player Choice
     private IEnumerator SelectFirstChoice()
     {
         EventSystem.current.SetSelectedGameObject(null);
@@ -263,25 +308,28 @@ public class VNManager : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
     }
 
+    //MARK: Handle Choice Selection
     public void MakeChoice(int choiceIndex)
-    {   
+    {
         if (canContinueToNextLine)
         {
             currentStory.ChooseChoiceIndex(choiceIndex);
             InputManager.GetInstance().RegisterContinuePressed();
             ContinueStory();
         }
-        
+
     }
 
-    public Ink.Runtime.Object GetVariableState(string variableName) 
+    //MARK: Getting the Ink Variables
+    public Ink.Runtime.Object GetVariableState(string variableName)
     {
         Ink.Runtime.Object variableValue = null;
         dialogueVAR.VAR.TryGetValue(variableName, out variableValue);
-        if (variableValue == null) 
+        if (variableValue == null)
         {
             Debug.LogWarning("Ink Variable was found to be null: " + variableName);
         }
         return variableValue;
     }
+
 }

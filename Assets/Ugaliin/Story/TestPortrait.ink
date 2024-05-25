@@ -2,7 +2,7 @@ INCLUDE globals.ink
 
 { dialogueEnd == false: -> main | -> endDialogue }
 
-Hello there! #speaker:Mother  #portrait:Mother_Default #layout:left
+Hello there! #speaker:Mother #portrait:Mother_Default #layout:left #VoiceOver:Mother_Hello
 -> main
 
 === main ===
