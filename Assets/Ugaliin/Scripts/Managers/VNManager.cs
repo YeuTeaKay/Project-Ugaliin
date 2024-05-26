@@ -31,15 +31,15 @@
     [SerializeField] private Animator portraitAnimator;
     private Animator LayoutChanger;
 
+    //MARK: Dialogue Audio & SFX
     [Header("Dialogue Audio & SFX")]
-
-    [SerializeField] private DialogueAudioInfoSO defaultAudioInfo;
-    [SerializeField] private DialogueAudioInfoSO[] audioInfos;
-
-    private DialogueAudioInfoSO currentAudioInfo;
-    private Dictionary<string, DialogueAudioInfoSO> audioInfoDictionary;
+    [SerializeField] private DialogueNPCAudioInfoSO defaultNPCAudioInfo;
+    [SerializeField] private DialogueNPCAudioInfoSO[] audioNPCInfos;
+    private DialogueNPCAudioInfoSO currentNPCAudioInfo;
+    private Dictionary<string, DialogueNPCAudioInfoSO> audioNPCInfoDictionary;
     public AudioSource audioSource;
 
+    //MARK: Choice UI Variables
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
     private TextMeshProUGUI[] choicesText;
@@ -48,9 +48,13 @@
     private bool canContinueToNextLine = false;
     private Coroutine displayCoroutine;
     private static VNManager instance;
+
+    //MARK: Ink Tags
     private const string SPEAKER_TAG = "speaker";
     private const string PORTRAIT_TAG = "portrait";
     private const string LAYOUT_TAG = "layout";
+    private const string NPC_Tag = "npc";
+    private const string VoiceOver_Tag = "voiceover";
     private DialogueVAR dialogueVAR;
 
     private void Awake()
@@ -63,7 +67,7 @@
 
         dialogueVAR = new DialogueVAR(loadGlobalsJSON);
         audioSource = this.gameObject.AddComponent<AudioSource>();
-        currentAudioInfo = defaultAudioInfo;
+        currentNPCAudioInfo = defaultNPCAudioInfo;
     }
 
     public static VNManager GetInstance()
@@ -85,6 +89,29 @@
         {
             choicesText[i] = choice.GetComponentInChildren<TextMeshProUGUI>();
             i++;
+        }
+    }
+    private void InitializeNPCAudioInfoDictionary() 
+    {
+        audioNPCInfoDictionary = new Dictionary<string, DialogueNPCAudioInfoSO>();
+        audioNPCInfoDictionary.Add(defaultNPCAudioInfo.ID, defaultNPCAudioInfo);
+        foreach (DialogueNPCAudioInfoSO audioInfo in audioNPCInfos) 
+        {
+            audioNPCInfoDictionary.Add(audioInfo.ID, audioInfo);
+        }
+    }
+
+    private void SetCurrentNPCAudioInfo(string ID) 
+    {
+        DialogueNPCAudioInfoSO audioInfo = null;
+        audioNPCInfoDictionary.TryGetValue(ID, out audioInfo);
+        if (audioInfo != null) 
+        {
+            this.currentNPCAudioInfo = audioInfo;
+        }
+        else 
+        {
+            Debug.LogWarning("Failed to find audio info for id: " + ID);
         }
     }
 
@@ -181,11 +208,11 @@
 
     private void PlayNPCSound(int currentDisplayCharacterCount)
     {   
-        AudioClip[] npcTypingSoundSFXs = currentAudioInfo.npcTypingSoundSFXs;
-        int frequencyLevel = currentAudioInfo.frequencyLevel;
-        float minPitch = currentAudioInfo.minPitch;
-        float maxPitch = currentAudioInfo.maxPitch;
-        bool stopAudioSource = currentAudioInfo.stopAudioSource;
+        AudioClip[] npcTypingSoundSFXs = currentNPCAudioInfo.npcTypingSoundSFXs;
+        int frequencyLevel = currentNPCAudioInfo.frequencyLevel;
+        float minPitch = currentNPCAudioInfo.minPitch;
+        float maxPitch = currentNPCAudioInfo.maxPitch;
+        bool stopAudioSource = currentNPCAudioInfo.stopAudioSource;
 
         if(currentDisplayCharacterCount % frequencyLevel == 0)
         {
@@ -225,10 +252,10 @@
             {
                 StopCoroutine(displayCoroutine);
             }
-            displayCoroutine = StartCoroutine(DisplayDialogue(currentStory.Continue()));
-
-
+            string nextLine = currentStory.Continue();
             HandleTags(currentStory.currentTags);
+            displayCoroutine = StartCoroutine(DisplayDialogue(nextLine));
+            
         }
         else
         {
@@ -263,6 +290,10 @@
 
                 case LAYOUT_TAG:
                     LayoutChanger.Play(tagValue);
+                    break;
+
+                case NPC_Tag:
+                    SetCurrentNPCAudioInfo(tagValue);
                     break;
 
                 default:

@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "DialogueAudioInfo", menuName = "Audio/DialogueAudioInfoSO", order = 1)]
-public class DialogueAudioInfoSO : MonoBehaviour
+[CreateAssetMenu(fileName = "DialogueNPCAudioInfoSO", menuName = "Audio/DialogueNPCAudioInfoSO", order = 1)]
+public class DialogueNPCAudioInfoSO : ScriptableObject
 {
     public string ID;
     public AudioClip[] npcTypingSoundSFXs;
