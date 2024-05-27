@@ -36,7 +36,11 @@
     [SerializeField] private DialogueNPCAudioInfoSO defaultNPCAudioInfo;
     [SerializeField] private DialogueNPCAudioInfoSO[] audioNPCInfos;
     private DialogueNPCAudioInfoSO currentNPCAudioInfo;
+
+    private DialogueVoicerOverInfoSO currentVoicerOverInfo;
     private Dictionary<string, DialogueNPCAudioInfoSO> audioNPCInfoDictionary;
+
+    private Dictionary<string, DialogueVoicerOverInfoSO> voicerOverInfoDictionary;
     public AudioSource audioSource;
 
     //MARK: Choice UI Variables
@@ -173,6 +177,8 @@
 
         canContinueToNextLine = false;
         bool isAddingRichTextTag = false;
+         
+        PlayVoiceOverSound();
 
         foreach (char letter in line.ToCharArray())
         {
@@ -208,7 +214,7 @@
 
     private void PlayNPCSound(int currentDisplayCharacterCount)
     {   
-        AudioClip[] npcTypingSoundSFXs = currentNPCAudioInfo.npcTypingSoundSFXs;
+        AudioClip[] npcTypingSFXs = currentNPCAudioInfo.npcTypingSFXs;
         int frequencyLevel = currentNPCAudioInfo.frequencyLevel;
         float minPitch = currentNPCAudioInfo.minPitch;
         float maxPitch = currentNPCAudioInfo.maxPitch;
@@ -220,8 +226,8 @@
             {
                 audioSource.Stop();
             }
-            int randomIndex = Random.Range(0, npcTypingSoundSFXs.Length);
-            AudioClip soundClip = npcTypingSoundSFXs[randomIndex];
+            int randomIndex = Random.Range(0, npcTypingSFXs.Length);
+            AudioClip soundClip = npcTypingSFXs[randomIndex];
 
             audioSource.pitch = Random.Range(minPitch, maxPitch);
             audioSource.PlayOneShot(soundClip);
@@ -230,7 +236,22 @@
 
     private void PlayVoiceOverSound()
     {
-        
+        AudioClip[] voiceOverAudio = currentVoicerOverInfo.voiceOverAudio;
+        int voiceOverfrequencyLevel = currentVoicerOverInfo.frequencyLevel;
+        float voiceOverminPitch = currentVoicerOverInfo.minPitch;
+        float voiceOvermaxPitch = currentVoicerOverInfo.maxPitch;
+        bool voiceOverstopAudioSource = currentVoicerOverInfo.stopAudioSource;
+        /*
+        if (currentDisplayCharacterCount % voiceOverfrequencyLevel == 0)
+        {
+            if (stopAudioSource)
+            {
+                audioSource.Stop();
+            }
+            //AudioClip voiceOverClip = voiceOverAudio[]
+            //audioSource.PlayOneShot(voiceOverClip)
+        } 
+        */  
     }
 
     //MARK: Hide Choices
