@@ -35,6 +35,8 @@
     [Header("Dialogue Audio & SFX")]
     [SerializeField] private DialogueNPCAudioInfoSO defaultNPCAudioInfo;
     [SerializeField] private DialogueNPCAudioInfoSO[] audioNPCInfos;
+    [SerializeField] private DialogueVoicerOverInfoSO defaultVoicerOverInfo;
+    [SerializeField] private DialogueVoicerOverInfoSO[] voicerOverInfos;
     private DialogueNPCAudioInfoSO currentNPCAudioInfo;
 
     private DialogueVoicerOverInfoSO currentVoicerOverInfo;
@@ -60,6 +62,7 @@
     private const string NPC_Tag = "npc";
     private const string VoiceOver_Tag = "voiceover";
     private DialogueVAR dialogueVAR;
+
 
     private void Awake()
     {
@@ -178,7 +181,7 @@
         canContinueToNextLine = false;
         bool isAddingRichTextTag = false;
          
-        PlayVoiceOverSound();
+        PlayVoiceOverSound(dialogueText.maxVisibleCharacters);
 
         foreach (char letter in line.ToCharArray())
         {
@@ -234,24 +237,26 @@
         }
     }
 
-    private void PlayVoiceOverSound()
+    private void PlayVoiceOverSound(int currentDisplayCharacterCount)
     {
-        AudioClip[] voiceOverAudio = currentVoicerOverInfo.voiceOverAudio;
+        AudioClip[] voiceOverAudioClip = currentVoicerOverInfo.voiceOverAudio;
         int voiceOverfrequencyLevel = currentVoicerOverInfo.frequencyLevel;
         float voiceOverminPitch = currentVoicerOverInfo.minPitch;
         float voiceOvermaxPitch = currentVoicerOverInfo.maxPitch;
         bool voiceOverstopAudioSource = currentVoicerOverInfo.stopAudioSource;
-        /*
-        if (currentDisplayCharacterCount % voiceOverfrequencyLevel == 0)
+
+        if(currentDisplayCharacterCount % voiceOverfrequencyLevel == 0)
         {
-            if (stopAudioSource)
+            if (voiceOverstopAudioSource)
             {
                 audioSource.Stop();
             }
-            //AudioClip voiceOverClip = voiceOverAudio[]
-            //audioSource.PlayOneShot(voiceOverClip)
-        } 
-        */  
+            int randomIndex = Random.Range(0, voiceOverAudioClip.Length);
+            AudioClip voiceOverAudioClips = voiceOverAudioClip[randomIndex];
+ 
+            audioSource.pitch = Random.Range(voiceOverminPitch, voiceOvermaxPitch);
+            audioSource.PlayOneShot(voiceOverAudioClips);
+        }
     }
 
     //MARK: Hide Choices
