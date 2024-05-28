@@ -222,6 +222,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: concrete floor1 (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 051a38609b7a27842b7949780db9a68c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2143,6 +2147,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 051a38609b7a27842b7949780db9a68c, type: 3}
       propertyPath: m_Name
       value: concrete floor1 (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 051a38609b7a27842b7949780db9a68c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4684,6 +4692,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: concrete floor1 (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 051a38609b7a27842b7949780db9a68c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6122,6 +6134,10 @@ PrefabInstance:
     - target: {fileID: 8120131444486827212, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
       propertyPath: m_Name
       value: MeshFence1 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8120131444486827212, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8791019334969504036, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7574,6 +7590,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: concrete floor1 (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 051a38609b7a27842b7949780db9a68c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7658,6 +7678,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MeshFence1 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 8120131444486827212, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8791019334969504036, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 83.84983
@@ -7719,6 +7743,10 @@ PrefabInstance:
     - target: {fileID: 8120131444486827212, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
       propertyPath: m_Name
       value: MeshFence1 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8120131444486827212, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8791019334969504036, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9685,6 +9713,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MeshFence1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8120131444486827212, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8791019334969504036, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 94.34983
@@ -10435,6 +10467,10 @@ PrefabInstance:
     - target: {fileID: 8120131444486827212, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
       propertyPath: m_Name
       value: MeshFence1 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8120131444486827212, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8791019334969504036, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22991,6 +23027,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MeshFence1 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 8120131444486827212, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8791019334969504036, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 89.09983
@@ -23768,6 +23808,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MeshFence1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8120131444486827212, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8791019334969504036, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 89.09983
@@ -24157,6 +24201,10 @@ PrefabInstance:
     - target: {fileID: 8120131444486827212, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
       propertyPath: m_Name
       value: MeshFence1 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8120131444486827212, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8791019334969504036, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25287,6 +25335,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: concrete floor1 (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 051a38609b7a27842b7949780db9a68c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26177,6 +26229,8 @@ MonoBehaviour:
   portraitAnimator: {fileID: 1175544135}
   defaultNPCAudioInfo: {fileID: 0}
   audioNPCInfos: []
+  defaultVoicerOverInfo: {fileID: 0}
+  voicerOverInfos: []
   audioSource: {fileID: 1567355205}
   choices:
   - {fileID: 1160406146}
@@ -26366,6 +26420,10 @@ PrefabInstance:
     - target: {fileID: 8120131444486827212, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
       propertyPath: m_Name
       value: MeshFence1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8120131444486827212, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8791019334969504036, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26719,6 +26777,10 @@ PrefabInstance:
     - target: {fileID: 8120131444486827212, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
       propertyPath: m_Name
       value: MeshFence1 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8120131444486827212, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8791019334969504036, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27726,6 +27788,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MeshFence1
       objectReference: {fileID: 0}
+    - target: {fileID: 8120131444486827212, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8791019334969504036, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 110.09983
@@ -27895,6 +27961,10 @@ PrefabInstance:
     - target: {fileID: 8120131444486827212, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
       propertyPath: m_Name
       value: MeshFence1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8120131444486827212, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8791019334969504036, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29605,6 +29675,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MeshFence1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8120131444486827212, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8791019334969504036, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 83.84983
@@ -29744,6 +29818,10 @@ PrefabInstance:
     - target: {fileID: 8120131444486827212, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
       propertyPath: m_Name
       value: MeshFence1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8120131444486827212, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8791019334969504036, guid: 824c00626fc1213408f78e303a5534c7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31446,6 +31524,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 051a38609b7a27842b7949780db9a68c, type: 3}
       propertyPath: m_Name
       value: concrete floor1 (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 051a38609b7a27842b7949780db9a68c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35231,6 +35313,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 051a38609b7a27842b7949780db9a68c, type: 3}
       propertyPath: m_Name
       value: concrete floor1 (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 051a38609b7a27842b7949780db9a68c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

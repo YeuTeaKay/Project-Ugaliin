@@ -41,6 +41,7 @@
     private Dictionary<string, DialogueNPCAudioInfoSO> audioNPCInfoDictionary;
 
     private Dictionary<string, DialogueVoicerOverInfoSO> voicerOverInfoDictionary;
+    private string currentVoiceClipName = string.Empty;
     public AudioSource audioSource;
 
     //MARK: Choice UI Variables
@@ -204,7 +205,7 @@
         canContinueToNextLine = false;
         bool isAddingRichTextTag = false;
          
-        PlayVoiceOverSound(dialogueText.maxVisibleCharacters);
+        PlayVoiceOverSound(currentVoiceClipName);
 
         foreach (char letter in line.ToCharArray())
         {
@@ -262,20 +263,34 @@
 
 
     
-    private void PlayVoiceOverSound(int currentDisplayCharacterCount)
+    private void PlayVoiceOverSound(string voiceClipName)
     {
         AudioClip[] voiceOverAudioClip = currentVoicerOverInfo.voiceOverAudio;
-        int voiceOverfrequencyLevel = currentVoicerOverInfo.frequencyLevel;
-        float voiceOverminPitch = currentVoicerOverInfo.minPitch;
-        float voiceOvermaxPitch = currentVoicerOverInfo.maxPitch;
         bool voiceOverstopAudioSource = currentVoicerOverInfo.stopAudioSource;
 
-        if(currentDisplayCharacterCount % voiceOverfrequencyLevel == 0)
+        AudioClip voiceClip = null;
+        foreach (AudioClip clip in voiceOverAudioClip)
+        {
+            if (clip.name == voiceClipName)
+            {
+                voiceClip = clip;
+                break;
+            }
+        }
+    
+        if (voiceClip != null)
         {
             if (voiceOverstopAudioSource)
             {
                 audioSource.Stop();
             }
+    
+            audioSource.pitch = Random.Range(currentVoicerOverInfo.minPitch, currentVoicerOverInfo.maxPitch);
+            audioSource.PlayOneShot(voiceClip);
+        }
+        else
+        {
+            Debug.LogWarning("Voice clip not found: " + voiceClipName);
         }
     }
 
@@ -344,6 +359,7 @@
                     break;
                 case VO_Tag:
                     SetCurrentVOAudioInfo(tagValue);
+                    currentVoiceClipName = tagValue;
                     break;
                 default:
                     Debug.LogWarning("Tag came in but was not recoginzed: " + tag);
