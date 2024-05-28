@@ -5,8 +5,6 @@
     using UnityEngine.EventSystems;
     using Ink.Runtime;
 
-
-
     public class VNManager : MonoBehaviour
     {
     //MARK: VNManager Params
@@ -60,7 +58,7 @@
     private const string PORTRAIT_TAG = "portrait";
     private const string LAYOUT_TAG = "layout";
     private const string NPC_Tag = "npc";
-    private const string VoiceOver_Tag = "voiceover";
+    private const string VO_Tag = "voiceover";
     private DialogueVAR dialogueVAR;
 
 
@@ -108,6 +106,16 @@
         }
     }
 
+    private void InitializeVOAudioInfoDictionary()
+    {
+        voicerOverInfoDictionary = new Dictionary<string, DialogueVoicerOverInfoSO>();
+        voicerOverInfoDictionary.Add(defaultVoicerOverInfo.voiceoverID, defaultVoicerOverInfo);
+        foreach (DialogueVoicerOverInfoSO audioinfo in voicerOverInfos)
+        {
+            voicerOverInfoDictionary.Add(audioinfo.voiceoverID, audioinfo);
+        }
+    }
+
     private void SetCurrentNPCAudioInfo(string ID) 
     {
         DialogueNPCAudioInfoSO audioInfo = null;
@@ -121,6 +129,21 @@
             Debug.LogWarning("Failed to find audio info for id: " + ID);
         }
     }
+
+    private void SetCurrentVOAudioInfo(string voiceoverID)
+    {
+        DialogueVoicerOverInfoSO audioVOInfo = null;
+        voicerOverInfoDictionary.TryGetValue(voiceoverID, out audioVOInfo);
+        if (audioVOInfo != null)
+        {
+            this.currentVoicerOverInfo = audioVOInfo;
+        }
+        else
+        {
+            Debug.LogWarning("Failed to find the Voice Over audio for id: " + voiceoverID);
+        }
+    }
+
 
     private void FixedUpdate()
     {
@@ -237,6 +260,8 @@
         }
     }
 
+
+    
     private void PlayVoiceOverSound(int currentDisplayCharacterCount)
     {
         AudioClip[] voiceOverAudioClip = currentVoicerOverInfo.voiceOverAudio;
@@ -251,13 +276,9 @@
             {
                 audioSource.Stop();
             }
-            int randomIndex = Random.Range(0, voiceOverAudioClip.Length);
-            AudioClip voiceOverAudioClips = voiceOverAudioClip[randomIndex];
- 
-            audioSource.pitch = Random.Range(voiceOverminPitch, voiceOvermaxPitch);
-            audioSource.PlayOneShot(voiceOverAudioClips);
         }
     }
+
 
     //MARK: Hide Choices
     private void HideChoices()
@@ -321,7 +342,9 @@
                 case NPC_Tag:
                     SetCurrentNPCAudioInfo(tagValue);
                     break;
-
+                case VO_Tag:
+                    SetCurrentVOAudioInfo(tagValue);
+                    break;
                 default:
                     Debug.LogWarning("Tag came in but was not recoginzed: " + tag);
                     break;
