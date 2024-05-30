@@ -26227,10 +26227,12 @@ MonoBehaviour:
   dialogueText: {fileID: 483064235}
   speakerName: {fileID: 1814624925}
   portraitAnimator: {fileID: 1175544135}
-  defaultNPCAudioInfo: {fileID: 0}
-  audioNPCInfos: []
-  defaultVoicerOverInfo: {fileID: 0}
-  voicerOverInfos: []
+  defaultNPCAudioInfo: {fileID: 11400000, guid: 183cc292532a5f648aa9bbddb82ca5ed, type: 2}
+  audioNPCInfos:
+  - {fileID: 11400000, guid: 9cf1b9d1507cd714ebf35b4a9619a1ee, type: 2}
+  defaultVoicerOverInfo: {fileID: 11400000, guid: be888df80ca2f8642b38af55bb1e2295, type: 2}
+  voicerOverInfos:
+  - {fileID: 11400000, guid: 2759759848e123040ae0a9042b3e8712, type: 2}
   audioSource: {fileID: 1567355205}
   choices:
   - {fileID: 1160406146}

@@ -41,7 +41,7 @@
     private Dictionary<string, DialogueNPCAudioInfoSO> audioNPCInfoDictionary;
 
     private Dictionary<string, DialogueVoicerOverInfoSO> voicerOverInfoDictionary;
-    private string currentVoiceClipName = string.Empty;
+    
     public AudioSource audioSource;
 
     //MARK: Choice UI Variables
@@ -96,6 +96,9 @@
             choicesText[i] = choice.GetComponentInChildren<TextMeshProUGUI>();
             i++;
         }
+
+        InitializeNPCAudioInfoDictionary();
+        InitializeVOAudioInfoDictionary();
     }
     private void InitializeNPCAudioInfoDictionary() 
     {
@@ -205,7 +208,7 @@
         canContinueToNextLine = false;
         bool isAddingRichTextTag = false;
          
-        PlayVoiceOverSound(currentVoiceClipName);
+        
 
         foreach (char letter in line.ToCharArray())
         {
@@ -226,11 +229,14 @@
             // if not rich text, add the next letter and wait a small time
             else
             {
+                
                 PlayNPCSound(dialogueText.maxVisibleCharacters);
                 dialogueText.maxVisibleCharacters++;
                 yield return new WaitForSeconds(typingSpeed);
             }
         }
+        PlayVoiceOverSound(currentVoiceClipName);
+
 
         continueButton.SetActive(true);
 
@@ -262,7 +268,7 @@
     }
 
 
-    
+    private string currentVoiceClipName = string.Empty;
     private void PlayVoiceOverSound(string voiceClipName)
     {
         AudioClip[] voiceOverAudioClip = currentVoicerOverInfo.voiceOverAudio;
@@ -284,8 +290,9 @@
             {
                 audioSource.Stop();
             }
-    
-            audioSource.pitch = Random.Range(currentVoicerOverInfo.minPitch, currentVoicerOverInfo.maxPitch);
+
+
+            audioSource.pitch = 1f;
             audioSource.PlayOneShot(voiceClip);
         }
         else

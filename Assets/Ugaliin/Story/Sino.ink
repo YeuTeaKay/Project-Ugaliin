@@ -1,1 +1,1 @@
-Sino ka! #speaker:Captain #portrait:Captain_Default
+Sino ka! #speaker:Captain #portrait:Captain_Default #npc:default  #voiceover:test
