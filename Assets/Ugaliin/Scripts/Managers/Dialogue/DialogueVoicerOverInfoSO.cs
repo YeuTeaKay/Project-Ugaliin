@@ -6,7 +6,7 @@ using UnityEngine;
 public class DialogueVoicerOverInfoSO : ScriptableObject 
 {
     public string voiceoverID;
-    public AudioClip[] voiceOverAudio;
+    public AudioClip voiceOverAudio;
 
     public bool stopAudioSource;
 }

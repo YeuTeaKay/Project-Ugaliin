@@ -271,20 +271,10 @@
     private string currentVoiceClipName = string.Empty;
     private void PlayVoiceOverSound(string voiceClipName)
     {
-        AudioClip[] voiceOverAudioClip = currentVoicerOverInfo.voiceOverAudio;
+        AudioClip voiceOverAudioClip = currentVoicerOverInfo.voiceOverAudio;
         bool voiceOverstopAudioSource = currentVoicerOverInfo.stopAudioSource;
-
-        AudioClip voiceClip = null;
-        foreach (AudioClip clip in voiceOverAudioClip)
-        {
-            if (clip.name == voiceClipName)
-            {
-                voiceClip = clip;
-                break;
-            }
-        }
     
-        if (voiceClip != null)
+        if (voiceOverAudioClip != null)
         {
             if (voiceOverstopAudioSource)
             {
@@ -293,7 +283,7 @@
 
 
             audioSource.pitch = 1f;
-            audioSource.PlayOneShot(voiceClip);
+            audioSource.PlayOneShot(voiceOverAudioClip);
         }
         else
         {

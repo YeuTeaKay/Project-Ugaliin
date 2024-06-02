@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: test
   m_EditorClassIdentifier: 
   voiceoverID: test
-  voiceOverAudio:
-  - {fileID: 8300000, guid: 37e658f051a334c49ad120271d3c527e, type: 3}
+  voiceOverAudio: {fileID: 8300000, guid: 65e81304ef59ac742b6729d38503da73, type: 3}
   stopAudioSource: 0
