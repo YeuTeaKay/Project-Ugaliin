@@ -5,8 +5,24 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "QuestInfoSO", menuName = "Quest/QuestInfoSO", order = 1)]
 public class QuestInfoSO : ScriptableObject
 {
-    public string questID;
-    public string questFullDescription;
-    public string questShortDescription;
-    public string questObjective;
+    [field: SerializeField] public string id { get; private set; }
+
+    [Header("General")]
+    public string displayName;
+
+    [Header("Requirements")]
+    public int chapterRequirement;
+    public QuestInfoSO[] questPrerequisites;
+
+    [Header("Steps")]
+    public GameObject[] questStepPrefabs;
+
+    // ensure the id is always the name of the Scriptable Object asset
+    private void OnValidate()
+    {
+        #if UNITY_EDITOR
+        id = this.name;
+        UnityEditor.EditorUtility.SetDirty(this);
+        #endif
+    }
 }
