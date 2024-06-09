@@ -2,11 +2,11 @@ INCLUDE globals.ink
 
 { dialogueEnd == false: -> main | -> endDialogue }
 
-Hello there! #speaker:Mother #portrait:Mother_Default #layout:left #VoiceOver:Mother_Hello
+
 -> main
 
 === main ===
-Hay salamat! Kaunti nalang ang mga gawain #speaker:Mother  #portrait:Mother_Default #layout:left
+Hay salamat! Kaunti nalang ang mga gawain #speaker:Mother #background:Player_House #portrait:Mother_Default #layout:left #voiceover:test
 kaya pwede na tayo magpahinga pagkatapos nito.
 + [Ako na po sa mga natitirang gawain ‘nay para makapagpahinga na po kayo.]
     -> chosen

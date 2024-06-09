@@ -21,7 +21,7 @@
     //MARK: Dialogue UI Variables
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialogueBox;
-    [SerializeField] private GameObject dialogueBackground;
+    [SerializeField] private Animator dialogueBackground;
 
     [SerializeField] private GameObject continueButton;
     [SerializeField] private TextMeshProUGUI dialogueText;
@@ -56,10 +56,12 @@
 
     //MARK: Ink Tags
     private const string SPEAKER_TAG = "speaker";
+    private const string BACKGROUND_TAG = "background";
     private const string PORTRAIT_TAG = "portrait";
     private const string LAYOUT_TAG = "layout";
     private const string NPC_Tag = "npc";
     private const string VO_Tag = "voiceover";
+
     private DialogueVAR dialogueVAR;
 
 
@@ -85,7 +87,7 @@
     {
         dialogueIsPlaying = false;
         dialogueBox.SetActive(false);
-        dialogueBackground.SetActive(false);
+        
 
         LayoutChanger = dialogueBox.GetComponent<Animator>();
 
@@ -100,6 +102,7 @@
         InitializeNPCAudioInfoDictionary();
         InitializeVOAudioInfoDictionary();
     }
+    
     private void InitializeNPCAudioInfoDictionary() 
     {
         audioNPCInfoDictionary = new Dictionary<string, DialogueNPCAudioInfoSO>();
@@ -149,7 +152,7 @@
     }
 
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (!dialogueIsPlaying)
         {
@@ -168,13 +171,13 @@
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialogueBox.SetActive(true);
-        dialogueBackground.SetActive(true);
         MainUIPanel.SetActive(false);
 
         dialogueVAR.StartListening(currentStory);
 
-
+        
         speakerName.text = "Blank";
+        dialogueBackground.Play("Background_Default");
         portraitAnimator.Play("Default");
         LayoutChanger.Play("Layout Default");
 
@@ -191,7 +194,7 @@
 
         dialogueIsPlaying = false;
         dialogueBox.SetActive(false);
-        dialogueBackground.SetActive(false);
+
         MainUIPanel.SetActive(true);
         dialogueText.text = "";
     }
@@ -343,12 +346,19 @@
                     speakerName.text = tagValue;
                     break;
 
+                case BACKGROUND_TAG:
+                    dialogueBackground.Play(tagValue);
+                    Debug.Log("Background Animator: " + tagValue);
+                    break;
+    
                 case PORTRAIT_TAG:
                     portraitAnimator.Play(tagValue);
+                    Debug.Log("Portrait Animator: " + tagValue);
                     break;
 
                 case LAYOUT_TAG:
                     LayoutChanger.Play(tagValue);
+                    Debug.Log("Layout Changer: " + tagValue);
                     break;
 
                 case NPC_Tag:
@@ -358,6 +368,9 @@
                     SetCurrentVOAudioInfo(tagValue);
                     currentVoiceClipName = tagValue;
                     break;
+                
+
+
                 default:
                     Debug.LogWarning("Tag came in but was not recoginzed: " + tag);
                     break;

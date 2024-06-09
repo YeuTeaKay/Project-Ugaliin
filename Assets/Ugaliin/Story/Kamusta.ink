@@ -1,1 +1,1 @@
-Kamusta ka #speaker:Xiaoyu #portrait:Xiaoyu_Default
+Kamusta ka #speaker:Xiaoyu  #background:TitaHouse_Inside #portrait:Xiaoyu_Default #npc:default #voiceover:test
