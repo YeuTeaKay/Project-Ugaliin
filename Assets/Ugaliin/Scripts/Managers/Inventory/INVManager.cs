@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;   
+using UnityEngine.UI;
 
-public class INVManager : MonoBehaviour
+
+public class INVManager : MonoBehaviour, IDataPersistance
 {
     private static INVManager instance;
     public List<Item> inventory = new List<Item>();
@@ -13,8 +14,8 @@ public class INVManager : MonoBehaviour
     public Transform BackpackContent;
     public Transform ItemContent;
     public GameObject InventoryItem;
-
     public GameObject BackpackItem;
+    public TMP_Text BackpackDescription;
 
     private void Awake()
     {
@@ -42,6 +43,18 @@ public class INVManager : MonoBehaviour
 
     public void ListItems()
     {
+        // Clear existing UI elements to avoid duplication
+        foreach (Transform child in ItemContent)
+        {
+            Destroy(child.gameObject);
+        }
+        foreach (Transform child in BackpackContent)
+        {
+            Destroy(child.gameObject);
+        }
+
+        instantiatedItems.Clear();
+
         foreach (var item in inventory)
         {
             // Check if the item has already been instantiated
@@ -100,8 +113,38 @@ public class INVManager : MonoBehaviour
 
                 // Add the item to the instantiated items list
                 instantiatedItems.Add(item);
+
+                BackpackDescription.text = item.description;
             }
         }
     }
+
+    public void LoadData(GameData data)
+    {
+        inventory.Clear();
+        foreach (var itemName in data.inventoryItemNames)
+        {
+            Item item = Resources.Load<Item>($"Items/{itemName}"); // Assuming your ScriptableObjects are stored in a Resources/Items folder
+            if (item != null)
+            {
+                inventory.Add(item);
+            }
+            else
+            {
+                Debug.LogWarning($"Item with name {itemName} not found in Resources/Items folder.");
+            }
+        }
+        ListItems();
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.inventoryItemNames.Clear();
+        foreach (var item in inventory)
+        {
+            data.inventoryItemNames.Add(item.name);
+        }
+    }
+
 }
 

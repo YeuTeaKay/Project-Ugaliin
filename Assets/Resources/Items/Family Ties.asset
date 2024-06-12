@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f37095059750c148804ff8d0586afbc, type: 3}
+  m_Name: Family Ties
+  m_EditorClassIdentifier: 
+  itemName: Family
+  icon: {fileID: 21300000, guid: a4a888ebe63fd594c95b7d3aa6997499, type: 3}
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+    tellus diam, laoreet ac egestas eu, mollis a urna. Morbi ullamcorper diam in
+    libero venenatis, sit amet consequat ligula blandit. Vivamus accumsan sapien
+    non libero hendrerit, quis malesuada sem pellentesque. Praesent mattis lacinia
+    sodales. Phasellus lacinia orci sed gravida luctus. Sed mollis, massa vel sagittis
+    congue, sem diam lacinia sapien, ut suscipit nisl lorem id lectus. Vestibulum
+    tempus rutrum metus sed fermentum. Vestibulum ante ipsum primis in faucibus orci
+    luctus et ultrices posuere cubilia curae; Curabitur justo magna, mollis vel magna
+    in, pulvinar finibus lorem. Etiam non elementum massa. Quisque ut venenatis lectus.
+    Cras commodo dignissim ipsum non auctor. Mauris gravida nibh sem, nec pulvinar
+    erat feugiat a. Praesent eu dui nec dolor tempor efficitur. Aenean eget ultrices
+    odio.
