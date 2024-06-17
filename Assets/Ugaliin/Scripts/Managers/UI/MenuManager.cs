@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject inventoryBackpack;
     [SerializeField] private GameObject inventoryBar;
     
     private void FixedUpdate()
@@ -26,11 +27,26 @@ public class MenuManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        pauseMenu.SetActive(false);
+        inventoryBar.SetActive(false);
+        inventoryBackpack.SetActive(false);
+    }
+
     public void PauseMenu()
     {
         PauseManager.GetInstance().Pause();
         pauseMenu.SetActive(true);
         inventoryBar.SetActive(false);
+        inventoryBackpack.SetActive(false);
+    }
+
+    public void BackPack()
+    {
+        pauseMenu.SetActive(false);
+        inventoryBar.SetActive(false);
+        inventoryBackpack.SetActive(true);
     }
 
     public void UnpauseMenu()
@@ -38,6 +54,7 @@ public class MenuManager : MonoBehaviour
         PauseManager.GetInstance().Unpause();
         pauseMenu.SetActive(false);
         inventoryBar.SetActive(true);
+        inventoryBackpack.SetActive(false);
     }
 
     public void Quit()
@@ -51,4 +68,6 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+
+    
 }

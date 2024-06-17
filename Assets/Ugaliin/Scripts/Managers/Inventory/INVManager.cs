@@ -6,16 +6,23 @@ using UnityEngine.UI;
 
 
 public class INVManager : MonoBehaviour, IDataPersistance
-{
+{   
+    //Essentials
     private static INVManager instance;
     public List<Item> inventory = new List<Item>();
     private List<Item> instantiatedItems = new List<Item>(); // Keep track of instantiated items
 
+    //Item Content Variables
     public Transform BackpackContent;
     public Transform ItemContent;
     public GameObject InventoryItem;
     public GameObject BackpackItem;
+
+    //Backpack Content Variables
+    public TMP_Text BackpackName;
     public TMP_Text BackpackDescription;
+    
+    public Image BackpackIcon;
 
     private void Awake()
     {
@@ -24,6 +31,15 @@ public class INVManager : MonoBehaviour, IDataPersistance
             Debug.LogError("Found more than one Input Manager in the scene.");
         }
         instance = this;
+    }
+
+    void Start()
+    {
+        // Ensure the default values are set when the game starts
+        if (inventory.Count > 0)
+        {
+            UpdateBackpackUI(inventory[0]);
+        }
     }
 
     public static INVManager GetInstance()
@@ -82,6 +98,7 @@ public class INVManager : MonoBehaviour, IDataPersistance
                     Destroy(obj); // Clean up the object
                     continue; // Skip to the next iteration of the loop
                 }
+                /*
                 var backpackName = backpackObj.transform.Find("ItemName").GetComponent<TMP_Text>();
                 if (backpackName == null)
                 {
@@ -89,7 +106,7 @@ public class INVManager : MonoBehaviour, IDataPersistance
                     Destroy(backpackObj); // Clean up the object
                     continue; // Skip to the next iteration of the loop
                 }
-
+                */
                 var itemIcon = obj.transform.Find("ItemIcon").GetComponent<Image>();
                 if (itemIcon == null)
                 {
@@ -98,25 +115,46 @@ public class INVManager : MonoBehaviour, IDataPersistance
                     continue; // Skip to the next iteration of the loop
                 }
 
-                var backpackIcon = backpackObj.transform.Find("ItemIcon").GetComponent<Image>();
-                if (backpackIcon == null)
+                var backpackInventoryIcon = backpackObj.transform.Find("ItemIcon").GetComponent<Image>();
+                if (backpackInventoryIcon == null)
                 {
                     Debug.LogError("ItemIcon component not found on instantiated object.");
                     Destroy(backpackObj); // Clean up the object
                     continue; // Skip to the next iteration of the loop
                 }
 
-                backpackName.text = item.itemName;
-                backpackIcon.sprite = item.icon;
+                
+                backpackInventoryIcon.sprite = item.icon;
                 itemName.text = item.itemName;
                 itemIcon.sprite = item.icon;
 
                 // Add the item to the instantiated items list
                 instantiatedItems.Add(item);
 
-                BackpackDescription.text = item.description;
+                Button button = obj.GetComponent<Button>();
+                if (button != null)
+                {
+                    button.onClick.AddListener(() => UpdateBackpackUI(item));
+                }
+                else
+                {
+                    Debug.LogError("No Button component found on the instantiated InventoryItem prefab.");
+                }
+
+                // Set default backpack item and description if this is the first item
+                if (instantiatedItems.Count == 1)
+                {
+                    UpdateBackpackUI(item);
+                }
             }
         }
+    }
+
+    public void UpdateBackpackUI(Item item)
+    {
+        BackpackName.text = item.itemName;
+        BackpackDescription.text = item.description;
+        BackpackIcon.sprite = item.icon;
     }
 
     public void LoadData(GameData data)
