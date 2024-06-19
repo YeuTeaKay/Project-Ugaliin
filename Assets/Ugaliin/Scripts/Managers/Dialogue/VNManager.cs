@@ -5,7 +5,7 @@
     using UnityEngine.EventSystems;
     using Ink.Runtime;
 
-    public class VNManager : MonoBehaviour
+    public class VNManager : MonoBehaviour, IDataPersistance
     {
     //MARK: VNManager Params
     [Header("Parameters")]
@@ -101,6 +101,8 @@
 
         InitializeNPCAudioInfoDictionary();
         InitializeVOAudioInfoDictionary();
+
+        
     }
     
     private void InitializeNPCAudioInfoDictionary() 
@@ -190,6 +192,7 @@
         yield return new WaitForSeconds(1f);
 
         dialogueVAR.StopListening(currentStory);
+        DataPersistenceManager.instance.SaveGame();
 
 
         dialogueIsPlaying = false;
@@ -437,5 +440,20 @@
         }
         return variableValue;
     }
+
+
+    public void LoadData(GameData data)
+    {
+        dialogueVAR.VAR["playerProgress"] = new Ink.Runtime.IntValue(data.playerProgress);
+    }
+    
+    public void SaveData(ref GameData data)
+    {
+        if (dialogueVAR.VAR.ContainsKey("playerProgress"))
+        {
+            data.playerProgress = (int)((Ink.Runtime.IntValue)dialogueVAR.VAR["playerProgress"]).value;
+        }
+    }
+
 
 }

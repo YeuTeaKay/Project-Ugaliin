@@ -1,6 +1,7 @@
 INCLUDE globals.ink
 
-{ dialogueEnd == false: -> main | -> endDialogue }
+{ playerProgress == 0: -> main}
+{ playerProgress == 1: -> secondDialogue}
 
 
 -> main
@@ -21,18 +22,28 @@ Ito ang listahan ng mga dapat mong puntahan.
 
 
 +[Hayy sige na nga.]
-~ dialogueEnd = true
+
     ->importantChoice("choiceItem0")
 
 +[Sige po nay ako na bahala dito sa listahan.]
-~ dialogueEnd = true
+
     ->importantChoice("choiceItem1")
 
 === importantChoice(choiceItem) ===
 ~playerChoice = choiceItem
-->endDialogue
+->firstDialogue
 
-=== endDialogue ====
+
+=== firstDialogue ===
 Batiin mo yung mga kapitbahay natin para makilala mo ng sila  #speaker:Mother  #portrait:Mother_Default #layout:left
+~playerProgress = 1
+-> secondDialogue
 
--> END
+=== secondDialogue ===
+this is the second dialogue #speaker:Mother #background:Player_House #portrait:Mother_Default #layout:left #voiceover:test
+~playerProgress = 2
+->defaultEndDialogue
+
+=== defaultEndDialogue ====
+this is the default end dialogue #speaker:Mother #background:Player_House #portrait:Mother_Default #layout:left #voiceover:test
+->END
