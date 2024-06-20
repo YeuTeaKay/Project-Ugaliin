@@ -62,12 +62,5 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
         Debug.LogWarning("Game Closed");
     }
-
-
-    public void LoadScene(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
-    }
-
     
 }

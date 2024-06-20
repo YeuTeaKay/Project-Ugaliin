@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 using Cinemachine;
 using UnityEngine.EventSystems;
 
-public class Character3DController : MonoBehaviour
+public class Character3DController : MonoBehaviour, IDataPersistance
 {
     [SerializeField] private float walkingSpeed = 5f;
     [SerializeField] private CinemachineVirtualCamera playerCam;
@@ -33,7 +33,16 @@ public class Character3DController : MonoBehaviour
         ApplyGravity();
         HandleAnimation();
     }
+    public void LoadData(GameData data)
+    {
+        this.transform.position = data.playerPosition;
+    }
 
+    public void SaveData(ref GameData data)
+    {
+        data.playerPosition = this.transform.position;
+    }
+    
     // Handles the 3D movement
     private void Handle3DMovement()
     {

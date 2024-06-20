@@ -8,6 +8,8 @@ public class PlayerCharacterSpawnManager : MonoBehaviour
     [SerializeField] private Transform SpecialSpawnPoint;
     private static PlayerCharacterSpawnManager instance;
 
+
+
     private void Awake()
     {
         if (instance != null)
@@ -26,7 +28,14 @@ public class PlayerCharacterSpawnManager : MonoBehaviour
 
     private void SpawnCharacter()
     {
-       Instantiate(selectedCharacterPrefab, SpecialSpawnPoint.position, Quaternion.identity);
+       if (selectedCharacterPrefab != null)
+        {
+            Instantiate(selectedCharacterPrefab, SpecialSpawnPoint.position, Quaternion.identity);
+        }
+        else
+        {
+            Debug.LogError("Selected character prefab is not set.");
+        }
     }
 
 }
