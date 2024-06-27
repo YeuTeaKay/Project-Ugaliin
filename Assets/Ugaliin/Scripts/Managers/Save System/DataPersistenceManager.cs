@@ -7,6 +7,7 @@ public class DataPersistenceManager : MonoBehaviour
 {
     [Header("File Storage Config")]
     [SerializeField] private string filename;
+    [SerializeField] private bool useEncryption;   
     private GameData gameData;
 
     private FileDataHandler dataHandler;
@@ -25,7 +26,7 @@ public class DataPersistenceManager : MonoBehaviour
 
     private void Start()
     {
-        this.dataHandler = new FileDataHandler(Application.persistentDataPath, filename);
+        this.dataHandler = new FileDataHandler(Application.persistentDataPath, filename, useEncryption);
         this.dataPersistanceObjects = FindAllDataPersistanceObjects();
         LoadGame();
     }
@@ -55,7 +56,7 @@ public class DataPersistenceManager : MonoBehaviour
     {
         foreach(IDataPersistance dataPersistanceObj in dataPersistanceObjects)
         {
-            dataPersistanceObj.SaveData(ref gameData);
+            dataPersistanceObj.SaveData(gameData);
         }
         dataHandler.Save(gameData);
     }

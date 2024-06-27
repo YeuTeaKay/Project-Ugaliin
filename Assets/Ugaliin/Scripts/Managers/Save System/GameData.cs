@@ -7,6 +7,8 @@ public class GameData
     public int playerProgress;
     public List<string> inventoryItemNames;
     public Vector3 playerPosition;
+    public string playerGender;
+    public float timeSpentPlaying;
 
 
     public GameData()
@@ -14,8 +16,8 @@ public class GameData
         this.playerProgress = 0;
         this.inventoryItemNames = new List<string>();
         this.playerPosition = new Vector3(0, 0, 0);
-
-
+        this.playerGender = string.Empty;
+        this.timeSpentPlaying = 0f;
     }
 }
 

@@ -188,7 +188,7 @@ public class INVManager : MonoBehaviour, IDataPersistance
         ListItems();
     }
 
-    public void SaveData(ref GameData data)
+    public void SaveData(GameData data)
     {
         data.inventoryItemNames.Clear();
         foreach (var item in inventory)

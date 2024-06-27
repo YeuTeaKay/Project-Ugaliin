@@ -447,7 +447,7 @@
         dialogueVAR.VAR["playerProgress"] = new Ink.Runtime.IntValue(data.playerProgress);
     }
     
-    public void SaveData(ref GameData data)
+    public void SaveData(GameData data)
     {
         if (dialogueVAR.VAR.ContainsKey("playerProgress"))
         {
