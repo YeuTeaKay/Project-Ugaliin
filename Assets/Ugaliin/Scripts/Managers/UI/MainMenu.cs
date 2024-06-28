@@ -39,7 +39,23 @@ public class MainMenu : MonoBehaviour
 
     public void OnLoadGameClicked()
     {
-        DataPersistenceManager.instance.SaveGame();
+        GameData loadedData = DataPersistenceManager.instance.GetGameData();
+
+        if (loadedData.playerGender == "Boy")
+        {
+            selectedCharacterPrefab = boyCharacter;
+        }
+        else if (loadedData.playerGender == "Girl")
+        {
+            selectedCharacterPrefab = girlCharacter;
+        }
+        else
+        {
+            Debug.LogError("No valid gender found in saved data.");
+            return;
+        }
+
+        PlayerCharacterSpawnManager.selectedCharacterPrefab = selectedCharacterPrefab;
         SceneManager.LoadSceneAsync("Movement Test");
     }
 

@@ -1929,7 +1929,7 @@ GameObject:
   - component: {fileID: 1263222662}
   - component: {fileID: 1263222661}
   m_Layer: 5
-  m_Name: Load Game
+  m_Name: Continue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2817,7 +2817,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cotinue
+  m_text: 'Continue
 
 '
   m_isRightToLeft: 0
