@@ -8,8 +8,6 @@ public class PlayerCharacterSpawnManager : MonoBehaviour
     [SerializeField] private Transform SpecialSpawnPoint;
     private static PlayerCharacterSpawnManager instance;
 
-
-
     private void Awake()
     {
         if (instance != null)

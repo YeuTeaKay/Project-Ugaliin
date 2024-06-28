@@ -37,6 +37,12 @@ public class MainMenu : MonoBehaviour
         OnCharacterSelect();
     }
 
+    public void OnLoadGameClicked()
+    {
+        DataPersistenceManager.instance.SaveGame();
+        SceneManager.LoadSceneAsync("Movement Test");
+    }
+
     public void OnCharacterSelect()
     {
         characterSelection.SetActive(true);
