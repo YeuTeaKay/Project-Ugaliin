@@ -23,12 +23,24 @@ public class DataPersistenceManager : MonoBehaviour
         instance = this;
     }
 
+    
+
 
     private void Start()
     {
         this.dataHandler = new FileDataHandler(Application.persistentDataPath, filename, useEncryption);
         this.dataPersistanceObjects = FindAllDataPersistanceObjects();
         LoadGame();
+    }
+
+    public GameData GetGameData()
+    {
+        return this.gameData;
+    }
+
+    public bool HasGameData()
+    {
+        return gameData != null;
     }
 
     public void NewGame()
