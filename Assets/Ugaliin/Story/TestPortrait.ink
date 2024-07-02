@@ -2,7 +2,8 @@ INCLUDE globals.ink
 
 { playerProgress == 0: -> main}
 { playerProgress == 1: -> secondDialogue}
-{ playerProgress == 2: -> defaultEndDialogue}
+{ playerProgress == 2: -> removeItemChoice}
+{ playerProgress == 3: -> defaultEndDialogue}
 
 
 -> main
@@ -42,9 +43,26 @@ Batiin mo yung mga kapitbahay natin para makilala mo ng sila  #speaker:Mother  #
 
 === secondDialogue ===
 this is the second dialogue #speaker:Mother #background:Player_House #portrait:Mother_Default #layout:left #voiceover:test
-->defaultEndDialogue
+->removeItemChoice
+
+=== removeItemChoice ===
+this is the second dialogue #speaker:Mother #background:Player_House #portrait:Mother_Default #layout:left #voiceover:test
+~playerProgress = 2
++ [Remove Item 0] 
+    -> removeItem("removeItem0")
+
++ [Remove Item 1]
+    -> removeItem("removeItem1")
+
++ [Remove Item 2]
+    -> removeItem("removeItem2")
+
+=== removeItem(itemToRemove) ===
+~playerChoice = itemToRemove
+~playerProgress = 2
+-> defaultEndDialogue
 
 === defaultEndDialogue ====
-~playerProgress = 2
+~playerProgress = 3
 this is the default end dialogue #speaker:Mother #background:Player_House #portrait:Mother_Default #layout:left #voiceover:test
 ->END

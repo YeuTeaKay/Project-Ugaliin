@@ -54,6 +54,12 @@ public class INVManager : MonoBehaviour, IDataPersistance
         inventoryChanged = true; 
     }
 
+    public void RemoveItem(Item item)
+    {
+        inventory.Remove(item);
+        inventoryChanged = true;
+    }
+
     public void Update()
     {
         if (inventoryChanged)
@@ -196,6 +202,8 @@ public class INVManager : MonoBehaviour, IDataPersistance
             data.inventoryItemNames.Add(item.name);
         }
     }
+
+
 
 }
 
