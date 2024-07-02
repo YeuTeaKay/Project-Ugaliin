@@ -393,17 +393,17 @@
                 + currentChoices.Count);
         }
 
-        int i = 0;
-        foreach (Choice choice in currentChoices)
+        for (int i = 0; i < choices.Length; i++)
         {
-            choices[i].gameObject.SetActive(true);
-            choicesText[i].text = choice.text;
-            i++;
-        }
-
-        for (int j = i; j < choices.Length; j++)
-        {
-            choices[j].gameObject.SetActive(false);
+            if (i < currentChoices.Count)
+            {
+                choices[i].gameObject.SetActive(true);
+                choicesText[i].text = currentChoices[i].text;
+            }
+            else
+            {
+                choices[i].gameObject.SetActive(false);
+            }
         }
 
         StartCoroutine(SelectFirstChoice());
@@ -414,7 +414,10 @@
     {
         EventSystem.current.SetSelectedGameObject(null);
         yield return new WaitForEndOfFrame();
-        EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
+        if (currentStory.currentChoices.Count > 0)
+        {
+            EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
+        }
     }
 
     //MARK: Handle Choice Selection

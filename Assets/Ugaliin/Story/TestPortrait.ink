@@ -2,6 +2,7 @@ INCLUDE globals.ink
 
 { playerProgress == 0: -> main}
 { playerProgress == 1: -> secondDialogue}
+{ playerProgress == 2: -> defaultEndDialogue}
 
 
 -> main
@@ -41,9 +42,9 @@ Batiin mo yung mga kapitbahay natin para makilala mo ng sila  #speaker:Mother  #
 
 === secondDialogue ===
 this is the second dialogue #speaker:Mother #background:Player_House #portrait:Mother_Default #layout:left #voiceover:test
-~playerProgress = 2
 ->defaultEndDialogue
 
 === defaultEndDialogue ====
+~playerProgress = 2
 this is the default end dialogue #speaker:Mother #background:Player_House #portrait:Mother_Default #layout:left #voiceover:test
 ->END
