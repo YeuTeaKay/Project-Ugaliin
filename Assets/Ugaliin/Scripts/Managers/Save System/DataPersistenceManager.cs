@@ -54,7 +54,7 @@ public class DataPersistenceManager : MonoBehaviour
         if(this.gameData == null)
         {
             Debug.Log("No data was found. You need to start a new game.");
-            NewGame();
+            return;
         }
 
         foreach(IDataPersistance dataPersistanceObj in dataPersistanceObjects)
@@ -65,7 +65,13 @@ public class DataPersistenceManager : MonoBehaviour
     }
 
     public void SaveGame()
-    {
+    {   
+        if(this.gameData == null)
+        {
+            Debug.LogError("No data was found. You need to start a new game.");
+            return;
+        }
+
         foreach(IDataPersistance dataPersistanceObj in dataPersistanceObjects)
         {
             dataPersistanceObj.SaveData(gameData);

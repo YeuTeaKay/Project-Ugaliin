@@ -270,6 +270,7 @@ GameObject:
   - component: {fileID: 180039413}
   - component: {fileID: 180039415}
   - component: {fileID: 180039414}
+  - component: {fileID: 180039416}
   m_Layer: 5
   m_Name: Character Select
   m_TagString: Untagged
@@ -337,6 +338,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180039412}
   m_CullTransparentMesh: 1
+--- !u!114 &180039416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180039412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc7bff1ca9d756240a7c7f061ff9af35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstSelected: {fileID: 1178845432}
 --- !u!1 &196633454
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,6 +849,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 085b1829eb246574c9340c29aebbb8cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstSelected: {fileID: 771645581}
+  continueGameButton: {fileID: 1263222661}
   boyCharacter: {fileID: 7962072225191893400, guid: bb063be97a8d07246ba40a352a0675c1, type: 3}
   girlCharacter: {fileID: 7962072225191893400, guid: 842bf39dc28b91c4f8bd754e6610c9b7, type: 3}
   mainMenu: {fileID: 694431433}
@@ -902,7 +918,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9716981, g: 0.371262, b: 0.371262, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.4892413, g: 0.8490566, b: 0.16420433, a: 1}
+    m_SelectedColor: {r: 1, g: 0.5859252, b: 0.13679248, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1215,11 +1231,11 @@ MonoBehaviour:
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
   m_ActionsAsset: {fileID: -944628639613478452, guid: dd964a0294e28d245909c03b4c2dd6f3, type: 3}
-  m_PointAction: {fileID: -6058667620129327000, guid: dd964a0294e28d245909c03b4c2dd6f3, type: 3}
+  m_PointAction: {fileID: 0}
   m_MoveAction: {fileID: -6058667620129327000, guid: dd964a0294e28d245909c03b4c2dd6f3, type: 3}
   m_SubmitAction: {fileID: -1462972824409374465, guid: dd964a0294e28d245909c03b4c2dd6f3, type: 3}
   m_CancelAction: {fileID: 0}
-  m_LeftClickAction: {fileID: -1462972824409374465, guid: dd964a0294e28d245909c03b4c2dd6f3, type: 3}
+  m_LeftClickAction: {fileID: 0}
   m_MiddleClickAction: {fileID: 0}
   m_RightClickAction: {fileID: 0}
   m_ScrollWheelAction: {fileID: 0}
@@ -1240,7 +1256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 771645581}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &872949373
@@ -2282,7 +2298,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9245283, g: 0.41429335, b: 0.41429335, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.37951937, g: 0.9433962, b: 0.13794944, a: 1}
+    m_SelectedColor: {r: 1, g: 0.58431375, b: 0.13794944, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1

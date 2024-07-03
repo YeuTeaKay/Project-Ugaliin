@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class MainMenu : MonoBehaviour 
+public class MainMenu : Menu 
 {
+    [Header("Buttons")]
+    [SerializeField] private Button continueGameButton;
+
     [Header("Character Selection")]
     public GameObject boyCharacter;
     public GameObject girlCharacter;
@@ -14,6 +18,14 @@ public class MainMenu : MonoBehaviour
     public GameObject mainMenu;
     public GameObject characterSelection;
 
+
+    private void Start()
+    {
+        if (!DataPersistenceManager.instance.HasGameData())
+        {
+            continueGameButton.interactable = false;
+        }
+    }
     public void SelectBoy()
     {
         selectedCharacterPrefab = boyCharacter;

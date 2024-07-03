@@ -25,12 +25,14 @@ public class PauseManager : MonoBehaviour
     public void Pause()
     {
         isPaused = true;
-        InputManager.GetInstance().SwitchActionMap("UI");
+        Time.timeScale = 0;
+        //InputManager.GetInstance().SwitchActionMap("UI");
     }
 
     public void Unpause()
     {
         isPaused = false;
-        InputManager.GetInstance().SwitchActionMap("Player");
+        Time.timeScale = 1;
+        //InputManager.GetInstance().SwitchActionMap("Player");
     }
 }

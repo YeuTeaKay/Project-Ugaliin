@@ -30,7 +30,7 @@ public class MenuManager : MonoBehaviour
     private void Start()
     {
         pauseMenu.SetActive(false);
-        inventoryBar.SetActive(false);
+        inventoryBar.SetActive(true);
         inventoryBackpack.SetActive(false);
     }
 
@@ -43,7 +43,8 @@ public class MenuManager : MonoBehaviour
     }
 
     public void BackPack()
-    {
+    {   
+        PauseManager.GetInstance().Pause();
         pauseMenu.SetActive(false);
         inventoryBar.SetActive(false);
         inventoryBackpack.SetActive(true);
@@ -55,6 +56,11 @@ public class MenuManager : MonoBehaviour
         pauseMenu.SetActive(false);
         inventoryBar.SetActive(true);
         inventoryBackpack.SetActive(false);
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 
     public void Quit()
