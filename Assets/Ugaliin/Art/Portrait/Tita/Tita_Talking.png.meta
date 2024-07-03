@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e6b75bc112f071345bd55c6c15e2711f
+guid: 3da0404569825a344a0bcccfba1493ca
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_0
+      name: Tita_Talking_0
       rect:
         serializedVersion: 2
         x: 20
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0e860b854b9789419bc3fdccd317a91
-      internalID: -1761042594
+      spriteID: 4248a87a8ea141646b784c2a34147333
+      internalID: -1847076815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_1
+      name: Tita_Talking_1
       rect:
         serializedVersion: 2
         x: 276
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 980f98fdcd871de44975f0e1c47a8afe
-      internalID: -1859965375
+      spriteID: 6d913a8f87be52a4c841ae83782ca4c1
+      internalID: -1854447363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_2
+      name: Tita_Talking_2
       rect:
         serializedVersion: 2
         x: 532
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1fee03652d48c44f8678787a34867aa
-      internalID: 879674877
+      spriteID: 8151b7dccd1ee6a4b935238b7223bcbc
+      internalID: -491775900
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_3
+      name: Tita_Talking_3
       rect:
         serializedVersion: 2
         x: 788
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea3332bd88287ef47a8c8f50ad87c135
-      internalID: -510223945
+      spriteID: 99be08d4bf3ee9d4bb4f7dc10f523b59
+      internalID: 1111773193
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_4
+      name: Tita_Talking_4
       rect:
         serializedVersion: 2
         x: 1044
@@ -221,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcb8f835733ae0b4d9c2fa443846c764
-      internalID: -1449567716
+      spriteID: f812b7f8d87508f47b75253ca51e44f1
+      internalID: -1772948585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_5
+      name: Tita_Talking_5
       rect:
         serializedVersion: 2
         x: 20
@@ -242,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf86f0de1ec493548a1d6cb32fa26d97
-      internalID: -1040488801
+      spriteID: cafb12e611e319f49b57dbd0908af388
+      internalID: -837670343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_6
+      name: Tita_Talking_6
       rect:
         serializedVersion: 2
         x: 276
@@ -263,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88456537befabdd43987d712d84af809
-      internalID: -26900183
+      spriteID: e8ec98827f8975541a9de36a2cea3ef4
+      internalID: 469319486
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_7
+      name: Tita_Talking_7
       rect:
         serializedVersion: 2
         x: 532
@@ -284,14 +284,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc3b5d31fb998404bab3f297c2cf7911
-      internalID: 1667364695
+      spriteID: af1fbc1b40dd5bc4994bd9a31dffd7b7
+      internalID: -286883286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_8
+      name: Tita_Talking_8
       rect:
         serializedVersion: 2
         x: 788
@@ -305,14 +305,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bebcef7139a2154468aeb827dec73dc8
-      internalID: -1260381393
+      spriteID: 59956a13f22e3d347bf2b4fdcd2cba08
+      internalID: 270829313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_9
+      name: Tita_Talking_9
       rect:
         serializedVersion: 2
         x: 1044
@@ -326,14 +326,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1d98eff6864ea045aa8de005645856a
-      internalID: -804371647
+      spriteID: d9ad050ac7b85724cae5341da3664d18
+      internalID: 1923831347
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_10
+      name: Tita_Talking_10
       rect:
         serializedVersion: 2
         x: 20
@@ -347,14 +347,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f20e07293ec1dd449b9a4adcd5954680
-      internalID: 773627576
+      spriteID: a74c9445f22efb149a5fb2aff31b6356
+      internalID: 2133928751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_11
+      name: Tita_Talking_11
       rect:
         serializedVersion: 2
         x: 276
@@ -368,14 +368,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4aa4995cf84a2c54397fc466451cf9f2
-      internalID: 1676059592
+      spriteID: c4452711c1d2525449280144924ee9c5
+      internalID: 468091245
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_12
+      name: Tita_Talking_12
       rect:
         serializedVersion: 2
         x: 532
@@ -389,14 +389,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83eb8a6990f4b1a4e9be9a3881097517
-      internalID: 1119267647
+      spriteID: 157a675f8abf44848a4e36abe0ec936a
+      internalID: 745449547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_13
+      name: Tita_Talking_13
       rect:
         serializedVersion: 2
         x: 788
@@ -410,14 +410,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 885f3780cf05355478c2df53e93a5dcf
-      internalID: -1186324807
+      spriteID: 809139c831c2f2d4fab2bbc06d124db0
+      internalID: 590415110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_14
+      name: Tita_Talking_14
       rect:
         serializedVersion: 2
         x: 1044
@@ -431,8 +431,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f8572d02798c944ea29dbe1b4128b36
-      internalID: -1590524414
+      spriteID: 15951871a06ba514f9dd8be61831d221
+      internalID: 708238757
       vertices: []
       indices: 
       edges: []
@@ -440,7 +440,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: c0847e227c456524897a0edbedc608be
     internalID: 0
     vertices: []
     indices: 
@@ -448,21 +448,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Barangay Captain_AngryIdle_0: -1761042594
-      Barangay Captain_AngryIdle_1: -1859965375
-      Barangay Captain_AngryIdle_10: 773627576
-      Barangay Captain_AngryIdle_11: 1676059592
-      Barangay Captain_AngryIdle_12: 1119267647
-      Barangay Captain_AngryIdle_13: -1186324807
-      Barangay Captain_AngryIdle_14: -1590524414
-      Barangay Captain_AngryIdle_2: 879674877
-      Barangay Captain_AngryIdle_3: -510223945
-      Barangay Captain_AngryIdle_4: -1449567716
-      Barangay Captain_AngryIdle_5: -1040488801
-      Barangay Captain_AngryIdle_6: -26900183
-      Barangay Captain_AngryIdle_7: 1667364695
-      Barangay Captain_AngryIdle_8: -1260381393
-      Barangay Captain_AngryIdle_9: -804371647
+      Tita_Talking_0: -1847076815
+      Tita_Talking_1: -1854447363
+      Tita_Talking_10: 2133928751
+      Tita_Talking_11: 468091245
+      Tita_Talking_12: 745449547
+      Tita_Talking_13: 590415110
+      Tita_Talking_14: 708238757
+      Tita_Talking_2: -491775900
+      Tita_Talking_3: 1111773193
+      Tita_Talking_4: -1772948585
+      Tita_Talking_5: -837670343
+      Tita_Talking_6: 469319486
+      Tita_Talking_7: -286883286
+      Tita_Talking_8: 270829313
+      Tita_Talking_9: 1923831347
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

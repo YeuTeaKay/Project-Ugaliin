@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e6b75bc112f071345bd55c6c15e2711f
+guid: 22c61c94d88efed4f9858c2e252f125c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_0
+      name: Lola Tindera_Talking_0
       rect:
         serializedVersion: 2
         x: 20
         y: 512
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0e860b854b9789419bc3fdccd317a91
-      internalID: -1761042594
+      spriteID: bbc74b350a3fd754abb66f9967fc6f6d
+      internalID: -564036573
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_1
+      name: Lola Tindera_Talking_1
       rect:
         serializedVersion: 2
         x: 276
         y: 512
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 980f98fdcd871de44975f0e1c47a8afe
-      internalID: -1859965375
+      spriteID: 26ff12d090f3067449f005ce5fdf45c4
+      internalID: -2051201006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_2
+      name: Lola Tindera_Talking_2
       rect:
         serializedVersion: 2
         x: 532
         y: 512
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1fee03652d48c44f8678787a34867aa
-      internalID: 879674877
+      spriteID: 870a2ff9ddac53746a6e113824528c46
+      internalID: -1488825799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_3
+      name: Lola Tindera_Talking_3
       rect:
         serializedVersion: 2
         x: 788
         y: 512
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea3332bd88287ef47a8c8f50ad87c135
-      internalID: -510223945
+      spriteID: 0d45a19ce25bce849b81b33ab6da2829
+      internalID: -1930609544
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_4
+      name: Lola Tindera_Talking_4
       rect:
         serializedVersion: 2
         x: 1044
         y: 512
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcb8f835733ae0b4d9c2fa443846c764
-      internalID: -1449567716
+      spriteID: 3bfa85ba93164fa499c2104042e2219c
+      internalID: -1589227865
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_5
+      name: Lola Tindera_Talking_5
       rect:
         serializedVersion: 2
         x: 20
         y: 256
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf86f0de1ec493548a1d6cb32fa26d97
-      internalID: -1040488801
+      spriteID: 22eec8d5e84ffed4682ead3612258292
+      internalID: -1493603685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_6
+      name: Lola Tindera_Talking_6
       rect:
         serializedVersion: 2
         x: 276
         y: 256
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88456537befabdd43987d712d84af809
-      internalID: -26900183
+      spriteID: 0c38b6007e26e7e41b3238066dd38c2b
+      internalID: 252012436
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_7
+      name: Lola Tindera_Talking_7
       rect:
         serializedVersion: 2
         x: 532
         y: 256
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,20 +284,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc3b5d31fb998404bab3f297c2cf7911
-      internalID: 1667364695
+      spriteID: d59a84343751bff4494b116c6dec420a
+      internalID: 201829768
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_8
+      name: Lola Tindera_Talking_8
       rect:
         serializedVersion: 2
         x: 788
         y: 256
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bebcef7139a2154468aeb827dec73dc8
-      internalID: -1260381393
+      spriteID: deb4f8d945e88e347b0778f4013f6c29
+      internalID: 369139878
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_9
+      name: Lola Tindera_Talking_9
       rect:
         serializedVersion: 2
         x: 1044
         y: 256
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,20 +326,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1d98eff6864ea045aa8de005645856a
-      internalID: -804371647
+      spriteID: 722dfbc930bca2e4894206cb169231dc
+      internalID: 515959009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_10
+      name: Lola Tindera_Talking_10
       rect:
         serializedVersion: 2
         x: 20
         y: 0
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -347,20 +347,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f20e07293ec1dd449b9a4adcd5954680
-      internalID: 773627576
+      spriteID: 393a9c54d62bfc144abdd70bea9800dd
+      internalID: 2099480144
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_11
+      name: Lola Tindera_Talking_11
       rect:
         serializedVersion: 2
         x: 276
         y: 0
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -368,20 +368,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4aa4995cf84a2c54397fc466451cf9f2
-      internalID: 1676059592
+      spriteID: 0a4340c9bdcaecb42939dbf20bcc5996
+      internalID: 1385166585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_12
+      name: Lola Tindera_Talking_12
       rect:
         serializedVersion: 2
         x: 532
         y: 0
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,20 +389,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83eb8a6990f4b1a4e9be9a3881097517
-      internalID: 1119267647
+      spriteID: 3d0ebb1179a81c74faea7ec9b303f59c
+      internalID: 1669279992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_13
+      name: Lola Tindera_Talking_13
       rect:
         serializedVersion: 2
         x: 788
         y: 0
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,20 +410,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 885f3780cf05355478c2df53e93a5dcf
-      internalID: -1186324807
+      spriteID: 87fc4239e39cf5d43a32622692e81633
+      internalID: -519135680
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_14
+      name: Lola Tindera_Talking_14
       rect:
         serializedVersion: 2
         x: 1044
         y: 0
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -431,8 +431,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f8572d02798c944ea29dbe1b4128b36
-      internalID: -1590524414
+      spriteID: 3803325949a343147b7db2b03124afd4
+      internalID: 1278140595
       vertices: []
       indices: 
       edges: []
@@ -440,7 +440,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 40d73d811eba5a845be8fa18ff9dc700
     internalID: 0
     vertices: []
     indices: 
@@ -448,21 +448,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Barangay Captain_AngryIdle_0: -1761042594
-      Barangay Captain_AngryIdle_1: -1859965375
-      Barangay Captain_AngryIdle_10: 773627576
-      Barangay Captain_AngryIdle_11: 1676059592
-      Barangay Captain_AngryIdle_12: 1119267647
-      Barangay Captain_AngryIdle_13: -1186324807
-      Barangay Captain_AngryIdle_14: -1590524414
-      Barangay Captain_AngryIdle_2: 879674877
-      Barangay Captain_AngryIdle_3: -510223945
-      Barangay Captain_AngryIdle_4: -1449567716
-      Barangay Captain_AngryIdle_5: -1040488801
-      Barangay Captain_AngryIdle_6: -26900183
-      Barangay Captain_AngryIdle_7: 1667364695
-      Barangay Captain_AngryIdle_8: -1260381393
-      Barangay Captain_AngryIdle_9: -804371647
+      Lola Tindera_Talking_0: -564036573
+      Lola Tindera_Talking_1: -2051201006
+      Lola Tindera_Talking_10: 2099480144
+      Lola Tindera_Talking_11: 1385166585
+      Lola Tindera_Talking_12: 1669279992
+      Lola Tindera_Talking_13: -519135680
+      Lola Tindera_Talking_14: 1278140595
+      Lola Tindera_Talking_2: -1488825799
+      Lola Tindera_Talking_3: -1930609544
+      Lola Tindera_Talking_4: -1589227865
+      Lola Tindera_Talking_5: -1493603685
+      Lola Tindera_Talking_6: 252012436
+      Lola Tindera_Talking_7: 201829768
+      Lola Tindera_Talking_8: 369139878
+      Lola Tindera_Talking_9: 515959009
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

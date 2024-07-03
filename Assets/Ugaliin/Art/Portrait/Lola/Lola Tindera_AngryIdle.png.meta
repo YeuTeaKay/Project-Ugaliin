@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e6b75bc112f071345bd55c6c15e2711f
+guid: 98569c7501b082f4d8e393f7eab5474d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_0
+      name: Lola Tindera_AngryIdle_0
       rect:
         serializedVersion: 2
         x: 20
         y: 512
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0e860b854b9789419bc3fdccd317a91
-      internalID: -1761042594
+      spriteID: af28d346b7b195b4f971a9da0a6015ff
+      internalID: 1192668546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_1
+      name: Lola Tindera_AngryIdle_1
       rect:
         serializedVersion: 2
         x: 276
         y: 512
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 980f98fdcd871de44975f0e1c47a8afe
-      internalID: -1859965375
+      spriteID: c9555b2fbed8ce0418a660792d017d0d
+      internalID: 1398593088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_2
+      name: Lola Tindera_AngryIdle_2
       rect:
         serializedVersion: 2
         x: 532
         y: 512
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1fee03652d48c44f8678787a34867aa
-      internalID: 879674877
+      spriteID: d55d1aa331643f648a667941376a58c0
+      internalID: 489279089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_3
+      name: Lola Tindera_AngryIdle_3
       rect:
         serializedVersion: 2
         x: 788
         y: 512
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea3332bd88287ef47a8c8f50ad87c135
-      internalID: -510223945
+      spriteID: ffa07714400ad2a49a7f8ba6eb7ec02a
+      internalID: 957043972
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_4
+      name: Lola Tindera_AngryIdle_4
       rect:
         serializedVersion: 2
         x: 1044
         y: 512
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcb8f835733ae0b4d9c2fa443846c764
-      internalID: -1449567716
+      spriteID: 837e28d9ce7e7be449b9b166d463ece3
+      internalID: -1203655363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_5
+      name: Lola Tindera_AngryIdle_5
       rect:
         serializedVersion: 2
         x: 20
         y: 256
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf86f0de1ec493548a1d6cb32fa26d97
-      internalID: -1040488801
+      spriteID: 5c309a86720cba44b8634dd156b45121
+      internalID: 1068952900
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_6
+      name: Lola Tindera_AngryIdle_6
       rect:
         serializedVersion: 2
         x: 276
         y: 256
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88456537befabdd43987d712d84af809
-      internalID: -26900183
+      spriteID: 6b29d52dc3bef1e4784d0b72a7859249
+      internalID: 1784046851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_7
+      name: Lola Tindera_AngryIdle_7
       rect:
         serializedVersion: 2
         x: 532
         y: 256
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,20 +284,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc3b5d31fb998404bab3f297c2cf7911
-      internalID: 1667364695
+      spriteID: d2945f70864b85b4fafb9db611e18e30
+      internalID: 710511883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_8
+      name: Lola Tindera_AngryIdle_8
       rect:
         serializedVersion: 2
         x: 788
         y: 256
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bebcef7139a2154468aeb827dec73dc8
-      internalID: -1260381393
+      spriteID: a9f65c8b98c2a2a4680cc6a2efa8e90f
+      internalID: 2017857979
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_9
+      name: Lola Tindera_AngryIdle_9
       rect:
         serializedVersion: 2
         x: 1044
         y: 256
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,20 +326,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1d98eff6864ea045aa8de005645856a
-      internalID: -804371647
+      spriteID: 5f3081f4e364c6549863b66d3ddb74d2
+      internalID: 2141511889
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_10
+      name: Lola Tindera_AngryIdle_10
       rect:
         serializedVersion: 2
         x: 20
         y: 0
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -347,20 +347,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f20e07293ec1dd449b9a4adcd5954680
-      internalID: 773627576
+      spriteID: 5669f14a8e58f5f44ba761c3af992ebe
+      internalID: 1486657527
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_11
+      name: Lola Tindera_AngryIdle_11
       rect:
         serializedVersion: 2
         x: 276
         y: 0
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -368,20 +368,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4aa4995cf84a2c54397fc466451cf9f2
-      internalID: 1676059592
+      spriteID: 674592102cc59ad40a6e328e20d75806
+      internalID: 796896958
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_12
+      name: Lola Tindera_AngryIdle_12
       rect:
         serializedVersion: 2
         x: 532
         y: 0
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,20 +389,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83eb8a6990f4b1a4e9be9a3881097517
-      internalID: 1119267647
+      spriteID: 7607652aa7149084e83759d99ab5f46e
+      internalID: -680344626
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_13
+      name: Lola Tindera_AngryIdle_13
       rect:
         serializedVersion: 2
         x: 788
         y: 0
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,20 +410,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 885f3780cf05355478c2df53e93a5dcf
-      internalID: -1186324807
+      spriteID: 33dda4ca2f4d5e94caa39047dfcb295d
+      internalID: -1655031980
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_14
+      name: Lola Tindera_AngryIdle_14
       rect:
         serializedVersion: 2
         x: 1044
         y: 0
         width: 208
-        height: 228
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -431,8 +431,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f8572d02798c944ea29dbe1b4128b36
-      internalID: -1590524414
+      spriteID: 0bcb185f6c7d3e545a7ffe4d86a443f5
+      internalID: 544518327
       vertices: []
       indices: 
       edges: []
@@ -440,7 +440,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: e56ab30f530e86a458f086a604569efa
     internalID: 0
     vertices: []
     indices: 
@@ -448,21 +448,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Barangay Captain_AngryIdle_0: -1761042594
-      Barangay Captain_AngryIdle_1: -1859965375
-      Barangay Captain_AngryIdle_10: 773627576
-      Barangay Captain_AngryIdle_11: 1676059592
-      Barangay Captain_AngryIdle_12: 1119267647
-      Barangay Captain_AngryIdle_13: -1186324807
-      Barangay Captain_AngryIdle_14: -1590524414
-      Barangay Captain_AngryIdle_2: 879674877
-      Barangay Captain_AngryIdle_3: -510223945
-      Barangay Captain_AngryIdle_4: -1449567716
-      Barangay Captain_AngryIdle_5: -1040488801
-      Barangay Captain_AngryIdle_6: -26900183
-      Barangay Captain_AngryIdle_7: 1667364695
-      Barangay Captain_AngryIdle_8: -1260381393
-      Barangay Captain_AngryIdle_9: -804371647
+      Lola Tindera_AngryIdle_0: 1192668546
+      Lola Tindera_AngryIdle_1: 1398593088
+      Lola Tindera_AngryIdle_10: 1486657527
+      Lola Tindera_AngryIdle_11: 796896958
+      Lola Tindera_AngryIdle_12: -680344626
+      Lola Tindera_AngryIdle_13: -1655031980
+      Lola Tindera_AngryIdle_14: 544518327
+      Lola Tindera_AngryIdle_2: 489279089
+      Lola Tindera_AngryIdle_3: 957043972
+      Lola Tindera_AngryIdle_4: -1203655363
+      Lola Tindera_AngryIdle_5: 1068952900
+      Lola Tindera_AngryIdle_6: 1784046851
+      Lola Tindera_AngryIdle_7: 710511883
+      Lola Tindera_AngryIdle_8: 2017857979
+      Lola Tindera_AngryIdle_9: 2141511889
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e6b75bc112f071345bd55c6c15e2711f
+guid: d791534d307ec234188a7c0119b2f025
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_0
+      name: Mother_AngryTalking_0
       rect:
         serializedVersion: 2
         x: 20
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0e860b854b9789419bc3fdccd317a91
-      internalID: -1761042594
+      spriteID: b225d4ac84d3435409cb32b337c2d8d9
+      internalID: -1147400100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_1
+      name: Mother_AngryTalking_1
       rect:
         serializedVersion: 2
         x: 276
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 980f98fdcd871de44975f0e1c47a8afe
-      internalID: -1859965375
+      spriteID: 8c19274ddb5308740bc1ae60e0c7de1a
+      internalID: -1117990237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_2
+      name: Mother_AngryTalking_2
       rect:
         serializedVersion: 2
         x: 532
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1fee03652d48c44f8678787a34867aa
-      internalID: 879674877
+      spriteID: 00efb318566bd53469aeb98b8d71be22
+      internalID: -610143085
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_3
+      name: Mother_AngryTalking_3
       rect:
         serializedVersion: 2
         x: 788
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea3332bd88287ef47a8c8f50ad87c135
-      internalID: -510223945
+      spriteID: 598fbc00a4365fe4caf4b8352e867ea5
+      internalID: 1301363573
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_4
+      name: Mother_AngryTalking_4
       rect:
         serializedVersion: 2
         x: 1044
@@ -221,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcb8f835733ae0b4d9c2fa443846c764
-      internalID: -1449567716
+      spriteID: 99f7d9a344981524197ebc59fb934f36
+      internalID: 1156977107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_5
+      name: Mother_AngryTalking_5
       rect:
         serializedVersion: 2
         x: 20
@@ -242,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf86f0de1ec493548a1d6cb32fa26d97
-      internalID: -1040488801
+      spriteID: 912d27a9d80b1214abf6f10923114850
+      internalID: -149837096
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_6
+      name: Mother_AngryTalking_6
       rect:
         serializedVersion: 2
         x: 276
@@ -263,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88456537befabdd43987d712d84af809
-      internalID: -26900183
+      spriteID: 8aba90d5249871b478c509268f162122
+      internalID: -919118471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_7
+      name: Mother_AngryTalking_7
       rect:
         serializedVersion: 2
         x: 532
@@ -284,14 +284,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc3b5d31fb998404bab3f297c2cf7911
-      internalID: 1667364695
+      spriteID: 98f7849f127bc8b44b56d580c6647150
+      internalID: 1736513884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_8
+      name: Mother_AngryTalking_8
       rect:
         serializedVersion: 2
         x: 788
@@ -305,14 +305,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bebcef7139a2154468aeb827dec73dc8
-      internalID: -1260381393
+      spriteID: b2912aa747af97b4091b737ccb485d18
+      internalID: -176253697
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_9
+      name: Mother_AngryTalking_9
       rect:
         serializedVersion: 2
         x: 1044
@@ -326,14 +326,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1d98eff6864ea045aa8de005645856a
-      internalID: -804371647
+      spriteID: 3481b5d01dd127c4d8475f81fe957c38
+      internalID: -1267675656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_10
+      name: Mother_AngryTalking_10
       rect:
         serializedVersion: 2
         x: 20
@@ -347,14 +347,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f20e07293ec1dd449b9a4adcd5954680
-      internalID: 773627576
+      spriteID: 136b2508632d1284bbfda8e34139ad39
+      internalID: 745214704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_11
+      name: Mother_AngryTalking_11
       rect:
         serializedVersion: 2
         x: 276
@@ -368,14 +368,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4aa4995cf84a2c54397fc466451cf9f2
-      internalID: 1676059592
+      spriteID: 4e3b36823f05eaf4ba1d8d31d1aa0f58
+      internalID: -159302451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_12
+      name: Mother_AngryTalking_12
       rect:
         serializedVersion: 2
         x: 532
@@ -389,14 +389,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83eb8a6990f4b1a4e9be9a3881097517
-      internalID: 1119267647
+      spriteID: 50fe2e35e7804314183b39e97373bdd3
+      internalID: -925170115
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_13
+      name: Mother_AngryTalking_13
       rect:
         serializedVersion: 2
         x: 788
@@ -410,14 +410,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 885f3780cf05355478c2df53e93a5dcf
-      internalID: -1186324807
+      spriteID: bff9f51336f3b3c468713878c625be74
+      internalID: -802187954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_14
+      name: Mother_AngryTalking_14
       rect:
         serializedVersion: 2
         x: 1044
@@ -431,8 +431,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f8572d02798c944ea29dbe1b4128b36
-      internalID: -1590524414
+      spriteID: d658d52db82732b4fb9f8efa920f9566
+      internalID: 1067163976
       vertices: []
       indices: 
       edges: []
@@ -440,7 +440,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 09ab0ccb8f571e440bbb2f7f82f72fa7
     internalID: 0
     vertices: []
     indices: 
@@ -448,21 +448,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Barangay Captain_AngryIdle_0: -1761042594
-      Barangay Captain_AngryIdle_1: -1859965375
-      Barangay Captain_AngryIdle_10: 773627576
-      Barangay Captain_AngryIdle_11: 1676059592
-      Barangay Captain_AngryIdle_12: 1119267647
-      Barangay Captain_AngryIdle_13: -1186324807
-      Barangay Captain_AngryIdle_14: -1590524414
-      Barangay Captain_AngryIdle_2: 879674877
-      Barangay Captain_AngryIdle_3: -510223945
-      Barangay Captain_AngryIdle_4: -1449567716
-      Barangay Captain_AngryIdle_5: -1040488801
-      Barangay Captain_AngryIdle_6: -26900183
-      Barangay Captain_AngryIdle_7: 1667364695
-      Barangay Captain_AngryIdle_8: -1260381393
-      Barangay Captain_AngryIdle_9: -804371647
+      Mother_AngryTalking_0: -1147400100
+      Mother_AngryTalking_1: -1117990237
+      Mother_AngryTalking_10: 745214704
+      Mother_AngryTalking_11: -159302451
+      Mother_AngryTalking_12: -925170115
+      Mother_AngryTalking_13: -802187954
+      Mother_AngryTalking_14: 1067163976
+      Mother_AngryTalking_2: -610143085
+      Mother_AngryTalking_3: 1301363573
+      Mother_AngryTalking_4: 1156977107
+      Mother_AngryTalking_5: -149837096
+      Mother_AngryTalking_6: -919118471
+      Mother_AngryTalking_7: 1736513884
+      Mother_AngryTalking_8: -176253697
+      Mother_AngryTalking_9: -1267675656
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e6b75bc112f071345bd55c6c15e2711f
+guid: b3722a6f4a5f0394eb765cdb8d47e239
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_0
+      name: Kapit Bahay_AngryTalking_0
       rect:
         serializedVersion: 2
         x: 20
         y: 512
         width: 208
-        height: 228
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0e860b854b9789419bc3fdccd317a91
-      internalID: -1761042594
+      spriteID: 3c4472d388eaf1643913f0048670d984
+      internalID: 1653340696
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_1
+      name: Kapit Bahay_AngryTalking_1
       rect:
         serializedVersion: 2
         x: 276
         y: 512
         width: 208
-        height: 228
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 980f98fdcd871de44975f0e1c47a8afe
-      internalID: -1859965375
+      spriteID: fd4cec4e313764448b1e7c23e6e6091a
+      internalID: -921436554
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_2
+      name: Kapit Bahay_AngryTalking_2
       rect:
         serializedVersion: 2
         x: 532
         y: 512
         width: 208
-        height: 228
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1fee03652d48c44f8678787a34867aa
-      internalID: 879674877
+      spriteID: 3b49953f21763fd47bb4842ad1c5bf74
+      internalID: -797594525
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_3
+      name: Kapit Bahay_AngryTalking_3
       rect:
         serializedVersion: 2
         x: 788
         y: 512
         width: 208
-        height: 228
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea3332bd88287ef47a8c8f50ad87c135
-      internalID: -510223945
+      spriteID: e16e9414f6a5ea544b5069b78f9413fb
+      internalID: 308391701
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_4
+      name: Kapit Bahay_AngryTalking_4
       rect:
         serializedVersion: 2
         x: 1044
         y: 512
         width: 208
-        height: 228
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcb8f835733ae0b4d9c2fa443846c764
-      internalID: -1449567716
+      spriteID: 7e350389f24690b44a715db114f1d72d
+      internalID: 626405473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_5
+      name: Kapit Bahay_AngryTalking_5
       rect:
         serializedVersion: 2
         x: 20
         y: 256
         width: 208
-        height: 228
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf86f0de1ec493548a1d6cb32fa26d97
-      internalID: -1040488801
+      spriteID: 95ccd36971598064bab1d7caf7e8ccc5
+      internalID: -2012366926
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_6
+      name: Kapit Bahay_AngryTalking_6
       rect:
         serializedVersion: 2
         x: 276
         y: 256
         width: 208
-        height: 228
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88456537befabdd43987d712d84af809
-      internalID: -26900183
+      spriteID: ec02726101a93bd489820b7b3ca6875e
+      internalID: 512856061
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_7
+      name: Kapit Bahay_AngryTalking_7
       rect:
         serializedVersion: 2
         x: 532
         y: 256
         width: 208
-        height: 228
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,20 +284,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc3b5d31fb998404bab3f297c2cf7911
-      internalID: 1667364695
+      spriteID: 639bec0d59cf048409615759bff30693
+      internalID: 569785928
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_8
+      name: Kapit Bahay_AngryTalking_8
       rect:
         serializedVersion: 2
         x: 788
         y: 256
         width: 208
-        height: 228
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bebcef7139a2154468aeb827dec73dc8
-      internalID: -1260381393
+      spriteID: a399d46112ba453458888a47b7c9f0f8
+      internalID: 1576654961
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_9
+      name: Kapit Bahay_AngryTalking_9
       rect:
         serializedVersion: 2
         x: 1044
         y: 256
         width: 208
-        height: 228
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,20 +326,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1d98eff6864ea045aa8de005645856a
-      internalID: -804371647
+      spriteID: 1d6fc28f52bba7342a0f9be024bd356b
+      internalID: -457697424
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_10
+      name: Kapit Bahay_AngryTalking_10
       rect:
         serializedVersion: 2
         x: 20
         y: 0
         width: 208
-        height: 228
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -347,20 +347,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f20e07293ec1dd449b9a4adcd5954680
-      internalID: 773627576
+      spriteID: bb1dc0c593fd64a4a8425cf6fe0d5b0b
+      internalID: 1934020699
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_11
+      name: Kapit Bahay_AngryTalking_11
       rect:
         serializedVersion: 2
         x: 276
         y: 0
         width: 208
-        height: 228
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -368,20 +368,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4aa4995cf84a2c54397fc466451cf9f2
-      internalID: 1676059592
+      spriteID: 4fe509334c65dab47bbe267cf0952090
+      internalID: -1739974108
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_12
+      name: Kapit Bahay_AngryTalking_12
       rect:
         serializedVersion: 2
         x: 532
         y: 0
         width: 208
-        height: 228
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,20 +389,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83eb8a6990f4b1a4e9be9a3881097517
-      internalID: 1119267647
+      spriteID: b0950a85e57c87140b9c58b992ce0299
+      internalID: 122622176
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_13
+      name: Kapit Bahay_AngryTalking_13
       rect:
         serializedVersion: 2
         x: 788
         y: 0
         width: 208
-        height: 228
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,20 +410,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 885f3780cf05355478c2df53e93a5dcf
-      internalID: -1186324807
+      spriteID: f3a961fe6e428d64a93f323d6fafcb5a
+      internalID: -301344839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_14
+      name: Kapit Bahay_AngryTalking_14
       rect:
         serializedVersion: 2
         x: 1044
         y: 0
         width: 208
-        height: 228
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -431,8 +431,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f8572d02798c944ea29dbe1b4128b36
-      internalID: -1590524414
+      spriteID: e9be75e29b4464f4ea8ede64dd62b0c5
+      internalID: -1324829276
       vertices: []
       indices: 
       edges: []
@@ -440,7 +440,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 31c8ffdf35a482b4c9757e66053dd4b2
     internalID: 0
     vertices: []
     indices: 
@@ -448,21 +448,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Barangay Captain_AngryIdle_0: -1761042594
-      Barangay Captain_AngryIdle_1: -1859965375
-      Barangay Captain_AngryIdle_10: 773627576
-      Barangay Captain_AngryIdle_11: 1676059592
-      Barangay Captain_AngryIdle_12: 1119267647
-      Barangay Captain_AngryIdle_13: -1186324807
-      Barangay Captain_AngryIdle_14: -1590524414
-      Barangay Captain_AngryIdle_2: 879674877
-      Barangay Captain_AngryIdle_3: -510223945
-      Barangay Captain_AngryIdle_4: -1449567716
-      Barangay Captain_AngryIdle_5: -1040488801
-      Barangay Captain_AngryIdle_6: -26900183
-      Barangay Captain_AngryIdle_7: 1667364695
-      Barangay Captain_AngryIdle_8: -1260381393
-      Barangay Captain_AngryIdle_9: -804371647
+      Kapit Bahay_AngryTalking_0: 1653340696
+      Kapit Bahay_AngryTalking_1: -921436554
+      Kapit Bahay_AngryTalking_10: 1934020699
+      Kapit Bahay_AngryTalking_11: -1739974108
+      Kapit Bahay_AngryTalking_12: 122622176
+      Kapit Bahay_AngryTalking_13: -301344839
+      Kapit Bahay_AngryTalking_14: -1324829276
+      Kapit Bahay_AngryTalking_2: -797594525
+      Kapit Bahay_AngryTalking_3: 308391701
+      Kapit Bahay_AngryTalking_4: 626405473
+      Kapit Bahay_AngryTalking_5: -2012366926
+      Kapit Bahay_AngryTalking_6: 512856061
+      Kapit Bahay_AngryTalking_7: 569785928
+      Kapit Bahay_AngryTalking_8: 1576654961
+      Kapit Bahay_AngryTalking_9: -457697424
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

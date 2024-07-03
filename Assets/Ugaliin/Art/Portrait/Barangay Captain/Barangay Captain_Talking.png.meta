@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e6b75bc112f071345bd55c6c15e2711f
+guid: e82a78a5efa0dfe49afd6c9a3b2c03f7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_0
+      name: Barangay Captain_Talking_0
       rect:
         serializedVersion: 2
         x: 20
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0e860b854b9789419bc3fdccd317a91
-      internalID: -1761042594
+      spriteID: b9489d5946fa3fe46a53d138f32a6b01
+      internalID: 736952762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_1
+      name: Barangay Captain_Talking_1
       rect:
         serializedVersion: 2
         x: 276
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 980f98fdcd871de44975f0e1c47a8afe
-      internalID: -1859965375
+      spriteID: b16fb45b5801e23469303005f7d5526c
+      internalID: 833718859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_2
+      name: Barangay Captain_Talking_2
       rect:
         serializedVersion: 2
         x: 532
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1fee03652d48c44f8678787a34867aa
-      internalID: 879674877
+      spriteID: 36f28be54c4891b41a4a5aa6e91acf43
+      internalID: 714746384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_3
+      name: Barangay Captain_Talking_3
       rect:
         serializedVersion: 2
         x: 788
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea3332bd88287ef47a8c8f50ad87c135
-      internalID: -510223945
+      spriteID: 2ad6bd5ae03a8e64d842b72448607963
+      internalID: -2064882671
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_4
+      name: Barangay Captain_Talking_4
       rect:
         serializedVersion: 2
         x: 1044
@@ -221,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcb8f835733ae0b4d9c2fa443846c764
-      internalID: -1449567716
+      spriteID: e000d7a917a5e7c438e0089ea1d617d4
+      internalID: 2095867682
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_5
+      name: Barangay Captain_Talking_5
       rect:
         serializedVersion: 2
         x: 20
@@ -242,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf86f0de1ec493548a1d6cb32fa26d97
-      internalID: -1040488801
+      spriteID: 57a4d6b71fd5d56449f912e44ac5d2f1
+      internalID: 152499872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_6
+      name: Barangay Captain_Talking_6
       rect:
         serializedVersion: 2
         x: 276
@@ -263,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88456537befabdd43987d712d84af809
-      internalID: -26900183
+      spriteID: 86b9b3c9925755c4094e414acc29d1cc
+      internalID: -2078990955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_7
+      name: Barangay Captain_Talking_7
       rect:
         serializedVersion: 2
         x: 532
@@ -284,14 +284,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc3b5d31fb998404bab3f297c2cf7911
-      internalID: 1667364695
+      spriteID: 7454487e61012d247a27a282692462fd
+      internalID: 172756896
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_8
+      name: Barangay Captain_Talking_8
       rect:
         serializedVersion: 2
         x: 788
@@ -305,14 +305,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bebcef7139a2154468aeb827dec73dc8
-      internalID: -1260381393
+      spriteID: eb8acb53d16030c4aae1a109e6a90646
+      internalID: -353512257
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_9
+      name: Barangay Captain_Talking_9
       rect:
         serializedVersion: 2
         x: 1044
@@ -326,14 +326,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1d98eff6864ea045aa8de005645856a
-      internalID: -804371647
+      spriteID: 9902c333c4648124c8bfac2a0285659d
+      internalID: 266432133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_10
+      name: Barangay Captain_Talking_10
       rect:
         serializedVersion: 2
         x: 20
@@ -347,14 +347,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f20e07293ec1dd449b9a4adcd5954680
-      internalID: 773627576
+      spriteID: 5812331eaace5634287af34e82e0b505
+      internalID: 503730593
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_11
+      name: Barangay Captain_Talking_11
       rect:
         serializedVersion: 2
         x: 276
@@ -368,14 +368,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4aa4995cf84a2c54397fc466451cf9f2
-      internalID: 1676059592
+      spriteID: fa504e063b3a1ab428832631557a1857
+      internalID: -405901377
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_12
+      name: Barangay Captain_Talking_12
       rect:
         serializedVersion: 2
         x: 532
@@ -389,14 +389,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83eb8a6990f4b1a4e9be9a3881097517
-      internalID: 1119267647
+      spriteID: ec9b1dd65df76b44ea5e7e6f7abd9983
+      internalID: 2040877938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_13
+      name: Barangay Captain_Talking_13
       rect:
         serializedVersion: 2
         x: 788
@@ -410,14 +410,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 885f3780cf05355478c2df53e93a5dcf
-      internalID: -1186324807
+      spriteID: fa440c4f2eab27c4eb7bbee055175beb
+      internalID: 1750374082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_14
+      name: Barangay Captain_Talking_14
       rect:
         serializedVersion: 2
         x: 1044
@@ -431,8 +431,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f8572d02798c944ea29dbe1b4128b36
-      internalID: -1590524414
+      spriteID: 933c1dc193d91cd4c8b3b6730cd88135
+      internalID: -213514912
       vertices: []
       indices: 
       edges: []
@@ -440,7 +440,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 2957e979d3cafb144ab73fd70ae8fa10
     internalID: 0
     vertices: []
     indices: 
@@ -448,21 +448,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Barangay Captain_AngryIdle_0: -1761042594
-      Barangay Captain_AngryIdle_1: -1859965375
-      Barangay Captain_AngryIdle_10: 773627576
-      Barangay Captain_AngryIdle_11: 1676059592
-      Barangay Captain_AngryIdle_12: 1119267647
-      Barangay Captain_AngryIdle_13: -1186324807
-      Barangay Captain_AngryIdle_14: -1590524414
-      Barangay Captain_AngryIdle_2: 879674877
-      Barangay Captain_AngryIdle_3: -510223945
-      Barangay Captain_AngryIdle_4: -1449567716
-      Barangay Captain_AngryIdle_5: -1040488801
-      Barangay Captain_AngryIdle_6: -26900183
-      Barangay Captain_AngryIdle_7: 1667364695
-      Barangay Captain_AngryIdle_8: -1260381393
-      Barangay Captain_AngryIdle_9: -804371647
+      Barangay Captain_Talking_0: 736952762
+      Barangay Captain_Talking_1: 833718859
+      Barangay Captain_Talking_10: 503730593
+      Barangay Captain_Talking_11: -405901377
+      Barangay Captain_Talking_12: 2040877938
+      Barangay Captain_Talking_13: 1750374082
+      Barangay Captain_Talking_14: -213514912
+      Barangay Captain_Talking_2: 714746384
+      Barangay Captain_Talking_3: -2064882671
+      Barangay Captain_Talking_4: 2095867682
+      Barangay Captain_Talking_5: 152499872
+      Barangay Captain_Talking_6: -2078990955
+      Barangay Captain_Talking_7: 172756896
+      Barangay Captain_Talking_8: -353512257
+      Barangay Captain_Talking_9: 266432133
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

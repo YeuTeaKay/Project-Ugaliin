@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e6b75bc112f071345bd55c6c15e2711f
+guid: 5e2c3ae871c3ada4985800ac6446270d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_0
+      name: Pinsan_AngryTalking_0
       rect:
         serializedVersion: 2
-        x: 20
+        x: 16
         y: 512
-        width: 208
-        height: 228
+        width: 216
+        height: 218
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0e860b854b9789419bc3fdccd317a91
-      internalID: -1761042594
+      spriteID: dd74f035ab405cb4aaaa7f06b3c3a669
+      internalID: 2035211026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_1
+      name: Pinsan_AngryTalking_1
       rect:
         serializedVersion: 2
-        x: 276
+        x: 272
         y: 512
-        width: 208
-        height: 228
+        width: 216
+        height: 218
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 980f98fdcd871de44975f0e1c47a8afe
-      internalID: -1859965375
+      spriteID: 4242170dc82c22e40a6cd862c699c663
+      internalID: 540021908
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_2
+      name: Pinsan_AngryTalking_2
       rect:
         serializedVersion: 2
-        x: 532
+        x: 528
         y: 512
-        width: 208
-        height: 228
+        width: 216
+        height: 218
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1fee03652d48c44f8678787a34867aa
-      internalID: 879674877
+      spriteID: da3c8a0661de70d4ea47433402b997f7
+      internalID: 687311481
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_3
+      name: Pinsan_AngryTalking_3
       rect:
         serializedVersion: 2
-        x: 788
+        x: 784
         y: 512
-        width: 208
-        height: 228
+        width: 216
+        height: 218
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea3332bd88287ef47a8c8f50ad87c135
-      internalID: -510223945
+      spriteID: 6cad172c1eacd624d88ec52b28f2a128
+      internalID: -1049546796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_4
+      name: Pinsan_AngryTalking_4
       rect:
         serializedVersion: 2
-        x: 1044
+        x: 1040
         y: 512
-        width: 208
-        height: 228
+        width: 216
+        height: 218
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcb8f835733ae0b4d9c2fa443846c764
-      internalID: -1449567716
+      spriteID: 015f5fc8b7fed1a43b1bc8839040a188
+      internalID: -1152042011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_5
+      name: Pinsan_AngryTalking_5
       rect:
         serializedVersion: 2
-        x: 20
+        x: 16
         y: 256
-        width: 208
-        height: 228
+        width: 216
+        height: 218
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf86f0de1ec493548a1d6cb32fa26d97
-      internalID: -1040488801
+      spriteID: 1ba423c59bfcfa245ad6a7e985d7f81d
+      internalID: 2029156805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_6
+      name: Pinsan_AngryTalking_6
       rect:
         serializedVersion: 2
-        x: 276
+        x: 272
         y: 256
-        width: 208
-        height: 228
+        width: 216
+        height: 218
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88456537befabdd43987d712d84af809
-      internalID: -26900183
+      spriteID: 2325374735b9c10468444c31ea07b2a1
+      internalID: -564782071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_7
+      name: Pinsan_AngryTalking_7
       rect:
         serializedVersion: 2
-        x: 532
+        x: 528
         y: 256
-        width: 208
-        height: 228
+        width: 216
+        height: 218
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,20 +284,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc3b5d31fb998404bab3f297c2cf7911
-      internalID: 1667364695
+      spriteID: 3a5ae06cd38c8414f9632560a6e32994
+      internalID: 492093859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_8
+      name: Pinsan_AngryTalking_8
       rect:
         serializedVersion: 2
-        x: 788
+        x: 784
         y: 256
-        width: 208
-        height: 228
+        width: 216
+        height: 218
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bebcef7139a2154468aeb827dec73dc8
-      internalID: -1260381393
+      spriteID: 71477e839ce6e5741bd43333ed125aa3
+      internalID: -1777368943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_9
+      name: Pinsan_AngryTalking_9
       rect:
         serializedVersion: 2
-        x: 1044
+        x: 1040
         y: 256
-        width: 208
-        height: 228
+        width: 216
+        height: 218
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,20 +326,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1d98eff6864ea045aa8de005645856a
-      internalID: -804371647
+      spriteID: 03a879ded688764488917821f396fd55
+      internalID: 469859586
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_10
+      name: Pinsan_AngryTalking_10
       rect:
         serializedVersion: 2
-        x: 20
+        x: 16
         y: 0
-        width: 208
-        height: 228
+        width: 216
+        height: 218
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -347,20 +347,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f20e07293ec1dd449b9a4adcd5954680
-      internalID: 773627576
+      spriteID: d3e9ca1aaf9bbe94d9d4d9647b7fe2ef
+      internalID: 154848485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_11
+      name: Pinsan_AngryTalking_11
       rect:
         serializedVersion: 2
-        x: 276
+        x: 272
         y: 0
-        width: 208
-        height: 228
+        width: 216
+        height: 218
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -368,20 +368,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4aa4995cf84a2c54397fc466451cf9f2
-      internalID: 1676059592
+      spriteID: c5173b7096388944c8432c60a2eef576
+      internalID: -1626574077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_12
+      name: Pinsan_AngryTalking_12
       rect:
         serializedVersion: 2
-        x: 532
+        x: 528
         y: 0
-        width: 208
-        height: 228
+        width: 216
+        height: 218
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,20 +389,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83eb8a6990f4b1a4e9be9a3881097517
-      internalID: 1119267647
+      spriteID: 8adadfc3b6dc6904e8c9472a7c37600c
+      internalID: 1190024114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_13
+      name: Pinsan_AngryTalking_13
       rect:
         serializedVersion: 2
-        x: 788
+        x: 784
         y: 0
-        width: 208
-        height: 228
+        width: 216
+        height: 218
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,20 +410,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 885f3780cf05355478c2df53e93a5dcf
-      internalID: -1186324807
+      spriteID: e7642848f268b5640aca7ea4a776ed5e
+      internalID: 501936235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barangay Captain_AngryIdle_14
+      name: Pinsan_AngryTalking_14
       rect:
         serializedVersion: 2
-        x: 1044
+        x: 1040
         y: 0
-        width: 208
-        height: 228
+        width: 216
+        height: 218
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -431,8 +431,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f8572d02798c944ea29dbe1b4128b36
-      internalID: -1590524414
+      spriteID: 331a506189dabb24e9fe8c4d40dd0053
+      internalID: 1011776573
       vertices: []
       indices: 
       edges: []
@@ -440,7 +440,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: ea57271371083fd43a3e746761aca599
     internalID: 0
     vertices: []
     indices: 
@@ -448,21 +448,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Barangay Captain_AngryIdle_0: -1761042594
-      Barangay Captain_AngryIdle_1: -1859965375
-      Barangay Captain_AngryIdle_10: 773627576
-      Barangay Captain_AngryIdle_11: 1676059592
-      Barangay Captain_AngryIdle_12: 1119267647
-      Barangay Captain_AngryIdle_13: -1186324807
-      Barangay Captain_AngryIdle_14: -1590524414
-      Barangay Captain_AngryIdle_2: 879674877
-      Barangay Captain_AngryIdle_3: -510223945
-      Barangay Captain_AngryIdle_4: -1449567716
-      Barangay Captain_AngryIdle_5: -1040488801
-      Barangay Captain_AngryIdle_6: -26900183
-      Barangay Captain_AngryIdle_7: 1667364695
-      Barangay Captain_AngryIdle_8: -1260381393
-      Barangay Captain_AngryIdle_9: -804371647
+      Pinsan_AngryTalking_0: 2035211026
+      Pinsan_AngryTalking_1: 540021908
+      Pinsan_AngryTalking_10: 154848485
+      Pinsan_AngryTalking_11: -1626574077
+      Pinsan_AngryTalking_12: 1190024114
+      Pinsan_AngryTalking_13: 501936235
+      Pinsan_AngryTalking_14: 1011776573
+      Pinsan_AngryTalking_2: 687311481
+      Pinsan_AngryTalking_3: -1049546796
+      Pinsan_AngryTalking_4: -1152042011
+      Pinsan_AngryTalking_5: 2029156805
+      Pinsan_AngryTalking_6: -564782071
+      Pinsan_AngryTalking_7: 492093859
+      Pinsan_AngryTalking_8: -1777368943
+      Pinsan_AngryTalking_9: 469859586
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
