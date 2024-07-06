@@ -448,6 +448,8 @@
     public void LoadData(GameData data)
     {
         dialogueVAR.VAR["playerProgress"] = new Ink.Runtime.IntValue(data.playerProgress);
+        dialogueVAR.VAR["badChoicesCounter"] = new Ink.Runtime.IntValue(data.badChoicesCounter);
+        dialogueVAR.VAR["goodChoicesCounter"] = new Ink.Runtime.IntValue(data.goodChoicesCounter);
     }
     
     public void SaveData(GameData data)
@@ -456,6 +458,20 @@
         {
             data.playerProgress = (int)((Ink.Runtime.IntValue)dialogueVAR.VAR["playerProgress"]).value;
         }
+
+        if (dialogueVAR.VAR.ContainsKey("badChoicesCounter"))
+        {
+            data.badChoicesCounter = (int)((Ink.Runtime.IntValue)dialogueVAR.VAR["badChoicesCounter"]).value;
+        }
+
+        if (dialogueVAR.VAR.ContainsKey("goodChoicesCounter"))
+        {
+            data.goodChoicesCounter = (int)((Ink.Runtime.IntValue)dialogueVAR.VAR["goodChoicesCounter"]).value;
+        }
+
+        Debug.Log("Saved playerProgress: " + data.playerProgress);
+        Debug.Log("Saved badChoicesCounter: " + data.badChoicesCounter);
+        Debug.Log("Saved goodChoicesCounter: " + data.goodChoicesCounter);
     }
 
 
