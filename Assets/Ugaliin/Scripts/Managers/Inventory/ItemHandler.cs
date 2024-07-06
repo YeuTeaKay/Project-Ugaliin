@@ -3,59 +3,42 @@ using UnityEngine;
 
 public class ItemHandler : MonoBehaviour
 {
-    [SerializeField] private Item choiceItem0;
-    [SerializeField] private Item choiceItem1;
-    [SerializeField] private Item choiceItem2;
-    [SerializeField] private Item removeItem0;
-    [SerializeField] private Item removeItem1;
-    [SerializeField] private Item removeItem2;
+    [SerializeField] private Item[] choiceItems;
+    [SerializeField] private Item[] removeItems;
 
     private bool actionPerformed = false;
-
 
     private void Update()
     {
         if (!actionPerformed)
         {
-            string IsplayerChoice = ((Ink.Runtime.StringValue) VNManager
-            .GetInstance()
-            .GetVariableState("playerChoice")).value;
+            string playerChoice = ((Ink.Runtime.StringValue)VNManager.GetInstance().GetVariableState("playerChoice")).value;
 
-             switch (IsplayerChoice)
+            if (playerChoice.StartsWith("choiceItem"))
             {
-                case "choiceItem0":
-                    Debug.Log("Player choice: " + IsplayerChoice);
-                    GiveItem(choiceItem0);
+                int index = int.Parse(playerChoice.Substring("choiceItem".Length));
+                if (index >= 0 && index < choiceItems.Length)
+                {
+                    Debug.Log("Player choice (good): " + playerChoice);
+                    GiveItem(choiceItems[index]);
                     actionPerformed = true;
-                    break;
-                case "choiceItem1":
-                    Debug.Log("Player choice: " + IsplayerChoice);
-                    GiveItem(choiceItem1);
+                    ResetPlayerChoice();
+                }
+            }
+            else if (playerChoice.StartsWith("removeItem"))
+            {
+                int index = int.Parse(playerChoice.Substring("removeItem".Length));
+                if (index >= 0 && index < removeItems.Length)
+                {
+                    Debug.Log("Player choice (bad): " + playerChoice);
+                    RemoveItem(removeItems[index]);
                     actionPerformed = true;
-                    break;
-                case "choiceItem2":
-                    Debug.Log("Player choice: " + IsplayerChoice);
-                    GiveItem(choiceItem2);
-                    actionPerformed = true;
-                    break;
-                case "removeItem0":
-                    Debug.Log("Remove item: " + IsplayerChoice);
-                    RemoveItem(removeItem0);
-                    actionPerformed = true;
-                    break;
-                case "removeItem1":
-                    Debug.Log("Remove item: " + IsplayerChoice);
-                    RemoveItem(removeItem1);
-                    actionPerformed = true;
-                    break;
-                case "removeItem2":
-                    Debug.Log("Remove item: " + IsplayerChoice);
-                    RemoveItem(removeItem2);
-                    actionPerformed = true;
-                    break;
-                default:
-                    Debug.LogWarning("Player choice was not found: " + IsplayerChoice);
-                    break;
+                    ResetPlayerChoice();
+                }
+            }
+            else
+            {
+                Debug.LogWarning("Player choice was not found: " + playerChoice);
             }
         }
     }
@@ -70,7 +53,9 @@ public class ItemHandler : MonoBehaviour
         INVManager.GetInstance().RemoveItem(item);
     }
 
-
-
-
+    private void ResetPlayerChoice()
+    {
+        VNManager.GetInstance().SetVariableState("playerChoice", new Ink.Runtime.StringValue(""));
+        actionPerformed = false;
+    }
 }

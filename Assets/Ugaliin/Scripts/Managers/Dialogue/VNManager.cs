@@ -474,5 +474,8 @@
         Debug.Log("Saved goodChoicesCounter: " + data.goodChoicesCounter);
     }
 
-
+    public void SetVariableState(string variableName, Ink.Runtime.Object value)
+    {
+        dialogueVAR.VAR[variableName] = value;
+    }
 }
