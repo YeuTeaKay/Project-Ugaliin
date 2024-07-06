@@ -25,6 +25,8 @@ public class INVManager : MonoBehaviour, IDataPersistance
 
     private bool inventoryChanged = false;
 
+    [SerializeField] private AudioManager audioManager;
+
     private void Awake()
     {
         if (instance != null)
@@ -32,6 +34,8 @@ public class INVManager : MonoBehaviour, IDataPersistance
             Debug.LogError("Found more than one Input Manager in the scene.");
         }
         instance = this;
+
+
     }
 
     public void Start()
@@ -51,7 +55,9 @@ public class INVManager : MonoBehaviour, IDataPersistance
     public void AddItem(Item item)
     {
         inventory.Add(item);
-        inventoryChanged = true; 
+        inventoryChanged = true;
+
+        audioManager.PlaySound("ItemAddedSound");
     }
 
     public void RemoveItem(Item item)
