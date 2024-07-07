@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f80d2ee11704ed41856e7678c91fd37, type: 3}
-  m_Name: BarangayCaptain1
+  m_Name: BarangayCaptain0
   m_EditorClassIdentifier: 
-  voiceoverID: BarangayCaptain1
-  voiceOverAudio: {fileID: 8300000, guid: d0fc27d8cdf8be24585eb749c5c3b707, type: 3}
+  voiceoverID: BarangayCaptain0
+  voiceOverAudio: {fileID: 8300000, guid: 56d4708a5206d7f469d20e65ef71b55b, type: 3}
   stopAudioSource: 0
