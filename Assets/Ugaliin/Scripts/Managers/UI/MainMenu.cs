@@ -17,6 +17,7 @@ public class MainMenu : Menu
     [Header("MainMenu UI")]
     public GameObject mainMenu;
     public GameObject characterSelection;
+    public GameObject settingsUI;
 
 
     private void Start()
@@ -25,6 +26,8 @@ public class MainMenu : Menu
         {
             continueGameButton.interactable = false;
         }
+
+        settingsUI.SetActive(false);
     }
     public void SelectBoy()
     {
@@ -47,6 +50,13 @@ public class MainMenu : Menu
     {
         DataPersistenceManager.instance.NewGame();
         OnCharacterSelect();
+    }
+
+    public void SettingsMenu()
+    {
+        settingsUI.SetActive(true);
+        mainMenu.SetActive(false);
+        characterSelection.SetActive(false);
     }
 
     public void OnLoadGameClicked()
@@ -81,6 +91,13 @@ public class MainMenu : Menu
         PlayerCharacterSpawnManager.selectedCharacterPrefab = selectedCharacterPrefab;
         DataPersistenceManager.instance.SaveGame();
         SceneManager.LoadSceneAsync("Movement Test");
+    }
+
+    public void MainMenuUI()
+    {
+        mainMenu.SetActive(true);
+        characterSelection.SetActive(false);
+        settingsUI.SetActive(false);
     }
 
     public void Quit()

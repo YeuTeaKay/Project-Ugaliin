@@ -8,6 +8,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject inventoryBackpack;
     [SerializeField] private GameObject inventoryBar;
+    [SerializeField] private GameObject settingsUI;
     
     private void FixedUpdate()
     {
@@ -32,6 +33,7 @@ public class MenuManager : MonoBehaviour
         pauseMenu.SetActive(false);
         inventoryBar.SetActive(true);
         inventoryBackpack.SetActive(false);
+        settingsUI.SetActive(false);
     }
 
     public void PauseMenu()
@@ -40,6 +42,7 @@ public class MenuManager : MonoBehaviour
         pauseMenu.SetActive(true);
         inventoryBar.SetActive(false);
         inventoryBackpack.SetActive(false);
+        settingsUI.SetActive(false);
     }
 
     public void BackPack()
@@ -48,6 +51,15 @@ public class MenuManager : MonoBehaviour
         pauseMenu.SetActive(false);
         inventoryBar.SetActive(false);
         inventoryBackpack.SetActive(true);
+        settingsUI.SetActive(false);
+    }
+
+    public void SettingsMenu()
+    {
+        settingsUI.SetActive(true);
+        pauseMenu.SetActive(false);
+        inventoryBar.SetActive(false);
+        inventoryBackpack.SetActive(false);
     }
 
     public void UnpauseMenu()
@@ -56,6 +68,7 @@ public class MenuManager : MonoBehaviour
         pauseMenu.SetActive(false);
         inventoryBar.SetActive(true);
         inventoryBackpack.SetActive(false);
+        settingsUI.SetActive(false);
     }
 
     public void LoadScene(string sceneName)
