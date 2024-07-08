@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f37095059750c148804ff8d0586afbc, type: 3}
   m_Name: Family Ties
   m_EditorClassIdentifier: 
-  itemName: Family
+  itemName: Family Ties
   icon: {fileID: 21300000, guid: a4a888ebe63fd594c95b7d3aa6997499, type: 3}
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
     tellus diam, laoreet ac egestas eu, mollis a urna. Morbi ullamcorper diam in

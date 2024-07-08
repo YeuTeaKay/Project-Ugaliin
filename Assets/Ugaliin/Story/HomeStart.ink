@@ -81,6 +81,7 @@ I’ll take care of everything here at home. This is the list of places you shou
     ->exploreDialogue
     
 === exploreDialogue ===
+#speaker:Mother  #portrait:Mother_Talking #layout:left #voiceover:default
 Go explore our street and talk to the neighbors!
 ->DONE
 
@@ -219,29 +220,29 @@ What do you think?
 === homeEndDialogue10 ===
 
 { goodChoicesCounter >= 20: -> HappyFiesta }
-{ goodChoicesCounter < 20: -> RollCredits }
+{ goodChoicesCounter <= 20: -> RollCredits }
 
 === HappyFiesta ===
-#speaker:Narrator  #portrait:Default #layout:left #voiceover:default
-*DING DONG!*
+#speaker:Doorbell   #portrait:Default #layout:left #voiceover:default
+DING DONG!
 
 #speaker:Mother  #portrait:Mother_Talking #layout:left #voiceover:default
 Huh? Who would that be. Wait, coming!
 
-#speaker:Tita Grace  #portrait:Mother_Talking #layout:left #voiceover:default
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:left #voiceover:default
 Sis! How are you? I thought I would pass by here to see how is moving in coming along. It's good that your moving went well. 
-#speaker:Tita Grace  #portrait:Mother_Talking #layout:left #voiceover:default
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:left #voiceover:default
 Visit us next time okay! The people from our barangay are also here.
 
-#speaker:Kapit Bahay  #portrait:Mother_Talking #layout:left #voiceover:default
+#speaker:Kapit Bahay  #portrait:KapitBahay_Talking #layout:left #voiceover:default
 Hello! Are you guys good here? If you need any lifting or if you need fixing here in you house or anything at all, I'm just here around, just call me.
 
-#speaker:Lola Tindera  #portrait:Mother_Talking #layout:left #voiceover:default
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:left #voiceover:default
 Thank goodness for your child because if it weren't for them, I don't know what to do with the karinderya. Here, we still have a lot of food left from our eatery, it's all yours.
 
-#speaker:Barangay Captain  #portrait:Mother_Talking #layout:left #voiceover:default
+#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:left #voiceover:default
 Welcome to our barangay! I do apologize that we just visited now, the fiesta is near that's why the people around are busy. 
-#speaker:Barangay Captain  #portrait:Mother_Talking #layout:left #voiceover:default
+#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:left #voiceover:default
 Your arrival is in impeccable timing! We're going to celebrate your arrival with the fiesta, so that you can feel the warm welcome of our community.
 
 ->RollCredits
