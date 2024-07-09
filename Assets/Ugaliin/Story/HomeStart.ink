@@ -7,24 +7,24 @@ INCLUDE globals.ink
 ->homeStart
 
 === homeStart ===
-#speaker:Narrator  #portrait:Default #layout:left #voiceover:default
+#speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
 A new beginning starts for Luad and their mother as they recently moved to their new home.
 
 
-#speaker:Narrator  #portrait:Default #layout:left #voiceover:default
+#speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
 Their neighbors helped them move in, making them comfortable in the Barangay. 
 
 
-#speaker:Narrator  #portrait:Default #layout:left #voiceover:default
+#speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
 They are about to finish tidying up their house, so Luad’s mother tells <br> Luad to go out and explore their community.
 
-#speaker:Mother  #portrait:Mother_Talking #layout:left #voiceover:default
+#speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:default
 Thank goodness! We are about to finish tidying up so we can rest after this.
 
-#speaker:Mother  #portrait:Mother_Talking #layout:left #voiceover:default
+#speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:default
 Luad my child, are you done cleaning your room? Don’t tire yourself, rest up if you need to.
 
-#speaker:Mother  #portrait:Mother_Talking #layout:left #voiceover:default
+#speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:default
 I’m close to done in fixing up our house so we can relax a bit after this.
 
 +[I’ll do the remaining housework mom so that you can already rest.]
@@ -38,12 +38,12 @@ I’m close to done in fixing up our house so we can relax a bit after this.
     
 === goodChoice(choiceItem) ===
 ~playerChoice = choiceItem
-#speaker:Narrator  #portrait:Default #layout:left #voiceover:default
+#speaker:Item Received  #portrait:CloseFamilyTies #layout:Default #voiceover:default
 You Have Obtained <color="blue"><b>CLOSE FAMILY TIES!</b>
     ->NextDialogue1
 
 === NextDialogue1 ===
-#speaker:Mother  #portrait:Mother_Talking #layout:left #voiceover:default
+#speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:default
 I know that you're tired, so I'll take care of things around here. Don't worry, there's just a few chores left.
 #speaker:Mother  #portrait:Mother_Talking #layout:left #voiceover:default
 Your Tita Grace lives nearby, why don't you visit them? I'm sure she'll be happy seeing you.
@@ -61,7 +61,7 @@ Your Tita Grace lives nearby, why don't you visit them? I'm sure she'll be happy
 What are you talking about? That's your Tita, go visit them immediately.
 
 ~playerChoice = choiceItem
-#speaker:Narrator  #portrait:Default #layout:left #voiceover:default
+#speaker:Item Received  #portrait:Manana #layout:Default #voiceover:default
 You Have Obtained <color="red"><b>MANANA HABIT!</b>
     ->NextDialogue2
 
