@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f37095059750c148804ff8d0586afbc, type: 3}
   m_Name: Utang na Loob
   m_EditorClassIdentifier: 
-  itemName: Trust
-  icon: {fileID: 21300000, guid: ff30330d51063f446a2550de735184c7, type: 3}
+  itemName: Utang na Loob
+  icon: {fileID: 21300000, guid: 86d842d1d80f5ad4ba20ca742ab6932c, type: 3}
   description: 

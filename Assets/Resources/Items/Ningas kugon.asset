@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f37095059750c148804ff8d0586afbc, type: 3}
-  m_Name: Manana
+  m_Name: Ningas kugon
   m_EditorClassIdentifier: 
-  itemName: Manana
-  icon: {fileID: 21300000, guid: fe2c3230717314345af82ac648b09735, type: 3}
+  itemName: Ningas kugon
+  icon: {fileID: 21300000, guid: 9f1890c6d097bfc4489f60c6ecdb4216, type: 3}
   description: 

@@ -7,6 +7,8 @@ public class SettingsManager : MonoBehaviour
     public TMP_Dropdown resolutionDropdown;
 
     private List<Resolution> availableResolutions;
+    
+    //public GameObject SideControls;
 
     void Start()
     {
