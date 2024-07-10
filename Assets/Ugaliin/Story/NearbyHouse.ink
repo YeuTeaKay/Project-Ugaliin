@@ -1,9 +1,8 @@
 INCLUDE globals.ink
 
-{ playerProgress == 1: -> NearbyHouse}
-{ playerProgress >= 2: -> EndDialogue}
+{ playerProgress >= 1: -> NearbyHouse}
+{ NearbyHouseEnd == true: -> EndDialogue}
 
-->NearbyHouse
 
 === NearbyHouse ===
 #speaker:Narrator  #portrait:Default #layout:left #voiceover:default
@@ -137,11 +136,12 @@ The sports fest here are not to be taken seriously, just for fun.
 #speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:left #voiceover:default
 Alright, I'll be off then. See you next time!
 
-~playerProgress += 1
-->EndDialogue
+->EndDialogue   
 
 
 === EndDialogue ===
+~playerProgress += 1
+~NearbyHouseEnd = true
 #speaker:KapitBahay  #portrait:KapitBahay_Idle #layout:left #voiceover:default
 Go talk to other people to get know the area!
 ->END

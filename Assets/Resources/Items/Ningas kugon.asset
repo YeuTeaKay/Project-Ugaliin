@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Ningas kugon
   icon: {fileID: 21300000, guid: 9f1890c6d097bfc4489f60c6ecdb4216, type: 3}
-  description: 
+  description: 'It is the tendency to begin something and not finish or carry it
+    out to the end. When one does not feel excitement and enthusiasm while doing
+    something, they will leave and not finish it. '

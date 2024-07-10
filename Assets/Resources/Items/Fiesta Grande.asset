@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Fiesta Grande
   icon: {fileID: 21300000, guid: 02986a46184eccf4b83bd86adf82a277, type: 3}
-  description: 
+  description: Filipinos love festivals, celebrating feasts of patron saints in their
+    towns. Even in times of distress, Filipinos often celebrate in a grand festival
+    rich with food and entertainment.

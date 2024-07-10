@@ -1,6 +1,7 @@
 VAR dialogueEnd = false
 VAR BarangayHallEnd = false
 VAR TitaHouseEnd = false
+VAR karinderyaEnd = false
 VAR NearbyHouseEnd = false
 VAR EndGame = false
 VAR Ending = ""

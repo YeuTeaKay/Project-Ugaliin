@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Amor Propio
   icon: {fileID: 21300000, guid: d1ee60b526f6d85418e6be973c16efd1, type: 3}
-  description: 
+  description: "It refers to having confidence, pride, and high self-esteem viewing
+    oneself as competent, and being treated as a person, not an object. It is a Spanish
+    word which means \u201Cself-love\u201D."

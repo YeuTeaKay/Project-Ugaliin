@@ -1,6 +1,6 @@
 INCLUDE globals.ink
 
-{ dialogueEnd == true: -> EndDialogue}
+{ TitaHouseEnd == true: -> EndDialogue}
 
 
 -> TitasHouse
@@ -107,7 +107,7 @@ I can't. We have a test next week. I still need to study. Probably next time we 
         ->NextDialogue4
 +[It's still next week! Just study next week, you're smart right?]
     ~badChoicesCounter += 1
-    ->badChoice0("choiceItem5")
+    ->badChoice0("choiceItem4")
     
 === badChoice0(choiceItem) ===
 ~playerChoice = choiceItem
@@ -359,7 +359,7 @@ We were wrong it's said it was <color="green"><b>Fiesta Grande</b>
 ~playerChoice = choiceItem
 ~goodChoicesCounter += 1
 #speaker:Narrator  #portrait:Default #layout:left #voiceover:default
-You got most of the orders correctly!
+We got most of the orders correctly!
 
 #speaker:Narrator  #portrait:Default #layout:left #voiceover:default
 You Have Obtained <color="blue"><b>BAYANIHAN!</b>
@@ -367,12 +367,12 @@ You Have Obtained <color="blue"><b>BAYANIHAN!</b>
 
 === YouLose ===
 #speaker:Narrator  #portrait:Default #layout:left #voiceover:default
-You didn't get most of the orders correctly! Do you want to try again?
+We didn't get most of the orders correctly! Do you want to try again?
 +[Try Again?]
     ->NextDialogue6
 +[End Game]
     ~badChoicesCounter += 1
-    ->badChoice1("choiceItem5")
+    ->badChoice1("choiceItem4")
 === badChoice1(choiceItem) ===
 ~playerChoice = choiceItem
 
@@ -401,5 +401,6 @@ Always remember, our house is always open for you guys. Okay then, eat! Don't be
     ->EndDialogue
     
 === EndDialogue ===
-~dialogueEnd = true
+~playerProgress += 1
+~TitaHouseEnd = true
 ->END

@@ -15,8 +15,12 @@ public class INVManager : MonoBehaviour, IDataPersistance
     //Item Content Variables
     public Transform BackpackContent;
     public Transform ItemContent;
+
+    public Transform EndGameItems;
     public GameObject InventoryItem;
     public GameObject BackpackItem;
+
+    public GameObject EndGameItem;
 
     //Backpack Content Variables
     public TMP_Text BackpackName;
@@ -88,6 +92,11 @@ public class INVManager : MonoBehaviour, IDataPersistance
             // Destroy the child game object
             Destroy(child.gameObject);
         }
+        foreach (Transform child in EndGameItems)
+        {
+            // Destroy the child game object
+            Destroy(child.gameObject);
+        }
         instantiatedItems.Clear();
 
         foreach (var item in inventory)
@@ -95,6 +104,14 @@ public class INVManager : MonoBehaviour, IDataPersistance
             // Check if the item has already been instantiated
             if (!instantiatedItems.Contains(item))
             {
+                GameObject endObject = Instantiate(EndGameItem, EndGameItems);
+                if (endObject == null)
+                {
+                    Debug.LogError("Failed to instantiate EndGameItem prefab.");
+                    continue; // Skip to the next iteration of the loop
+                }
+                Debug.Log("Instantiated EndGameItem: " + endObject.name);
+
                 GameObject obj = Instantiate(InventoryItem, ItemContent);
                 if (obj == null)
                 {
@@ -111,6 +128,13 @@ public class INVManager : MonoBehaviour, IDataPersistance
                 }
                 Debug.Log("Instantiated BackpackItem: " + backpackObj.name);
 
+                var endItemIcon = endObject.transform.Find("ItemIcon").GetComponent<Image>();
+                if (endItemIcon == null)
+                {
+                    Debug.LogError("ItemIcon component not found on instantiated object.");
+                    Destroy(endObject); // Clean up the object
+                    continue; // Skip to the next iteration of the loop
+                }
 
                 var itemName = obj.transform.Find("ItemName").GetComponent<TMP_Text>();
                 if (itemName == null)
@@ -140,6 +164,7 @@ public class INVManager : MonoBehaviour, IDataPersistance
                 backpackInventoryIcon.sprite = item.icon;
                 itemName.text = item.itemName;
                 itemIcon.sprite = item.icon;
+                endItemIcon.sprite = item.icon;
 
                 // Add the item to the instantiated items list
                 instantiatedItems.Add(item);

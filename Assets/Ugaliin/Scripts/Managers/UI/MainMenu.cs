@@ -19,6 +19,8 @@ public class MainMenu : Menu
     public GameObject characterSelection;
     public GameObject settingsUI;
 
+    public GameObject tutorialMenu;
+
 
     private void Start()
     {
@@ -27,10 +29,11 @@ public class MainMenu : Menu
             continueGameButton.interactable = false;
         }
 
-        settingsUI.SetActive(false);
+        MainMenuUI();
     }
     public void SelectBoy()
     {
+        DataPersistenceManager.instance.NewGame();
         selectedCharacterPrefab = boyCharacter;
         Debug.Log("Selected Gender: Boy");
         DataPersistenceManager.instance.GetGameData().playerGender = "Boy";
@@ -39,6 +42,7 @@ public class MainMenu : Menu
     }
     public void SelectGirl()
     {
+        DataPersistenceManager.instance.NewGame();
         selectedCharacterPrefab = girlCharacter;
         DataPersistenceManager.instance.GetGameData().playerGender = "Girl";
         Debug.Log("Selected Gender: Girl");
@@ -48,15 +52,25 @@ public class MainMenu : Menu
 
     public void OnNewGameClicked()
     {
-        DataPersistenceManager.instance.NewGame();
-        OnCharacterSelect();
+        
+        TutorialMenu();
+    }
+
+    public void TutorialMenu()
+    {
+        tutorialMenu.SetActive(true);
+        settingsUI.SetActive(false);
+        mainMenu.SetActive(false);
+        characterSelection.SetActive(false);
     }
 
     public void SettingsMenu()
     {
+
         settingsUI.SetActive(true);
         mainMenu.SetActive(false);
         characterSelection.SetActive(false);
+        tutorialMenu.SetActive(false);
     }
 
     public void OnLoadGameClicked()
@@ -83,7 +97,11 @@ public class MainMenu : Menu
 
     public void OnCharacterSelect()
     {
+        tutorialMenu.SetActive(false);
         characterSelection.SetActive(true);
+        mainMenu.SetActive(false);
+        settingsUI.SetActive(false);
+        
     }
 
     private void LoadNextScene()
@@ -98,6 +116,7 @@ public class MainMenu : Menu
         mainMenu.SetActive(true);
         characterSelection.SetActive(false);
         settingsUI.SetActive(false);
+        tutorialMenu.SetActive(false);
     }
 
     public void Quit()

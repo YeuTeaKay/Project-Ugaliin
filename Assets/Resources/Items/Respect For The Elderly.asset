@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f37095059750c148804ff8d0586afbc, type: 3}
-  m_Name: RespectfortheElderly
+  m_Name: Respect For The Elderly
   m_EditorClassIdentifier: 
   itemName: Respect For The Elderly
   icon: {fileID: 21300000, guid: e8921c07ccee1574289662f7b433508a, type: 3}
-  description: 
+  description: 'Filipinos take good care and respect for their elders. This stems
+    from Filipinos respecting authoritative figures and as such in a family setting,
+    often regarded with elders. '

@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Utang na Loob
   icon: {fileID: 21300000, guid: 86d842d1d80f5ad4ba20ca742ab6932c, type: 3}
-  description: 
+  description: Being grateful for people who have extended kindness to them. This
+    means that if a person has done good to them, they must express gratitude towards
+    them, regardless of whether they have repaid the kindness or not.

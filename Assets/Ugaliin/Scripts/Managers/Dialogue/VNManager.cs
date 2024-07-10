@@ -450,6 +450,11 @@
         dialogueVAR.VAR["playerProgress"] = new Ink.Runtime.IntValue(data.playerProgress);
         dialogueVAR.VAR["badChoicesCounter"] = new Ink.Runtime.IntValue(data.badChoicesCounter);
         dialogueVAR.VAR["goodChoicesCounter"] = new Ink.Runtime.IntValue(data.goodChoicesCounter);
+        dialogueVAR.VAR["BarangayHallEnd"] = new Ink.Runtime.BoolValue(data.BarangayHallEnd);
+        dialogueVAR.VAR["TitaHouseEnd"] = new Ink.Runtime.BoolValue(data.TitaHouseEnd);
+        dialogueVAR.VAR["NearbyHouseEnd"] = new Ink.Runtime.BoolValue(data.NearbyHouseEnd);
+        dialogueVAR.VAR["EndGame"] = new Ink.Runtime.BoolValue(data.EndGame);
+        dialogueVAR.VAR["Ending"] = new Ink.Runtime.StringValue(data.Ending);
     }
     
     public void SaveData(GameData data)
@@ -468,6 +473,31 @@
         {
             data.goodChoicesCounter = (int)((Ink.Runtime.IntValue)dialogueVAR.VAR["goodChoicesCounter"]).value;
         }
+        if (dialogueVAR.VAR.ContainsKey("BarangayHallEnd"))
+        {
+            data.BarangayHallEnd = (bool)((Ink.Runtime.BoolValue)dialogueVAR.VAR["BarangayHallEnd"]).value;
+        }
+
+        if (dialogueVAR.VAR.ContainsKey("TitaHouseEnd"))
+        {
+            data.TitaHouseEnd = (bool)((Ink.Runtime.BoolValue)dialogueVAR.VAR["TitaHouseEnd"]).value;
+        }
+
+        if (dialogueVAR.VAR.ContainsKey("NearbyHouseEnd"))
+        {
+            data.NearbyHouseEnd = (bool)((Ink.Runtime.BoolValue)dialogueVAR.VAR["NearbyHouseEnd"]).value;
+        }
+
+        if (dialogueVAR.VAR.ContainsKey("EndGame"))
+        {
+            data.EndGame = (bool)((Ink.Runtime.BoolValue)dialogueVAR.VAR["EndGame"]).value;
+        }
+
+        if (dialogueVAR.VAR.ContainsKey("Ending"))
+        {
+            data.Ending = (string)((Ink.Runtime.StringValue)dialogueVAR.VAR["Ending"]).value;
+        }
+
 
         Debug.Log("Saved playerProgress: " + data.playerProgress);
         Debug.Log("Saved badChoicesCounter: " + data.badChoicesCounter);

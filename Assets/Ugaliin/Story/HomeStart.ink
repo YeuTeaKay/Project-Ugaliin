@@ -1,7 +1,6 @@
 INCLUDE globals.ink
 
-{ playerProgress == 0: -> homeStart}
-{ playerProgress <= 1: -> exploreDialogue}
+{ playerProgress >= 1: -> exploreDialogue}
 { playerProgress == 5: -> homeEnd}
 
 ->homeStart
@@ -24,12 +23,12 @@ Thank goodness! We are about to finish tidying up so we can rest after this.
 #speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:default
 Luad my child, are you done cleaning your room? Don’t tire yourself, rest up if you need to.
 
-#speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:default
+#speaker:Mother  #portrait:Mother_Default #layout:Default #voiceover:default
 I’m close to done in fixing up our house so we can relax a bit after this.
 
 +[I’ll do the remaining housework mom so that you can already rest.]
     ~goodChoicesCounter += 1
-    ->goodChoice("choiceItem0")
+    ->goodChoice("choiceItem3")
   
 +[Finally! We’ve been doing this for ages!]
     ~badChoicesCounter += 1
@@ -54,7 +53,7 @@ Your Tita Grace lives nearby, why don't you visit them? I'm sure she'll be happy
   
 +[I'll go there next time. They're just close by.]
     ~badChoicesCounter += 1
-    ->badChoice("choiceItem1")
+    ->badChoice("choiceItem7")
 
 === badChoice(choiceItem) ===
 #speaker:Mother  #portrait:Mother_Angry_Talking #layout:left #voiceover:default

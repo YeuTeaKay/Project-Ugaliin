@@ -9,6 +9,8 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject inventoryBackpack;
     [SerializeField] private GameObject inventoryBar;
     [SerializeField] private GameObject settingsUI;
+    [SerializeField] private GameObject controlTips;
+
     
     private void FixedUpdate()
     {
@@ -34,6 +36,7 @@ public class MenuManager : MonoBehaviour
         inventoryBar.SetActive(true);
         inventoryBackpack.SetActive(false);
         settingsUI.SetActive(false);
+        controlTips.SetActive(true);
     }
 
     public void PauseMenu()
@@ -43,6 +46,7 @@ public class MenuManager : MonoBehaviour
         inventoryBar.SetActive(false);
         inventoryBackpack.SetActive(false);
         settingsUI.SetActive(false);
+        controlTips.SetActive(false);
     }
 
     public void BackPack()
@@ -52,6 +56,7 @@ public class MenuManager : MonoBehaviour
         inventoryBar.SetActive(false);
         inventoryBackpack.SetActive(true);
         settingsUI.SetActive(false);
+        controlTips.SetActive(false);
     }
 
     public void SettingsMenu()
@@ -69,6 +74,7 @@ public class MenuManager : MonoBehaviour
         inventoryBar.SetActive(true);
         inventoryBackpack.SetActive(false);
         settingsUI.SetActive(false);
+        controlTips.SetActive(true);
     }
 
     public void LoadScene(string sceneName)

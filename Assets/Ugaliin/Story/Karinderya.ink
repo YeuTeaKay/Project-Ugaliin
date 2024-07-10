@@ -1,8 +1,8 @@
 INCLUDE globals.ink
 
-{ dialogueEnd == true: -> EndDialogue}
+{ karinderyaEnd == true: -> EndDialogue}
+{ playerProgress >= 1: -> Karinderya}
 
--> Karinderya
 === Karinderya ===
 
 Luad passes by the Karinderia where they can buy food if they have none at home, or where they can buy some snacks. 
@@ -55,17 +55,21 @@ I also have a lot of deliveries lined up today. I don't know what to do.
 +[What can I do to help you lola? I don't have anything to do anyway.]
     ~goodChoicesCounter += 1
     ->goodChoice1("choiceItem1")
+    
 +[You can do it! Just trust in yourself. You can overcome this hurdle today.]
     ~goodChoicesCounter += 1
     ->goodChoice2("choiceItem2")
+    
 +[Just close up shop. Today seems exhausting for you.]
     ~badChoicesCounter += 1
     ->NextAngryDialogue1
+    
 === goodChoice1(choiceItem) ===
 ~playerChoice = choiceItem
 #speaker:Narrator  #portrait:Default #layout:left #voiceover:default
 You Have Obtained <color="blue"><b>PAKIKISAMA!</b>
     ->NextDialogue2
+    
 === goodChoice2(choiceItem) ===
 ~playerChoice = choiceItem
 #speaker:Narrator  #portrait:Default #layout:left #voiceover:default
@@ -302,7 +306,8 @@ You Have Obtained <color="blue"><b>RESPECT FOR THE ELDERLY!</b>
     ->NextDialogue4
 
 === EndDialogue ===
-~dialogueEnd = true
+~playerProgress += 1
+~karinderyaEnd = true
 #speaker:Lola Tindera  #portrait:Lola_Idle #layout:left #voiceover:default
 Go roam the streets and talk to other people
 
