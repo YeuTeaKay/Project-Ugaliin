@@ -1,5 +1,6 @@
 INCLUDE globals.ink
 
+{ playerProgress == 0: -> TalkToMother}
 { BarangayHallEnd == true: -> EndDialogue}
 { playerProgress >= 1: -> BarangayHall}
 

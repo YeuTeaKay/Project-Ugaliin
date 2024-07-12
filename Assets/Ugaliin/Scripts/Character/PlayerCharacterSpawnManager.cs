@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SimpleAudioManager;
 
 public class PlayerCharacterSpawnManager : MonoBehaviour
 {
@@ -21,11 +22,13 @@ public class PlayerCharacterSpawnManager : MonoBehaviour
 
     private void Start()
     {
+        Manager.instance.PlaySong(0);
         SpawnCharacter();
     }
 
     private void SpawnCharacter()
     {
+        
         if (selectedCharacterPrefab != null)
         {
             Instantiate(selectedCharacterPrefab, SpecialSpawnPoint.position, Quaternion.identity);

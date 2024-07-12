@@ -1,7 +1,8 @@
 INCLUDE globals.ink
 
-{ playerProgress >= 1: -> exploreDialogue}
 { playerProgress == 5: -> homeEnd}
+{ playerProgress >= 1: -> exploreDialogue}
+
 
 ->homeStart
 
@@ -72,11 +73,11 @@ I’ll take care of everything here at home. This is the list of places you shou
 
 +[Okay mother I’ll take care of this.]
     ~goodChoicesCounter += 1
-    ~playerProgress = 1
+    ~playerProgress += 1
     ->exploreDialogue
 +[Fiiiine..]
     ~badChoicesCounter += 1
-    ~playerProgress = 1
+    ~playerProgress += 1
     ->exploreDialogue
     
 === exploreDialogue ===
@@ -211,15 +212,17 @@ What do you think?
 
 +[We'll be happy here mom! I'm sure of it!]
     ~goodChoicesCounter += 1
+    ~badChoicesCounter += 1
     ->homeEndDialogue10
 +[I really hope so mom.]
+    ~badChoicesCounter += 1
     ~badChoicesCounter += 1
     ->homeEndDialogue10
     
 === homeEndDialogue10 ===
 
 { goodChoicesCounter >= 20: -> HappyFiesta }
-{ goodChoicesCounter <= 20: -> RollCredits }
+{ goodChoicesCounter <= 20: -> RollCredits1 }
 
 === HappyFiesta ===
 #speaker:Doorbell   #portrait:Default #layout:Default #voiceover:default
@@ -267,27 +270,65 @@ Luad! Don't be like that to everyone! They're good people who came all the way h
     ->homeEndDialogue13
 
 === homeEndDialogue13 ===
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:default
 Don't worry sis! We understand and we are always here to help you guys.
+#speaker:Kapit Bahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:default
 Yep! So let's get on with the fiesta!
+#speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:default
 Before the actual fiesta, let's have a house warming first!
+
+#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:default
 Okay 'Cap! I got the food, so eat up!
+
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:default
 I'll help you prepare Lola.
+
+#speaker:Kapit Bahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:default
 I'll fix the set up over here.
+
+#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:default
 Don't worry ma'am and Luad, we'll take care of this. Just go be comfortable with everyone. Again, we would like to welcome you guys to our barangay!
-Oh thank you, thank you so much! You guys are so nice! How about it Luad? What do you think of our barangay now? We are going to have so much fun and I can't wait to be part of something just like this.
+
+#speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:default
+Oh thank you, thank you so much! You guys are so nice! How about it Luad?
+What do you think of our barangay now? We are going to have so much fun and I can't wait to be part of something just like this.
+
 +[Same thoughts mom! I can't wait for the fiesta too!]
     ~goodChoicesCounter += 1
     ->EndingChoice("choiceItem4")
 +[It's okay mom, I hope everything goes well.]
     ~badChoicesCounter += 1
-    ->RollCredits
+    ->RollCredits2
 === EndingChoice(choiceItem) ===
 ~playerChoice = choiceItem
 #speaker:Item Received  #portrait:CloseFamilyTies #layout:Default #voiceover:default
 You Have Obtained <color="blue"><b>Fiesta Grande!</b>
-    ->RollCredits
-    
-=== RollCredits ===
+~Ending = "Fiest Grande"
+    ->RollCredits2
+
+=== RollCredits1 ===
+~Ending = "Home Coming"
+~EndGame = true
+#speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
+And so, Luad and their mother continue to work on the house as they put the finishing touches and make themselves comfortable in their new home. 
+
+#speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
+Luad reflects on their experiences while exploring the barangay, feeling they can adjust well and become one with the community.
+
+#speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
+Mother ensures everything is in place, putting together a cozy home for them to live in. 
+#speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
+With their hopes up, they look forward to a brand new beginning in their new home. 
+
+#speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
+They know that there will be challenges ahead, but there are people around them who are ready to help them in times of need.
+
+#speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
+WELCOME TO THE BARANGAY!
+->END
+
+=== RollCredits2 ===
+~EndGame = true
 #speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
 Everyone they know in the barangay is here to greet them, and give them a warm welcome.
 
@@ -308,5 +349,6 @@ They know that there will be challenges ahead, but there are people around them 
 
 #speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
 HAPPY FIESTA! WELCOME TO THE BARANGAY!
+
 
 ->END

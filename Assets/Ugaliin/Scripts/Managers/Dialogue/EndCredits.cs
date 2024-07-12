@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
+using SimpleAudioManager;
 using TMPro;
 
 public class EndCredits : MonoBehaviour
 {
 
     [SerializeField] private GameObject statsPage;
+    [SerializeField] private GameObject videoPage;
+    [SerializeField] private GameObject screenPage;
+    [SerializeField] private GameObject EndGameButton;
     [SerializeField] private TextMeshProUGUI goodChoicesText;
     [SerializeField] private TextMeshProUGUI badChoicesText;
     [SerializeField] private TextMeshProUGUI genderText;
@@ -17,50 +22,63 @@ public class EndCredits : MonoBehaviour
 
     private void Start()
     {
+        statsPage.SetActive(false);
+        EndGameButton.SetActive(false);
+        videoPage.SetActive(false);
+        screenPage.SetActive(false);
+
+    }
+
+    private void Update()
+    {
         GameData data = DataPersistenceManager.instance.GetGameData();
-        if (data != null && data.EndGame)
+        if (data.EndGame == true)
         {
             ShowVideo();
+            screenPage.SetActive(true);
+            videoPage.SetActive(true);
         }
-        else
-        {
-            ShowStatsPage();
-        }
+ 
+        UpdateStatsPage(data);
+
     }
 
     private void ShowVideo()
     {
-        if (videoPlayer != null)
-        {
             videoPlayer.Play();
+            Manager.instance.PlaySong(2);
             videoPlayer.loopPointReached += OnVideoFinished;
-        }
-        else
-        {
-            Debug.LogError("VideoPlayer is not assigned.");
-            ShowStatsPage(); // Fallback to show stats page if no video player is assigned
-        }
     }
 
     private void OnVideoFinished(VideoPlayer vp)
     {
-        videoPlayer.loopPointReached -= OnVideoFinished; // Unsubscribe from the event
+        videoPlayer.loopPointReached -= OnVideoFinished;// Unsubscribe from the event
         ShowStatsPage();
     }
 
     public void ShowStatsPage()
     {
+        screenPage.SetActive(false);
+        videoPage.SetActive(false);
         GameData data = DataPersistenceManager.instance.GetGameData();
-        if (data != null)
-        {
-            UpdateStatsPage(data);
-            statsPage.SetActive(true);
-        }
+        UpdateStatsPage(data);
+        Manager.instance.StopSong(2);
+        statsPage.SetActive(true);
+        StartCoroutine(NextSceneButton());
+            
     }
     // Start is called before the first frame update
-    public void HideStatsPage()
+
+    private IEnumerator NextSceneButton()
+    {  
+
+        yield return new WaitForSeconds(10f);
+        EndGameButton.SetActive(true);
+    }
+
+    public void BackToMenu()
     {
-        statsPage.SetActive(false);
+        SceneManager.LoadScene("MainMenu");
     }
 
     private void UpdateStatsPage(GameData data)

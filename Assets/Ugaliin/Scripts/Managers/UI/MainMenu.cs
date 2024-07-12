@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using SimpleAudioManager;
 
 public class MainMenu : Menu 
 {
@@ -21,6 +22,11 @@ public class MainMenu : Menu
 
     public GameObject tutorialMenu;
 
+
+    private void Awake()
+    {
+        Manager.instance.PlaySong(0);
+    }
 
     private void Start()
     {

@@ -1,5 +1,6 @@
 INCLUDE globals.ink
 
+{ playerProgress == 0: -> TalkToMother}
 { karinderyaEnd == true: -> EndDialogue}
 { playerProgress >= 1: -> Karinderya}
 
@@ -246,21 +247,21 @@ You got the wrong order Luad...
     
 
 === CheckScore ===
-{ playerPoints <= 4: -> YouWin("choiceItem2") }
-{ playerPoints >= 3: -> YouLose }
+{ playerPoints >= 4: -> YouWin("choiceItem2") }
+{ playerPoints <= 3: -> YouLose }
 
 === YouWin(choiceItem) ===
 ~playerChoice = choiceItem
 ~goodChoicesCounter += 1
-#speaker:Narrator  #portrait:Default #layout:Quiz #voiceover:default
+#speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
 You got most of the orders correctly!
 
-#speaker:Narrator  #portrait:Bayanihan #layout:Quiz #voiceover:default
+#speaker:Narrator  #portrait:Bayanihan #layout:Default #voiceover:default
 You Have Obtained <color="blue"><b>BAYANIHAN!</b>
     ->NextDialogue4
 
 === YouLose ===
-#speaker:Narrator  #portrait:Default #layout:Quiz #voiceover:default
+#speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
 You didn't get most of the orders correctly! Do you want to try again?
 +[Try Again?]
     ->MiniGame
@@ -270,11 +271,11 @@ You didn't get most of the orders correctly! Do you want to try again?
 === badChoice0(choiceItem) ===
 ~playerChoice = choiceItem
 ~badChoicesCounter += 1
-#speaker:Narrator  #portrait:NingasKugon #layout:Quiz #voiceover:default
+#speaker:Narrator  #portrait:NingasKugon #layout:Default #voiceover:default
 You Have Obtained <color="red"><b>NINGAS COGON!</b>
     ->NextDialogue4
 === NextDialogue4 ===
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Quiz #voiceover:default
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:default
 Oh! You're done already? You're fast! How did the deliveries go? 
 
 #speaker:Lola Tindera  #portrait:Lola_Talking #layout:Quiz #voiceover:default
@@ -291,21 +292,21 @@ I hope they got it immediately and would enjoy my cooking.
     ->NextAngryDialogue2
 
 === NextDialogue5 ===
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Quiz #voiceover:default
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:default
 I'm glad that they liked it. I hope they come back here to eat again.
 ->NextDialogue6
 
 === NextAngryDialogue2 ===
-#speaker:Lola Tindera  #portrait:Lola_Angry_Talking #layout:Quiz #voiceover:default
+#speaker:Lola Tindera  #portrait:Lola_Angry_Talking #layout:Default #voiceover:default
 Don't rush! Here is the free food, and that tastes good, don't worry.
 ->NextDialogue6
 
 === NextDialogue6 ===
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Quiz #voiceover:default
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:default
 Thanks again kid. You really were a big help today. 
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Quiz #voiceover:default
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:default
 Come back here again to eat okay? Also, tell your mother to buy food from here. 
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Quiz #voiceover:default
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:default
 Until next time!
 
 +[Thank you too for the free food! Mano po lola, goodbye!]
@@ -319,14 +320,13 @@ Until next time!
  === goodChoice4(choiceItem) ===
 ~playerChoice = choiceItem
 ~playerProgress += 1
-#speaker:Narrator  #portrait:RespectForTheElderly #layout:Quiz #voiceover:default
+#speaker:Narrator  #portrait:RespectForTheElderly #layout:Default #voiceover:default
 You Have Obtained <color="blue"><b>RESPECT FOR THE ELDERLY!</b>
-    ->NextDialogue4
+    ->EndDialogue
 
 === EndDialogue ===
-
 ~karinderyaEnd = true
-#speaker:Lola Tindera  #portrait:Lola_Idle #layout:Quiz #voiceover:default
+#speaker:Lola Tindera  #portrait:Lola_Default #layout:Default #voiceover:default
 Go roam the streets and talk to other people
 
 

@@ -4,6 +4,7 @@
     using UnityEngine;
     using UnityEngine.EventSystems;
     using Ink.Runtime;
+    using SimpleAudioManager;
 
     public class VNManager : MonoBehaviour, IDataPersistance
     {
@@ -177,7 +178,7 @@
 
         dialogueVAR.StartListening(currentStory);
 
-        
+        Manager.instance.PlaySong(1);
         speakerName.text = "Blank";
         dialogueBackground.Play("Background_Default");
         portraitAnimator.Play("Default");
@@ -194,6 +195,7 @@
         dialogueVAR.StopListening(currentStory);
         DataPersistenceManager.instance.SaveGame();
 
+        Manager.instance.StopSong(1);
 
         dialogueIsPlaying = false;
         dialogueBox.SetActive(false);

@@ -1,12 +1,13 @@
 INCLUDE globals.ink
 
+{ playerProgress == 0: -> TalkToMother}
 { playerProgress >= 1: -> NearbyHouse}
 { NearbyHouseEnd == true: -> EndDialogue}
 
 === TalkToMother ===
 #speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:default
 Hey Luad! you mother said that she wanted to talk to you about something.
-->DONE
+->END
 
 === NearbyHouse ===
 #speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
@@ -128,6 +129,7 @@ You Have Obtained <color="red"><b>MANANA!</b>
     ->NextDialogue4
     
 === NextDialogue4 ===
+~playerProgress += 1
 #speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:default
 Okay just make sure to join! You can do it! It's also easy to get along with people here,
 
@@ -139,7 +141,7 @@ The sports fest here are not to be taken seriously, just for fun.
 
 #speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:default
 Alright, I'll be off then. See you next time!
-~playerProgress += 1
+
 ->EndDialogue   
 
 

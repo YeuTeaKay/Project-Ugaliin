@@ -1,5 +1,5 @@
 INCLUDE globals.ink
-
+{ playerProgress == 0: -> TalkToMother}
 { playerProgress >= 1: -> TitasHouse}
 { TitaHouseEnd == true: -> EndDialogue}
 
@@ -166,7 +166,7 @@ Come on cousin, please?
 
 ->Question1
 === Question1 ===
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 This value refers to acting in consideration of others which will be eventually reciprocated to them.
 
 +[Bayanihan]
@@ -178,16 +178,16 @@ This value refers to acting in consideration of others which will be eventually 
     
 === RightAnswer1 ===
 ~playerPoints += 1
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 We are right Luad! it's said it was <color="green"><b>Pakikisama!</b>.
     ->Question2
 === WrongAnswer1 ===
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 We were wrong it's said it was <color="green"><b>Pakikisama!</b> Luad!.
     ->Question2
     
 === Question2 ===
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 Which action shows the value "Bayanihan"?
 
 +[Preparing food for your guests.]
@@ -199,16 +199,16 @@ Which action shows the value "Bayanihan"?
     
 === RightAnswer2 ===
 ~playerPoints += 1
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 We are right Luad! it's said it was <color="green"><b>Helping set up banners for the fiesta!</b>.
     ->Question3
 === WrongAnswer2 ===
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 We were wrong it's said it was <color="green"><b>Helping set up banners for the fiesta!</b> Luad!.
     ->Question3
 
 === Question3 ===
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 This value refers to having a passive tendency to negative consequences.
 
 +[Bahala Na]
@@ -220,16 +220,16 @@ This value refers to having a passive tendency to negative consequences.
 
 === RightAnswer3 ===
 ~playerPoints += 1
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 We are right Luad! it's said it was <color="green"><b>Bahala Na!</b>.
     ->Question4
 === WrongAnswer3 ===
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 We were wrong it's said it was <color="green"><b>Bahala Na!</b>
     ->Question4
 
 === Question4 ===
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 Define the value of "Amor Propio".
 
 +[Having close relations with your family members.]
@@ -241,16 +241,16 @@ Define the value of "Amor Propio".
 
 === RightAnswer4 ===
 ~playerPoints += 1
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 We are right Luad! it's said it was <color="green"><b>Viewing oneself as competent!</b>.
     ->Question5
 === WrongAnswer4 ===
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 We were wrong it's said it was <color="green"><b>Viewing oneself as competent</b>
     ->Question5
 
 === Question5 ===
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 This value refers to having a tendency to begin something and not finish.
 
 +[Hiya]
@@ -262,16 +262,16 @@ This value refers to having a tendency to begin something and not finish.
 
 === RightAnswer5 ===
 ~playerPoints += 1
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 We are right Luad! it's said it was <color="green"><b>Ningas Cogon!</b>.
     ->Question6
 === WrongAnswer5 ===
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 We were wrong it's said it was <color="green"><b>Ningas Cogon</b>
     ->Question6
 
 === Question6 ===
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 Which action shows the value "Hiya"?
 
 +[Apologizing for not preparing food for guests.]
@@ -283,16 +283,16 @@ Which action shows the value "Hiya"?
 
 === RightAnswer6 ===
 ~playerPoints += 1
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 We are right Luad! it's said it was <color="green"><b>Apologizing for not preparing food for guests!</b>.
     ->Question7
 === WrongAnswer6 ===
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 We were wrong it's said it was <color="green"><b>Apologizing for not preparing food for guests</b>
     ->Question7
     
 === Question7 ===
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 Define the value of "Hospitality"?
 
 +[Apologizing to the guests for not cleaning the house.]
@@ -304,16 +304,16 @@ Define the value of "Hospitality"?
 
 === RightAnswer7 ===
 ~playerPoints += 1
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 We are right Luad! it's said it was <color="green"><b>Touring the guests around your home!</b>.
     ->Question8
 === WrongAnswer7 ===
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 We were wrong it's said it was <color="green"><b>Touring the guests around your home</b>
     ->Question8
 
 === Question8 ===
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 Your friend keeps on expressing their gratitude to you even though you helped them a long time ago. What value does your friend show?
 
 +[Close Family Ties]
@@ -325,16 +325,16 @@ Your friend keeps on expressing their gratitude to you even though you helped th
 
 === RightAnswer8 ===
 ~playerPoints += 1
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 We are right Luad! it's said it was <color="green"><b>Utang na Loob!</b>.
     ->Question9
 === WrongAnswer8 ===
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 We were wrong it's said it was <color="green"><b>Utang na Loob</b>
     ->Question9
 
 === Question9 ===
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 This value refers to having the tendency to put off work and doing something else instead.
 
 +[Mañana Habit]
@@ -346,16 +346,16 @@ This value refers to having the tendency to put off work and doing something els
 
 === RightAnswer9 ===
 ~playerPoints += 1
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 We are right Luad! it's said it was <color="green"><b>Mañana Habit!</b>.
     ->Question10
 === WrongAnswer9 ===
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 We were wrong it's said it was <color="green"><b>Mañana Habit</b>
     ->Question10
 
 === Question10 ===
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 Your community has a patron saint, which yearly celebrates their feast day. Which value does the community show?
 
 +[Bayanihan]
@@ -367,17 +367,17 @@ Your community has a patron saint, which yearly celebrates their feast day. Whic
 
 === RightAnswer10 ===
 ~playerPoints += 1
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 We are right Luad! it's said it was <color="green"><b>Fiesta Grande!</b>.
     ->CheckScore
 === WrongAnswer10 ===
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Quiz #voiceover:default
 We were wrong it's said it was <color="green"><b>Fiesta Grande</b>
     ->CheckScore
 
 === CheckScore ===
-{ playerPoints <= 7: -> YouWin("choiceItem2") }
-{ playerPoints >= 6: -> YouLose }
+{ playerPoints >= 7: -> YouWin("choiceItem2") }
+{ playerPoints <= 6: -> YouLose }
 
 === YouWin(choiceItem) ===
 ~playerChoice = choiceItem
@@ -387,13 +387,13 @@ We got most of the orders correctly!
 
 #speaker:Narrator  #portrait:Bayanihan #layout:Default #voiceover:default
 You Have Obtained <color="blue"><b>BAYANIHAN!</b>
-    ->NextDialogue6
+    ->NextDialogue11
 
 === YouLose ===
 #speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
 We didn't get most of the orders correctly! Do you want to try again?
 +[Try Again?]
-    ->NextDialogue6
+    ->NextDialogue11
 +[End Game]
     ~badChoicesCounter += 1
     ->badChoice1("choiceItem8")
@@ -402,9 +402,10 @@ We didn't get most of the orders correctly! Do you want to try again?
 
 #speaker:Narrator  #portrait:NingasKugon #layout:Default #voiceover:default
 You Have Obtained <color="red"><b>NINGAS COGON!</b>
-    ->NextDialogue6
+    ->NextDialogue11
 
-=== NextDialogue6 ===
+=== NextDialogue11 ===
+~playerProgress += 1
 #speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
 Thanks for your help cousin! I really hope that I can pass the test and get a high grade.
 
@@ -422,12 +423,12 @@ You guys are nearby now so we can spend time together from time to time.
 
 #speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:default
 Always remember, our house is always open for you guys. Okay then, eat! Don't be shy!
-~playerProgress += 1
+
     ->EndDialogue
     
 === EndDialogue ===
 ~TitaHouseEnd = true
-#speaker:KapitBahay  #portrait:KapitBahay_Idle #layout:Default #voiceover:default
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:default
 Go talk to other people to get know the area!
 
 ->END
