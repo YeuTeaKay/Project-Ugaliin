@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voiceoverID: LT4
   voiceOverAudio: {fileID: 0}
-  stopAudioSource: 0
+  stopAudioSource: 1

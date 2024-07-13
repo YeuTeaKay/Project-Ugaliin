@@ -23,8 +23,9 @@ public class MainMenu : Menu
     public GameObject tutorialMenu;
 
 
-    private void Awake()
+    public void Awake()
     {
+        MainMenuUI();
         Manager.instance.PlaySong(0);
     }
 
@@ -35,7 +36,7 @@ public class MainMenu : Menu
             continueGameButton.interactable = false;
         }
 
-        MainMenuUI();
+        
     }
     public void SelectBoy()
     {
@@ -64,9 +65,9 @@ public class MainMenu : Menu
 
     public void TutorialMenu()
     {
-        tutorialMenu.SetActive(true);
-        settingsUI.SetActive(false);
         mainMenu.SetActive(false);
+        tutorialMenu.SetActive(true);
+        settingsUI.SetActive(false);        
         characterSelection.SetActive(false);
     }
 

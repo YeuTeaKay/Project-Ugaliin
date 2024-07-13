@@ -14,7 +14,7 @@ Hey Luad! you mother said that she wanted to talk to you about something.
 Luad sees their neighbor hanging around outside their house, who was the one who helped them carry in their things when the movers came.
 
 
-#speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:default
+#speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:KB0
 Hey Luad! How’s moving in coming along? Do you guys need help in carrying more heavy stuff?
 
 +[We're not done yet but we can handle it, thank you for helping us earlier!]
@@ -36,15 +36,15 @@ You Have Obtained <color="blue"><b>UTANG NA LOOB!</b>
 ->NextDialogue1
 
 === badChoiceNoItem ====
-#speaker:KapitBahay  #portrait:KapitBahay_Angry_Idle #layout:Default #voiceover:default
+#speaker:KapitBahay  #portrait:KapitBahay_Angry_Idle #layout:Default #voiceover:KB1
 Oh, okay then.
     ->NextDialogue2
 
 === NextDialogue1 ===
-#speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:default
+#speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:KB2
 Oh is that so? Well if you guys need any help or if you need to fix something up, just call me. 
 
-#speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:default
+#speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:KB3
 I'm a mechanic that helps around here in the neighborhood.
 
 +[Same goes to you, if you need help on anything, don't be shy to ask us for help.]
@@ -61,10 +61,10 @@ You Have Obtained <color="blue"><b>PAKIKISAMA!</b>
     ->NextDialogue2
 
 === NextDialogue2 ===
-#speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:default
+#speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:KB4
 Are you sure? It might be difficult for you since it's just the two of you taking care of things.
 
-#speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:default
+#speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:KB5
 Don't be shy to ask us for help here, this is how it is here in the barangay, we work together.
 
 +[Thank you so much for the offer, but I can handle finishing the housework. I'm used to doing this so there's nothing to worry about.]
@@ -89,13 +89,13 @@ You Have Obtained <color="blue"><b>BAYANIHAN!</b>
     ->NextDialogue3
     
 === NextDialogue3 ===
-#speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:default
+#speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:KB6
 Ah, by the way, the sports fest is coming up here in the barangay. Why don't you try joining? 
 
-#speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:default
+#speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:KB7
 You can already register as early as now even though the registration ends by the end of the month.
 
-#speaker:KapitBahay  #portrait:KapitBahay_Idle #layout:Default #voiceover:default
+#speaker:KapitBahay  #portrait:KapitBahay_Idle #layout:Default #voiceover:KB8
 You want to join?
 
 +[Okay I'll try joining. But I'm not that skilled to play. I hope I'll make the cut.]
@@ -130,16 +130,16 @@ You Have Obtained <color="red"><b>MANANA!</b>
     
 === NextDialogue4 ===
 ~playerProgress += 1
-#speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:default
+#speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:KB9
 Okay just make sure to join! You can do it! It's also easy to get along with people here,
 
-#speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:default
+#speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:KB10
 so you won't have any trouble socializing with them. Besides, just have enjoy while playing.
 
-#speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:default
+#speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:KB11
 The sports fest here are not to be taken seriously, just for fun. 
 
-#speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:default
+#speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:KB12
 Alright, I'll be off then. See you next time!
 
 ->EndDialogue   

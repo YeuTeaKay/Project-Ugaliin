@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f80d2ee11704ed41856e7678c91fd37, type: 3}
   m_Name: M11
   m_EditorClassIdentifier: 
-  voiceoverID: M0
-  voiceOverAudio: {fileID: 0}
-  stopAudioSource: 0
+  voiceoverID: M11
+  voiceOverAudio: {fileID: 8300000, guid: f861b8d4e23256a48a4f53d8a5aaf792, type: 3}
+  stopAudioSource: 1

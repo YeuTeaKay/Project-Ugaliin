@@ -15,7 +15,7 @@ Luad visits their aunt or “Tita” to greet them and says they have already ar
 #speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
 She is the sister of Luad’s mother, who also has a child, Luad’s cousin.
 
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:default
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG0
 Oh Luad! You guys have moved in already! Come inside first to have some snacks and let's talk for a bit.
 +[Oh don't worry tita! It's fine, I don't want to bother you guys.]
     ~goodChoicesCounter += 1
@@ -32,28 +32,28 @@ Oh Luad! You guys have moved in already! Come inside first to have some snacks a
 #speaker:Narrator  #portrait:Hiya #layout:Default #voiceover:default
 You Have Obtained <color="blue"><b>HIYA!</b>
 
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:default
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG1
 Don't be shy! I consider you as my child too so come on in, just go inside.
     ->NextDialogue1
 
 === NextAngryDialogue0 ===
-#speaker:Tita Grace  #portrait:Tita_Angry_Talking #layout:Default #voiceover:default
+#speaker:Tita Grace  #portrait:Tita_Angry_Talking #layout:Default #voiceover:TG2
 Don't be like that! Get in so that we can catch up and talk about how you guys are.
     ->NextDialogue1
     
 === NextDialogue0 ===
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:default
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG3
 Looks like you're still cheery as ever! Go on inside, don't be shy.
     ->NextDialogue1
     
 === NextDialogue1 ===
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:default
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG4
 Sorry for the mess, I've been kind of busy lately. 
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:default
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG5
 Anyway, Luad how are you? How is your mother? 
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:default
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG6
 You guys have moved already, you should have told me so that I could have helped you. 
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:default
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG7
 You've grown so much!
 
 +[Oh don't worry tita! It's fine, I don't want to bother you guys.]
@@ -78,10 +78,10 @@ You Have Obtained <color="blue"><b>CLOSE FAMILY TIES!</b>
     ->NextDialogue2
     
 === NextDialogue2 ===
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:default
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG8
 I'm really sorry, I haven't prepared anything for you guys.
 
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:default
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG9
 I've been busy with work and taking care of your cousin. I'll make it up to you guys next time.
 
 +[It's really okay tita. Come visit us sometime, mom will be glad to see you. Our house is open for you guys anytime. ]
@@ -104,22 +104,22 @@ You Have Obtained <color="blue"><b>BAHALA NA!</b>
     ->NextDialogue3
     
 === NextDialogue3 ===
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:default
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG10
 You're really kind Luad! Oh speaking of, here is your cousin. Ellie, come here. 
 
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:default
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG11
 This is your cousion Luad. You guys have met a long time ago, Ellie was still a baby that time so she is not familiar with you.
 
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:default
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG12
 I'll leave you guys here okay? I'll just make some snacks.
 
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:CE0
 H-hello! My name is Ellie! I don't remember you but mama said that you're my cousin.
 
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:CE1
 Looks like I have a new playmate!  But, even though I want to play with you, 
 
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:CE2
 I can't. We have a test next week. I still need to study. Probably next time we can play.
 
 +[Okay, study well Ellie. I'll just come back next time so that we can play together.]
@@ -134,23 +134,23 @@ I can't. We have a test next week. I still need to study. Probably next time we 
 #speaker:Narrator  #portrait:Manana #layout:Default #voiceover:default
 You Have Obtained <color="blue"><b>MANANA!</b>
 
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:CE3
 No I can't! I need to study because I want to stay as an honor student so that mama will be proud of me.
     ->NextDialogue5
     
 === NextDialogue4 ===
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:CE4
 Yay! Thanks cousin! Next time, we'll play hide-and-seek and with my toys!
     ->NextDialogue5
     
 === NextDialogue5 ===
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:CE5
 Oh I know! So that we can do something today, is it okay for you to help me study?
 
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:CE6
 I'll just be asking questions about topics that I can't understand.
 
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:CE7
 Come on cousin, please?
 
 +[Sure! That's a nice idea so that you'll get good grades.]
@@ -406,22 +406,22 @@ You Have Obtained <color="red"><b>NINGAS COGON!</b>
 
 === NextDialogue11 ===
 ~playerProgress += 1
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:CE8
 Thanks for your help cousin! I really hope that I can pass the test and get a high grade.
 
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:CE9
 As long as the next time you come, we'll play, right? You promised! 
 
-#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:default
+#speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:CE10
 Oh right! Mama is here with snacks!
 
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:default
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG13
 Oh I hope Ellie did not bother you too much. But really, thank you very much Luad. 
 
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:default
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG14
 You guys are nearby now so we can spend time together from time to time. 
 
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:default
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG15
 Always remember, our house is always open for you guys. Okay then, eat! Don't be shy!
 
     ->EndDialogue

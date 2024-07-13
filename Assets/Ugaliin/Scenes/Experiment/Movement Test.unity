@@ -152,6 +152,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 776428528}
   - {fileID: 749566648}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15125,6 +15126,77 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4726320198290442, guid: b62a88683020bad4f88cd9c883281901, type: 3}
   m_PrefabInstance: {fileID: 769721885}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &776428527
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3436724}
+    m_Modifications:
+    - target: {fileID: 3465043539428926125, guid: 4f9c798032369024e8a65c4b8fac6fd4, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354207566574490840, guid: 4f9c798032369024e8a65c4b8fac6fd4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354207566574490840, guid: 4f9c798032369024e8a65c4b8fac6fd4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354207566574490840, guid: 4f9c798032369024e8a65c4b8fac6fd4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354207566574490840, guid: 4f9c798032369024e8a65c4b8fac6fd4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354207566574490840, guid: 4f9c798032369024e8a65c4b8fac6fd4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354207566574490840, guid: 4f9c798032369024e8a65c4b8fac6fd4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354207566574490840, guid: 4f9c798032369024e8a65c4b8fac6fd4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354207566574490840, guid: 4f9c798032369024e8a65c4b8fac6fd4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354207566574490840, guid: 4f9c798032369024e8a65c4b8fac6fd4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354207566574490840, guid: 4f9c798032369024e8a65c4b8fac6fd4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8267517869500887648, guid: 4f9c798032369024e8a65c4b8fac6fd4, type: 3}
+      propertyPath: m_Name
+      value: VoiceOver
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4f9c798032369024e8a65c4b8fac6fd4, type: 3}
+--- !u!4 &776428528 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6354207566574490840, guid: 4f9c798032369024e8a65c4b8fac6fd4, type: 3}
+  m_PrefabInstance: {fileID: 776428527}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &776428529 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8267517869500887648, guid: 4f9c798032369024e8a65c4b8fac6fd4, type: 3}
+  m_PrefabInstance: {fileID: 776428527}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &777592200 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6302886967269616158, guid: 793418c52b7486244ba372fde0c9ab7f, type: 3}
@@ -18860,7 +18932,7 @@ MonoBehaviour:
   audioSourcePrefab: {fileID: 749566649}
   loopCurrentSong: 1
   playOnAwake: 1
-  maxVolume: 1
+  maxVolume: 0.579
   defaultSongBlendDuration: 1
   defaultIntensityBlendDuration: 1
   _songs:
@@ -31914,8 +31986,35 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9cf1b9d1507cd714ebf35b4a9619a1ee, type: 2}
   defaultVoicerOverInfo: {fileID: 11400000, guid: be888df80ca2f8642b38af55bb1e2295, type: 2}
   voicerOverInfos:
-  - {fileID: 11400000, guid: 2759759848e123040ae0a9042b3e8712, type: 2}
-  - {fileID: 11400000, guid: 96d47bf41627ab74dbca67db233dbeab, type: 2}
+  - {fileID: 11400000, guid: 582af9b13813cb0478e1003532036551, type: 2}
+  - {fileID: 11400000, guid: aa099838b673f2e4abbb4f0aec76d92e, type: 2}
+  - {fileID: 11400000, guid: 352bec966c7b55b41b3b4c9ff37fd11c, type: 2}
+  - {fileID: 11400000, guid: 0c26c8bf9b333c747af825a705d35d30, type: 2}
+  - {fileID: 11400000, guid: 6faa5c620f10487478faac659dfa22e9, type: 2}
+  - {fileID: 11400000, guid: 0e9354507fbb3f54cb100dfbcec9eeef, type: 2}
+  - {fileID: 11400000, guid: 62636e17e291ce940acb31a9a04ab9eb, type: 2}
+  - {fileID: 11400000, guid: bcda036a275670145a62599ecc470c2f, type: 2}
+  - {fileID: 11400000, guid: d192030bc6cba7843bdbd1dde1a6feb2, type: 2}
+  - {fileID: 11400000, guid: 1615d7d1832ca06408bdf9be99327210, type: 2}
+  - {fileID: 11400000, guid: 34042c40b604d1d4194578cddc2a7000, type: 2}
+  - {fileID: 11400000, guid: a1a84b0652cbd004cb30d18f3c21d11b, type: 2}
+  - {fileID: 11400000, guid: 9a2b5fddaeeabcb419f2692c44806c04, type: 2}
+  - {fileID: 11400000, guid: 43fcb0686d885464ca25647650ea338f, type: 2}
+  - {fileID: 11400000, guid: 85a60fcbc64904243bd0a8ddf6535ccf, type: 2}
+  - {fileID: 11400000, guid: bf1cd47a07632d04b9aa3b989ffbfee1, type: 2}
+  - {fileID: 11400000, guid: 94852e11ba4f9d9449637e8b2f4c9822, type: 2}
+  - {fileID: 11400000, guid: 01d46016904a5bb48ac561d2e3ca5eb5, type: 2}
+  - {fileID: 11400000, guid: 4061a559f33f63f47b448be750a2101a, type: 2}
+  - {fileID: 11400000, guid: cf8933c43aa2e424fa129b4a2b34fa50, type: 2}
+  - {fileID: 11400000, guid: aada36e4dc8b1054788a8c9f1eb812c6, type: 2}
+  - {fileID: 11400000, guid: a9d9102e0823c6f4999f826b1dc4a984, type: 2}
+  - {fileID: 11400000, guid: 18ab84d4feadfe841848fb0a8f1d0c54, type: 2}
+  - {fileID: 11400000, guid: 0522e9769be54f54ca100d0ae084bfcd, type: 2}
+  - {fileID: 11400000, guid: 57080b620b099d746836394ebecbfb2d, type: 2}
+  - {fileID: 11400000, guid: bd94e2c59557e394bb2a4dedf2f56b45, type: 2}
+  - {fileID: 11400000, guid: 337317d5f7830f04eb1a0256d794aae6, type: 2}
+  - {fileID: 11400000, guid: 79543115e2a7ecb4095d3bc396bce440, type: 2}
+  voicePrefab: {fileID: 776428529}
   audioSource: {fileID: 1567355205}
   choices:
   - {fileID: 1160406146}
@@ -31933,7 +32032,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.484
   m_Pitch: 1
   Loop: 0
   Mute: 0

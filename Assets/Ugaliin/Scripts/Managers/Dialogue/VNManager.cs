@@ -36,6 +36,7 @@
     [SerializeField] private DialogueNPCAudioInfoSO[] audioNPCInfos;
     [SerializeField] private DialogueVoicerOverInfoSO defaultVoicerOverInfo;
     [SerializeField] private DialogueVoicerOverInfoSO[] voicerOverInfos;
+    [SerializeField] private GameObject voicePrefab;
     private DialogueNPCAudioInfoSO currentNPCAudioInfo;
 
     private DialogueVoicerOverInfoSO currentVoicerOverInfo;
@@ -216,7 +217,7 @@
         canContinueToNextLine = false;
         bool isAddingRichTextTag = false;
          
-        
+        PlayVoiceOverSound(currentVoiceClipName);
 
         foreach (char letter in line.ToCharArray())
         {
@@ -243,7 +244,7 @@
                 yield return new WaitForSeconds(typingSpeed);
             }
         }
-        PlayVoiceOverSound(currentVoiceClipName);
+        
 
 
         continueButton.SetActive(true);
@@ -284,14 +285,17 @@
     
         if (voiceOverAudioClip != null)
         {
+            // Get the AudioSource component from the instantiated prefab
+            AudioSource voiceAudioSource = voicePrefab.GetComponent<AudioSource>();
+
             if (voiceOverstopAudioSource)
             {
-                audioSource.Stop();
+                voiceAudioSource.Stop();
             }
 
-
-            audioSource.pitch = 1f;
-            audioSource.PlayOneShot(voiceOverAudioClip);
+            // Set the pitch and play the audio clip
+            voiceAudioSource.pitch = 1f;
+            voiceAudioSource.PlayOneShot(voiceOverAudioClip);
         }
         else
         {
