@@ -131,15 +131,12 @@ You Have Obtained <color="red"><b>MANANA!</b>
 === NextDialogue4 ===
 ~playerProgress += 1
 #speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:KB9
-Okay just make sure to join! You can do it! It's also easy to get along with people here,
+Okay just make sure to join! You can do it! It's also easy to get along with people here, so you won't have any trouble socializing with them. 
 
 #speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:KB10
-so you won't have any trouble socializing with them. Besides, just have enjoy while playing.
+Besides, just have enjoy while playing. The sports fest here are not to be taken seriously, just for fun. 
 
 #speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:KB11
-The sports fest here are not to be taken seriously, just for fun. 
-
-#speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:KB12
 Alright, I'll be off then. See you next time!
 
 ->EndDialogue   

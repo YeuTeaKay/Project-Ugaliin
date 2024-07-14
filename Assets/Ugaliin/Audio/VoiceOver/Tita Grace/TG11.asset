@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: TG11
   m_EditorClassIdentifier: 
   voiceoverID: TG11
-  voiceOverAudio: {fileID: 0}
-  stopAudioSource: 0
+  voiceOverAudio: {fileID: 8300000, guid: ce1db153e72254f498d6192e85209b8e, type: 3}
+  stopAudioSource: 1

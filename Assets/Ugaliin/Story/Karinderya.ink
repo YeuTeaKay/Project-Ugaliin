@@ -17,10 +17,10 @@ Luad passes by the Karinderia where they can buy food if they have none at home,
 The place is popular in their neighborhood but the vendor looks troubled right now.
 
 #speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT0
-Buy now! The dishes here  are delicious and cheap! Oh, you kid? Wait,
+Buy now! The dishes here  are delicious and cheap!
 
 #speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT1
-I don't recognize you, are you new here? 
+ Oh, you kid? Wait, I don't recognize you, are you new here? 
 
 #speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT2
 Ah! You're the new people who recently just moved in right? 
@@ -101,10 +101,11 @@ That can't be! My beloved karinderya's reputation will be tarnished.
 I would like to ask help from you kid, if maybe you can deliver these food to the people.
 
 #speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT11
-I'll give you some food later to bring home, for free! Then next time you buy from here, 
+I'll give you some food later to bring home, for free! Then next time you buy from here, I'll give you a discount.
 
 #speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT12
-I'll give you a discount. What do you think? Sounds good?
+What do you think? Sounds good?
+ 
 +[What can I do to help you lola? I don't have anything to do anyway.]
     ~goodChoicesCounter += 1
     ->goodChoice3("choiceItem9")
@@ -118,17 +119,15 @@ You Have Obtained <color="blue"><b>PAKIKISAMA!</b>
     ->MiniGame
 
 === MiniGame ===
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:default
-There! Thank you! Thank god you passed by. Can you help me take order from the other customers. 
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT13
+There! Thank you! Thank god you passed by. Here are the people that you'll deliver the food to. 
 
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:default
-Don't mess up the order or the customer will be mad. 
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT14
+You need to be fast so that the food will still be warm when it reaches them.
 
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:default
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT15
 Okay, good luck!
 
-#speaker:Lola Tindera  #portrait:Lola_Idle #layout:Default #voiceover:default
-Here comes a customer
 ~playerPoints = 0
 ->Question1
 === Question1 ===
@@ -278,7 +277,7 @@ You Have Obtained <color="red"><b>NINGAS COGON!</b>
 #speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:default
 Oh! You're done already? You're fast! How did the deliveries go? 
 
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Quiz #voiceover:default
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:default
 I hope they got it immediately and would enjoy my cooking.
 
 +[It went good. They properly received the food and it looks like they are happy with it.]
@@ -292,21 +291,21 @@ I hope they got it immediately and would enjoy my cooking.
     ->NextAngryDialogue2
 
 === NextDialogue5 ===
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT13
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT16
 I'm glad that they liked it. I hope they come back here to eat again.
 ->NextDialogue6
 
 === NextAngryDialogue2 ===
-#speaker:Lola Tindera  #portrait:Lola_Angry_Talking #layout:Default #voiceover:LT14
+#speaker:Lola Tindera  #portrait:Lola_Angry_Talking #layout:Default #voiceover:LT17
 Don't rush! Here is the free food, and that tastes good, don't worry.
 ->NextDialogue6
 
 === NextDialogue6 ===
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT15
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT18
 Thanks again kid. You really were a big help today. 
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT16
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT19
 Come back here again to eat okay? Also, tell your mother to buy food from here. 
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT17
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT20
 Until next time!
 
 +[Thank you too for the free food! Mano po lola, goodbye!]

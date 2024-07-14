@@ -230,26 +230,31 @@ DING DONG!
 #speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:M28
 Huh? Who would that be. Wait, coming!
 
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:default
-Sis! How are you? I thought I would pass by here to see how is moving in coming along. It's good that your moving went well. 
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:default
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG15
+Sis! How are you? 
+
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG16
+I thought I would pass by here to see how is moving in coming along. It's good that your moving went well. 
+
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG17
 Visit us next time okay! The people from our barangay are also here.
 
-#speaker:Kapit Bahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:default
+#speaker:Kapit Bahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:KB12
 Hello! Are you guys good here? If you need any lifting or if you need fixing here in you house or anything at all, I'm just here around, just call me.
 
 #speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT18
 Thank goodness for your child because if it weren't for them, I don't know what to do with the karinderya. Here, we still have a lot of food left from our eatery, it's all yours.
 
-#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:default
-Welcome to our barangay! I do apologize that we just visited now, the fiesta is near that's why the people around are busy. 
-#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:default
+#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG20
+Welcome to our barangay! I do apologize that we just visited now, the fiesta is near that's why the people around are busy.
+
+#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG21
 Your arrival is in impeccable timing! We're going to celebrate your arrival with the fiesta, so that you can feel the warm welcome of our community.
 
-#speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:M28
+#speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:M29
 Thank you very much everyone for coming! I do hope that we can also help in making our barangay a better place for everyone. 
 
-#speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:M29
+#speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:M30
 Me and my child are glad that we are in this community filled with wonderful people like you. Isn't that right Luad?
 
 +[For sure! We are excited to live here with you guys.]
@@ -260,38 +265,40 @@ Me and my child are glad that we are in this community filled with wonderful peo
     ->homeEndDialogue12
 
 === homeEndDialogue11 ===
-#speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:M30
+#speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:M31
 We sure are! You guys have been nice to us even though we just got here. Thank you again!
     ->homeEndDialogue13
 === homeEndDialogue12 ===
-#speaker:Mother  #portrait:Mother_Angry_Talking #layout:Default #voiceover:M31
+#speaker:Mother  #portrait:Mother_Angry_Talking #layout:Default #voiceover:M32
 Luad! Don't be like that to everyone! They're good people who came all the way here just to greet us. Show a little courtesy!
     ->homeEndDialogue13
 
 === homeEndDialogue13 ===
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:default
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG18
 Don't worry sis! We understand and we are always here to help you guys.
-#speaker:Kapit Bahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:default
+
+#speaker:Kapit Bahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:KB13
 Yep! So let's get on with the fiesta!
-#speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:default
+
+#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG22
 Before the actual fiesta, let's have a house warming first!
 
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:T19
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover::LT19
 Okay 'Cap! I got the food, so eat up!
 
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:default
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG19
 I'll help you prepare Lola.
 
-#speaker:Kapit Bahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:default
+#speaker:Kapit Bahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:KB14
 I'll fix the set up over here.
 
-#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:default
+#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG23
 Don't worry ma'am and Luad, we'll take care of this. Just go be comfortable with everyone. Again, we would like to welcome you guys to our barangay!
 
-#speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:M32
+#speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:M34
 Oh thank you, thank you so much! You guys are so nice! How about it Luad?
 
-#speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:M33
+#speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:M35
 What do you think of our barangay now? We are going to have so much fun and I can't wait to be part of something just like this.
 
 +[Same thoughts mom! I can't wait for the fiesta too!]
@@ -302,9 +309,9 @@ What do you think of our barangay now? We are going to have so much fun and I ca
     ->RollCredits2
 === EndingChoice(choiceItem) ===
 ~playerChoice = choiceItem
-#speaker:Item Received  #portrait:CloseFamilyTies #layout:Default #voiceover:default
+#speaker:Item Received  #portrait:FiestaGrande #layout:Default #voiceover:default
 You Have Obtained <color="blue"><b>Fiesta Grande!</b>
-~Ending = "Fiest Grande"
+~Ending = "Fiesta Grande"
     ->RollCredits2
 
 === RollCredits1 ===

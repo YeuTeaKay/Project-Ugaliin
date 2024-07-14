@@ -45,7 +45,7 @@ Oh! I didn't know someone was waiting. Hold on, I'll just finish this part over 
 
 === NextDialogue1 ===
 #speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG2
-Come, come, sit. I do apologize for the whole office being busy at making the place look beautiful. 
+Come, come, sit down . I do apologize for the whole office being busy at making the place look beautiful. 
 #speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG3
 We are going to hold a fiesta soon that's why we're preparing for it really well. 
 
@@ -82,22 +82,23 @@ There's been a lot of things going on here
 You Have Obtained <color="blue"><b>BAYANIHAN!</b>
 
 #speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG8
-You're welcome. That's how we are here in the barangay, we work together.
+You're welcome. That's how we are here in the barangay
     ->NextDialogue3
     
 === badDialogue0 ===
+#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG9
 Those people are careful. They know what they are doing, that's why they help around here.
     ->NextDialogue3
     
 === NextDialogue3 ===
-#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG9
+#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG10
 How about you? How is the barangay for you? Are you comfortable? 
 
-#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG10
+#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG11
 You know, at your age, you can join the youth that helps our barangay. 
 
-#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG11
-It looks like you can and it will be a big help for them.
+#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG12
+You can be a big help for them.
 
 +[Oh I'm not that good to join in those. I can just help out a bit.)]
     ~goodChoicesCounter += 1
@@ -117,12 +118,12 @@ You Have Obtained <color="blue"><b>HIYA!</b>
 
 === goodChoice3(choiceItem) ===
 ~playerChoice = choiceItem
-#speaker:Narrator  #portrait:Hiya #layout:Default #voiceover:default
+#speaker:Narrator  #portrait:AmorPropio #layout:Default #voiceover:default
 You Have Obtained <color="blue"><b>AMOR PROPIO!</b>
     ->NextDialogue4
 
 === NextDialogue4 ===    
-#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG12
+#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG13
 Don't worry, us your elders are here to help and guide the youth in establishing our community.
     ->NextDialogue5
 
@@ -131,15 +132,15 @@ Don't worry, us your elders are here to help and guide the youth in establishing
 #speaker:Narrator  #portrait:NingasKugon #layout:Default #voiceover:default
 You Have Obtained <color="blue"><b>NINGAS COGON!</b>
 
-#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG13
+#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG14
 Helping people is not a waste of time. Remember that they might also be the ones helping you someday.
     ->NextDialogue5
 
 === NextDialogue5 ===
-#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG14
+#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG15
 Tell your mother that after our work here, we'll visit you to check your status 
 
-#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG15
+#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG16
 and if there are other information that you guys may want to know about our place.
 
 +[You're welcome to visit us anytime, so don't be shy in coming over.]
@@ -156,14 +157,14 @@ You Have Obtained <color="blue"><b>HOSPITALITY!</b>
     ->NextDialogue6
     
 === NextDialogue6 ===
-#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG16
+#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG17
 Oh really? Okay then, I need to finish setting up the banners here. 
 
-#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG17
+#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG18
 Thank you so much for visiting our humble barangay hall. 
 
-#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG18
-If you guys need anything at all, we are ready to serve you. Again, thank you so much Luad! See you soon!
+#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG19
+If you guys need anything at all, we may able to help you again. Now thank you so much Luad! See you soon!
     ~playerProgress += 1
     ->EndDialogue
     

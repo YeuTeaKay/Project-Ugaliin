@@ -52,9 +52,8 @@ Sorry for the mess, I've been kind of busy lately.
 #speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG5
 Anyway, Luad how are you? How is your mother? 
 #speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG6
-You guys have moved already, you should have told me so that I could have helped you. 
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG7
-You've grown so much!
+You guys have moved already, you should have told me so that I could have helped you. You've grown so much!
+
 
 +[Oh don't worry tita! It's fine, I don't want to bother you guys.]
     ~goodChoicesCounter += 1
@@ -78,10 +77,10 @@ You Have Obtained <color="blue"><b>CLOSE FAMILY TIES!</b>
     ->NextDialogue2
     
 === NextDialogue2 ===
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG8
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG7
 I'm really sorry, I haven't prepared anything for you guys.
 
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG9
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG8
 I've been busy with work and taking care of your cousin. I'll make it up to you guys next time.
 
 +[It's really okay tita. Come visit us sometime, mom will be glad to see you. Our house is open for you guys anytime. ]
@@ -104,17 +103,17 @@ You Have Obtained <color="blue"><b>BAHALA NA!</b>
     ->NextDialogue3
     
 === NextDialogue3 ===
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG10
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG9
 You're really kind Luad! Oh speaking of, here is your cousin. Ellie, come here. 
 
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG11
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG10
 This is your cousion Luad. You guys have met a long time ago, Ellie was still a baby that time so she is not familiar with you.
 
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG12
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG11
 I'll leave you guys here okay? I'll just make some snacks.
 
 #speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:CE0
-H-hello! My name is Ellie! I don't remember you but mama said that you're my cousin.
+H-Hi! My name is Ellie! I don't remember you but mama said that you're my cousin.
 
 #speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:CE1
 Looks like I have a new playmate!  But, even though I want to play with you, 
@@ -376,22 +375,22 @@ We were wrong it's said it was <color="green"><b>Fiesta Grande</b>
     ->CheckScore
 
 === CheckScore ===
-{ playerPoints >= 7: -> YouWin("choiceItem2") }
+{ playerPoints >= 7: -> YouWin("choiceItem3") }
 { playerPoints <= 6: -> YouLose }
 
 === YouWin(choiceItem) ===
 ~playerChoice = choiceItem
 ~goodChoicesCounter += 1
 #speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
-We got most of the orders correctly!
+We got most of the questions correctly!
 
-#speaker:Narrator  #portrait:Bayanihan #layout:Default #voiceover:default
-You Have Obtained <color="blue"><b>BAYANIHAN!</b>
+#speaker:Narrator  #portrait:CloseFamilyTies #layout:Default #voiceover:default
+You Have Obtained <color="blue"><b>CLOSE FAMILY TIES!</b>
     ->NextDialogue11
 
 === YouLose ===
 #speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
-We didn't get most of the orders correctly! Do you want to try again?
+We didn't get most of the questions correctly! Do you want to try again?
 +[Try Again?]
     ->NextDialogue11
 +[End Game]
@@ -415,13 +414,13 @@ As long as the next time you come, we'll play, right? You promised!
 #speaker:Ellie  #portrait:Pinsan_Talking #layout:Default #voiceover:CE10
 Oh right! Mama is here with snacks!
 
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG13
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG12
 Oh I hope Ellie did not bother you too much. But really, thank you very much Luad. 
 
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG14
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG13
 You guys are nearby now so we can spend time together from time to time. 
 
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG15
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG14
 Always remember, our house is always open for you guys. Okay then, eat! Don't be shy!
 
     ->EndDialogue
