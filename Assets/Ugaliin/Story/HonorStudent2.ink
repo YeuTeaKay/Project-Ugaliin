@@ -1,0 +1,2 @@
+#speaker:Honor Student  #portrait:Honor #layout:OverWorld #voiceover:default
+Fun fact! Even though people are amidst some difficulties in their lives, Filipinos still find time to celebrate with the community in fiestas!

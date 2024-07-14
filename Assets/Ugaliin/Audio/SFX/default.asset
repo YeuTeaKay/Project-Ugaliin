@@ -19,3 +19,4 @@ MonoBehaviour:
   minPitch: 1
   maxPitch: 1
   stopAudioSource: 0
+  volume: 0.292

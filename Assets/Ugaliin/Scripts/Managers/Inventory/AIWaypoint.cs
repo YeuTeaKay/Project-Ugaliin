@@ -40,9 +40,21 @@ public class AIWaypoint : MonoBehaviour
             currentWaypointIndex = (currentWaypointIndex + 1) % wayPoint.Count;
         }
 
+
+        Vector3 direction = wayPoint[currentWaypointIndex].position - transform.position;
         // Set the destination to the current waypoint
         navMeshAgent.SetDestination(wayPoint[currentWaypointIndex].position);
 
-        transform.rotation = initialRotation;
+        // Determine the rotation based on the direction
+        if (direction.x > 0)
+        {
+            // Rotate 180 degrees on the Y axis
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else if (direction.x < 0)
+        {
+            // Maintain 0 rotation on the Y axis
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
     }
 }

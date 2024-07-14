@@ -262,19 +262,20 @@
         float minPitch = currentNPCAudioInfo.minPitch;
         float maxPitch = currentNPCAudioInfo.maxPitch;
         bool stopAudioSource = currentNPCAudioInfo.stopAudioSource;
+        float volume = currentNPCAudioInfo.volume;
 
         if(currentDisplayCharacterCount % frequencyLevel == 0)
+    {
+        if(stopAudioSource)
         {
-            if(stopAudioSource)
-            {
-                audioSource.Stop();
-            }
-            int randomIndex = Random.Range(0, npcTypingSFXs.Length);
-            AudioClip soundClip = npcTypingSFXs[randomIndex];
-
-            audioSource.pitch = Random.Range(minPitch, maxPitch);
-            audioSource.PlayOneShot(soundClip);
+            audioSource.Stop();
         }
+        int randomIndex = Random.Range(0, npcTypingSFXs.Length);
+        AudioClip soundClip = npcTypingSFXs[randomIndex];
+
+        audioSource.pitch = Random.Range(minPitch, maxPitch);
+        audioSource.PlayOneShot(soundClip, volume); // Use the volume here
+    }
     }
 
 

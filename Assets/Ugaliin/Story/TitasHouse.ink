@@ -5,7 +5,7 @@ INCLUDE globals.ink
 
 
 === TalkToMother ===
-#speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:default
+#speaker:KapitBahay  #portrait:KapitBahay_Talking #background:TitaHouse_Inside #layout:Default #voiceover:default
 Hey Luad! very busy right now, and your mother said to talk to her about something
 ->DONE
 

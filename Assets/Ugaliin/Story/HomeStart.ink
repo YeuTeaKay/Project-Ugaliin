@@ -7,7 +7,7 @@ INCLUDE globals.ink
 ->homeStart
 
 === homeStart ===
-#speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
+#speaker:Narrator  #portrait:Default #background:Player_House #layout:Default #voiceover:default
 A new beginning starts for Luad and their mother as they recently moved to their new home.
 
 
@@ -86,7 +86,7 @@ Go explore the street and talk to the neighbors!
 ->DONE
 
 === homeEnd ===
-#speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
+#speaker:Narrator  #portrait:Default #background:Player_House #layout:Default #voiceover:default
 After exploring the barangay, Luad went home and greeted their mother. 
 
 #speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
@@ -224,7 +224,7 @@ What do you think?
 { goodChoicesCounter <= 20: -> RollCredits1 }
 
 === HappyFiesta ===
-#speaker:Doorbell   #portrait:Default #layout:Default #voiceover:default
+#speaker:Doorbell   #portrait:Default #background:Player_Outside_House #layout:Default #voiceover:default
 DING DONG!
 
 #speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:M28
@@ -245,10 +245,10 @@ Hello! Are you guys good here? If you need any lifting or if you need fixing her
 #speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT24
 Thank goodness for your child because if it weren't for them, I don't know what to do with the karinderya. Here, we still have a lot of food left from our eatery, it's all yours.
 
-#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG20
+#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BC20
 Welcome to our barangay! I do apologize that we just visited now, the fiesta is near that's why the people around are busy.
 
-#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG21
+#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BC21
 Your arrival is in impeccable timing! We're going to celebrate your arrival with the fiesta, so that you can feel the warm welcome of our community.
 
 #speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:M29
@@ -280,7 +280,7 @@ Don't worry sis! We understand and we are always here to help you guys.
 #speaker:Kapit Bahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:KB13
 Yep! So let's get on with the fiesta!
 
-#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG22
+#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BC22
 Before the actual fiesta, let's have a house warming first!
 
 #speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover::LT25
@@ -292,7 +292,7 @@ I'll help you prepare Lola.
 #speaker:Kapit Bahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:KB14
 I'll fix the set up over here.
 
-#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG23
+#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BC23
 Don't worry ma'am and Luad, we'll take care of this. Just go be comfortable with everyone. Again, we would like to welcome you guys to our barangay!
 
 #speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:M33

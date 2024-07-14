@@ -15,4 +15,6 @@ public class DialogueNPCAudioInfoSO : ScriptableObject
     public float maxPitch = 3f;
     public bool stopAudioSource;
     
+    [Range(0f, 1f)]
+    public float volume = 1f;
 }

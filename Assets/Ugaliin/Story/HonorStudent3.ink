@@ -1,0 +1,2 @@
+#speaker:Honor Student  #portrait:Honor #layout:OverWorld #voiceover:default
+Fun fact! Filipinos are very respectful to their elders. They do the gesture of "mano po", where they put the hands of their elders to their forehead as a sign of respect.

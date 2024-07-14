@@ -6,7 +6,7 @@ INCLUDE globals.ink
 
 
 === TalkToMother ===
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:default
+#speaker:Lola Tindera  #portrait:Lola_Talking #background:Karinderya #layout:Default #voiceover:default
 Very busy right now, talk to me later kid.
 ->DONE
 

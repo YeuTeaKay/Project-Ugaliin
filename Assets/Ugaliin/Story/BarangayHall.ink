@@ -5,7 +5,7 @@ INCLUDE globals.ink
 { playerProgress >= 1: -> BarangayHall}
 
 === TalkToMother ===
-#speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:default
+#speaker:Barangay Captain  #portrait:Barangay_Talking #background:Barangay #layout:Default #voiceover:default
 Very busy right now, talk to me later kid.
 ->DONE
 

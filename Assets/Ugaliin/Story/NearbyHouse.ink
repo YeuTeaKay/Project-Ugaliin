@@ -5,7 +5,7 @@ INCLUDE globals.ink
 { NearbyHouseEnd == true: -> EndDialogue}
 
 === TalkToMother ===
-#speaker:KapitBahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:default
+#speaker:KapitBahay  #portrait:KapitBahay_Talking #background:Kapitbahay #layout:Default #voiceover:default
 Hey Luad! you mother said that she wanted to talk to you about something.
 ->END
 
