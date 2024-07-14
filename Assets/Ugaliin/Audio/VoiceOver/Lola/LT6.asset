@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: LT6
   m_EditorClassIdentifier: 
   voiceoverID: LT6
-  voiceOverAudio: {fileID: 0}
+  voiceOverAudio: {fileID: 8300000, guid: 5874ed9b4f44ca648923e4970985a95c, type: 3}
   stopAudioSource: 1

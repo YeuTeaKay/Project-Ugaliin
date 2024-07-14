@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: KB3
   m_EditorClassIdentifier: 
   voiceoverID: KB3
-  voiceOverAudio: {fileID: 0}
-  stopAudioSource: 0
+  voiceOverAudio: {fileID: 8300000, guid: 413a261839edd2e4aae9966382ff3fe7, type: 3}
+  stopAudioSource: 1

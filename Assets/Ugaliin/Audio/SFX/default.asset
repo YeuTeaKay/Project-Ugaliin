@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: default
   npcTypingSFXs:
-  - {fileID: 8300000, guid: 378aea8383741bb4db67a8f9b5bf3228, type: 3}
-  frequencyLevel: 2
-  minPitch: 0.5
-  maxPitch: 3
+  - {fileID: 8300000, guid: f384e86c7c8d1764fa3e6020ba79953a, type: 3}
+  frequencyLevel: 3
+  minPitch: 1
+  maxPitch: 1
   stopAudioSource: 0

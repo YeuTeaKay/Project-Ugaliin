@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: CE8
   m_EditorClassIdentifier: 
   voiceoverID: CE8
-  voiceOverAudio: {fileID: 0}
-  stopAudioSource: 0
+  voiceOverAudio: {fileID: 8300000, guid: 2c70f14541f5bad499dd5ee81125396e, type: 3}
+  stopAudioSource: 1

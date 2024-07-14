@@ -242,7 +242,7 @@ Visit us next time okay! The people from our barangay are also here.
 #speaker:Kapit Bahay  #portrait:KapitBahay_Talking #layout:Default #voiceover:KB12
 Hello! Are you guys good here? If you need any lifting or if you need fixing here in you house or anything at all, I'm just here around, just call me.
 
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT18
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT24
 Thank goodness for your child because if it weren't for them, I don't know what to do with the karinderya. Here, we still have a lot of food left from our eatery, it's all yours.
 
 #speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG20
@@ -283,7 +283,7 @@ Yep! So let's get on with the fiesta!
 #speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG22
 Before the actual fiesta, let's have a house warming first!
 
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover::LT19
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover::LT25
 Okay 'Cap! I got the food, so eat up!
 
 #speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG19
@@ -295,10 +295,10 @@ I'll fix the set up over here.
 #speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BG23
 Don't worry ma'am and Luad, we'll take care of this. Just go be comfortable with everyone. Again, we would like to welcome you guys to our barangay!
 
-#speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:M34
+#speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:M33
 Oh thank you, thank you so much! You guys are so nice! How about it Luad?
 
-#speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:M35
+#speaker:Mother  #portrait:Mother_Talking #layout:Default #voiceover:M34
 What do you think of our barangay now? We are going to have so much fun and I can't wait to be part of something just like this.
 
 +[Same thoughts mom! I can't wait for the fiesta too!]

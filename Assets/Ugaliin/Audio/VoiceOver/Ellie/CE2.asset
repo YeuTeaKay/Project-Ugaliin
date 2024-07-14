@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: CE2
   m_EditorClassIdentifier: 
   voiceoverID: CE2
-  voiceOverAudio: {fileID: 0}
-  stopAudioSource: 0
+  voiceOverAudio: {fileID: 8300000, guid: 54b4983037a1fe24e966e75e9ea6b933, type: 3}
+  stopAudioSource: 1

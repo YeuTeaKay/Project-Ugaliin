@@ -57,9 +57,9 @@ My dishes are delicious and there is nothing wrong with places like this.
 === NextDialogue1 ===
 #speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT6
 My karinderya is the tastiest and most famous eatery here in the barangay! 
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:left #voiceover:default
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:left #voiceover:LT7
 However, I have a problem right now. My helper here is on vacation, that's why I'm the only one managing thing around here.
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT7
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT8
 I also have a lot of deliveries lined up today. I don't know what to do.
 
 +[What can I do to help you lola? I don't have anything to do anyway.]
@@ -87,23 +87,23 @@ You Have Obtained <color="blue"><b>BAHALA NA!</b>
     ->NextDialogue2
     
 === NextDialogue2 ===
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT8
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT9
 I really hope so kid. I wish what you said will come true.
     ->MiniGame
 
 === NextAngryDialogue1 ===
-#speaker:Lola Tindera  #portrait:Lola_Angry_Talking #layout:Default #voiceover:LT9
+#speaker:Lola Tindera  #portrait:Lola_Angry_Talking #layout:Default #voiceover:LT10
 That can't be! My beloved karinderya's reputation will be tarnished.
     ->MiniGame
 
 === NextDialogue3 ===
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT10
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT11
 I would like to ask help from you kid, if maybe you can deliver these food to the people.
 
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT11
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT12
 I'll give you some food later to bring home, for free! Then next time you buy from here, I'll give you a discount.
 
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT12
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT13
 What do you think? Sounds good?
  
 +[What can I do to help you lola? I don't have anything to do anyway.]
@@ -119,13 +119,13 @@ You Have Obtained <color="blue"><b>PAKIKISAMA!</b>
     ->MiniGame
 
 === MiniGame ===
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT13
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT14
 There! Thank you! Thank god you passed by. Here are the people that you'll deliver the food to. 
 
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT14
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT15
 You need to be fast so that the food will still be warm when it reaches them.
 
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT15
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT16
 Okay, good luck!
 
 ~playerPoints = 0
@@ -274,10 +274,10 @@ You didn't get most of the orders correctly! Do you want to try again?
 You Have Obtained <color="red"><b>NINGAS COGON!</b>
     ->NextDialogue4
 === NextDialogue4 ===
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:default
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT17
 Oh! You're done already? You're fast! How did the deliveries go? 
 
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:default
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT18
 I hope they got it immediately and would enjoy my cooking.
 
 +[It went good. They properly received the food and it looks like they are happy with it.]
@@ -291,21 +291,21 @@ I hope they got it immediately and would enjoy my cooking.
     ->NextAngryDialogue2
 
 === NextDialogue5 ===
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT16
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT19
 I'm glad that they liked it. I hope they come back here to eat again.
 ->NextDialogue6
 
 === NextAngryDialogue2 ===
-#speaker:Lola Tindera  #portrait:Lola_Angry_Talking #layout:Default #voiceover:LT17
+#speaker:Lola Tindera  #portrait:Lola_Angry_Talking #layout:Default #voiceover:LT20
 Don't rush! Here is the free food, and that tastes good, don't worry.
 ->NextDialogue6
 
 === NextDialogue6 ===
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT18
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT21
 Thanks again kid. You really were a big help today. 
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT19
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT22
 Come back here again to eat okay? Also, tell your mother to buy food from here. 
-#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT20
+#speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT23
 Until next time!
 
 +[Thank you too for the free food! Mano po lola, goodbye!]

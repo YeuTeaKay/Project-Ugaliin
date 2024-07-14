@@ -197,6 +197,7 @@
         DataPersistenceManager.instance.SaveGame();
 
         Manager.instance.StopSong(1);
+        Manager.instance.PlaySong(0);
 
         dialogueIsPlaying = false;
         dialogueBox.SetActive(false);

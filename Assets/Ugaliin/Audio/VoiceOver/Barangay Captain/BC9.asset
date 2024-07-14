@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: BC9
   m_EditorClassIdentifier: 
   voiceoverID: BC9
-  voiceOverAudio: {fileID: 0}
-  stopAudioSource: 0
+  voiceOverAudio: {fileID: 8300000, guid: 2a00bcf63b2cb5c44ab7c1b51955467a, type: 3}
+  stopAudioSource: 1
