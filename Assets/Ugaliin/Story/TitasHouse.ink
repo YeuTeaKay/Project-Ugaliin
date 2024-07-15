@@ -10,12 +10,12 @@ Hey Luad! very busy right now, and your mother said to talk to her about somethi
 ->DONE
 
 === TitasHouse ===
-#speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
+#speaker:Narrator  #portrait:Default #layout:Default #background:TitaHouse_Inside #voiceover:default
 Luad visits their aunt or “Tita” to greet them and says they have already arrived in the community. 
 #speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
 She is the sister of Luad’s mother, who also has a child, Luad’s cousin.
 
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG0
+#speaker:Tita Grace  #portrait:Tita_Talking  #layout:Default #voiceover:TG0
 Oh Luad! You guys have moved in already! Come inside first to have some snacks and let's talk for a bit.
 +[Oh don't worry tita! It's fine, I don't want to bother you guys.]
     ~goodChoicesCounter += 1
@@ -55,13 +55,13 @@ Anyway, Luad how are you? How is your mother?
 You guys have moved already, you should have told me so that I could have helped you. You've grown so much!
 
 
-+[Oh don't worry tita! It's fine, I don't want to bother you guys.]
++[It's okay tita we can handle it ourselves. We also didn't want to bother you.]
     ~goodChoicesCounter += 1
     ->goodChoice1("choiceItem5")
-+[Okay tita thank you! Coming in!]
++[We're fine tita. How are you guys doing here? If you need anything, we're just nearby to help!]
     ~goodChoicesCounter += 1
     ->goodChoice2("choiceItem3")
-+[No it's okay, I'll just go.]
++[Mom just told me to come here to see you.]
     ~badChoicesCounter += 1
     ->NextDialogue2
 === goodChoice1(choiceItem) ===

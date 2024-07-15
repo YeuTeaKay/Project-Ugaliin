@@ -5,12 +5,12 @@ INCLUDE globals.ink
 { playerProgress >= 1: -> BarangayHall}
 
 === TalkToMother ===
-#speaker:Barangay Captain  #portrait:Barangay_Talking #background:Barangay #layout:Default #voiceover:default
+#speaker:Barangay Captain  #portrait:Barangay_Talking #background:Barangay_Hall #layout:Default #voiceover:default
 Very busy right now, talk to me later kid.
 ->DONE
 
 === BarangayHall ===
-#speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
+#speaker:Narrator  #portrait:Default #layout:Default #background:Barangay_Hall #voiceover:default
 Luad goes to the Barangay Hall to inform the Barangay Captain that they have arrived in the community. 
 
 #speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
@@ -69,10 +69,10 @@ I hope the people we sent were careful. I'm sorry that I can't personally be the
 #speaker:Barangay Captain  #portrait:Barangay_Talking #layout:Default #voiceover:BC7
 There's been a lot of things going on here 
 
-+[Good day! My name is Luad. We're the ones who just moved in the house at the end of the street. I'm living with my mother.]
++[There was no problem. Thank you very much for the people you sent. They helped us a lot.]
     ~goodChoicesCounter += 1
     ->goodChoice1("choiceItem2")
-+[I am Luad. My mother just sent me to let you know that we have moved in.]
++[They're from you? We don't need your help. Thank god nothing broke.]
     ~badChoicesCounter += 1
     ->badDialogue0
 
@@ -171,7 +171,7 @@ If you guys need anything at all, we may able to help you again. Now thank you s
 === EndDialogue ===
 
 ~BarangayHallEnd = true
-#speaker:Lola Tindera  #portrait:Lola_Idle #layout:Default #voiceover:default
+#speaker:Lola Tindera  #portrait:Lola_Idle #layout:Default #background:Barangay_Hall #voiceover:default
 Go roam the streets and talk to other people
 
 

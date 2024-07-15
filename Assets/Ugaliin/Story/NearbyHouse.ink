@@ -1,4 +1,4 @@
-INCLUDE globals.ink
+    INCLUDE globals.ink
 
 { playerProgress == 0: -> TalkToMother}
 { playerProgress >= 1: -> NearbyHouse}
@@ -10,7 +10,7 @@ Hey Luad! you mother said that she wanted to talk to you about something.
 ->END
 
 === NearbyHouse ===
-#speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
+#speaker:Narrator  #portrait:Default #layout:Default #background:Kapitbahay #voiceover:default
 Luad sees their neighbor hanging around outside their house, who was the one who helped them carry in their things when the movers came.
 
 
@@ -144,6 +144,6 @@ Alright, I'll be off then. See you next time!
 
 === EndDialogue ===
 ~NearbyHouseEnd = true
-#speaker:KapitBahay  #portrait:KapitBahay_Idle #layout:Default #voiceover:default
+#speaker:KapitBahay  #portrait:KapitBahay_Idle #background:Kapitbahay #layout:Default #voiceover:default
 Go talk to other people to get know the area!
 ->END

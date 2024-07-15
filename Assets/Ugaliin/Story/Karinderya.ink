@@ -11,7 +11,7 @@ Very busy right now, talk to me later kid.
 ->DONE
 
 === Karinderya ===
-#speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
+#speaker:Narrator  #portrait:Default #layout:Default #background:Karinderya #voiceover:default
 Luad passes by the Karinderia where they can buy food if they have none at home, or where they can buy some snacks. 
 #speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
 The place is popular in their neighborhood but the vendor looks troubled right now.
@@ -106,10 +106,10 @@ I'll give you some food later to bring home, for free! Then next time you buy fr
 #speaker:Lola Tindera  #portrait:Lola_Talking #layout:Default #voiceover:LT13
 What do you think? Sounds good?
  
-+[What can I do to help you lola? I don't have anything to do anyway.]
++[I'll take care of your deliveries. Don't worry, I got this!]
     ~goodChoicesCounter += 1
     ->goodChoice3("choiceItem9")
-+[You can do it! Just trust in yourself. You can overcome this hurdle today.]
++[You sure huh? Okay fine, for the sake of free food.]
     ~badChoicesCounter += 1
     ->MiniGame
 === goodChoice3(choiceItem) ===
@@ -325,7 +325,7 @@ You Have Obtained <color="blue"><b>RESPECT FOR THE ELDERLY!</b>
 
 === EndDialogue ===
 ~karinderyaEnd = true
-#speaker:Lola Tindera  #portrait:Lola_Default #layout:Default #voiceover:default
+#speaker:Lola Tindera  #portrait:Lola_Default #background:Karinderya #layout:Default #voiceover:default
 Go roam the streets and talk to other people
 
 
