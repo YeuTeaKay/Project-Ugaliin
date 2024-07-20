@@ -16,7 +16,7 @@ PlayerSettings:
   productName: Ugaliin
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
+  m_SplashScreenBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
@@ -40,9 +40,7 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos:
-  - logo: {fileID: 21300000, guid: 99df0d8c311a35549bd3a0ef964e87d3, type: 3}
-    duration: 5
-  - logo: {fileID: 21300000, guid: b4810b66549eea6449c5da85e6defac3, type: 3}
+  - logo: {fileID: 21300000, guid: dda7ca53748632b45bad21920adf97fd, type: 3}
     duration: 5
   m_VirtualRealitySplashScreen: {fileID: 2800000, guid: b4810b66549eea6449c5da85e6defac3, type: 3}
   m_HolographicTrackingLossScreen: {fileID: 0}
@@ -287,7 +285,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: b4810b66549eea6449c5da85e6defac3, type: 3}
+      m_Icon: {fileID: 2800000, guid: b7d1033e1ae554c4c9cc965c5521b564, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -620,7 +618,7 @@ PlayerSettings:
   ps4IncludedModules: []
   ps4attribVROutputEnabled: 0
   monoEnv: 
-  splashScreenBackgroundSourceLandscape: {fileID: 0}
+  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: f5fc4b1d925ed9a49b1b1dd8fa11db9e, type: 3}
   splashScreenBackgroundSourcePortrait: {fileID: 0}
   blurSplashScreenBackground: 1
   spritePackerPolicy: 

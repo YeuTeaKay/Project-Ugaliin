@@ -7,8 +7,6 @@ public class SettingsManager : MonoBehaviour
     public TMP_Dropdown resolutionDropdown;
 
     private List<Resolution> availableResolutions;
-    
-    //public GameObject SideControls;
 
     void Start()
     {
@@ -47,6 +45,9 @@ public class SettingsManager : MonoBehaviour
 
         // Add a listener to handle when the user selects a new resolution
         resolutionDropdown.onValueChanged.AddListener(delegate { SetResolution(resolutionDropdown.value); });
+
+        // Automatically set the resolution to 1920x1080
+        SetResolutionTo1920x1080();
     }
 
     // This method is called whenever the user selects a new resolution from the dropdown
@@ -54,6 +55,21 @@ public class SettingsManager : MonoBehaviour
     {
         Resolution resolution = availableResolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreenMode, resolution.refreshRateRatio);
+    }
+
+    // This method sets the resolution to 1920x1080
+    private void SetResolutionTo1920x1080()
+    {
+        foreach (var resolution in availableResolutions)
+        {
+            if (resolution.width == 1920 && resolution.height == 1080)
+            {
+                Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreenMode, resolution.refreshRateRatio);
+                resolutionDropdown.value = availableResolutions.IndexOf(resolution);
+                resolutionDropdown.RefreshShownValue();
+                break;
+            }
+        }
     }
 
     public void SetFullscreen()
