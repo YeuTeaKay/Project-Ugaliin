@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class AIWaypoint : MonoBehaviour
 {
-    public List<Transform> wayPoint; 
+    public List<Transform> wayPoints; 
     NavMeshAgent navMeshAgent;
     public int currentWaypointIndex = 0;
     private Quaternion initialRotation;
@@ -14,6 +14,13 @@ public class AIWaypoint : MonoBehaviour
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         initialRotation = transform.rotation;
+
+        if (wayPoints.Count > 0)
+        {
+            // Set an initial random waypoint
+            currentWaypointIndex = Random.Range(0, wayPoints.Count);
+            navMeshAgent.SetDestination(wayPoints[currentWaypointIndex].position);
+        }
     }
 
     void Update()
@@ -24,26 +31,26 @@ public class AIWaypoint : MonoBehaviour
     private void Walking()
     {
 
-        if (wayPoint.Count == 0)
+        if (wayPoints.Count == 0)
         {
      
             return;
         }
 
      
-        float distanceToWaypoint = Vector3.Distance(wayPoint[currentWaypointIndex].position, transform.position);
+        float distanceToWaypoint = Vector3.Distance(wayPoints[currentWaypointIndex].position, transform.position);
 
         // Check if the agent is close enough to the current waypoint
         if (distanceToWaypoint <= 2)
         {
-         
-            currentWaypointIndex = (currentWaypointIndex + 1) % wayPoint.Count;
+            // Select a random waypoint index
+            currentWaypointIndex = Random.Range(0, wayPoints.Count);
         }
 
 
-        Vector3 direction = wayPoint[currentWaypointIndex].position - transform.position;
+        Vector3 direction = wayPoints[currentWaypointIndex].position - transform.position;
         // Set the destination to the current waypoint
-        navMeshAgent.SetDestination(wayPoint[currentWaypointIndex].position);
+        navMeshAgent.SetDestination(wayPoints[currentWaypointIndex].position);
 
         // Determine the rotation based on the direction
         if (direction.x > 0)

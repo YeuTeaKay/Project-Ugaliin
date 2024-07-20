@@ -191,6 +191,8 @@
     //MARK: Exit Dialogue
     private IEnumerator ExitVNMode()
     {
+        StopVoiceOverSound();
+
         yield return new WaitForSeconds(1f);
 
         dialogueVAR.StopListening(currentStory);
@@ -305,6 +307,15 @@
         }
     }
 
+    private void StopVoiceOverSound()
+    {
+        // Get the AudioSource component from the instantiated prefab
+        AudioSource voiceAudioSource = voicePrefab.GetComponent<AudioSource>();
+        if (voiceAudioSource.isPlaying)
+        {
+            voiceAudioSource.Stop();
+        }
+    }
 
     //MARK: Hide Choices
     private void HideChoices()

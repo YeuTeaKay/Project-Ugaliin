@@ -79,6 +79,7 @@ public class MenuManager : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
+        PauseManager.GetInstance().Unpause();
         SceneManager.LoadScene(sceneName);
     }
 
