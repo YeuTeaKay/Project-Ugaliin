@@ -12,10 +12,10 @@ Hey Luad! very busy right now, and your mother said to talk to her about somethi
 === TitasHouse ===
 #speaker:Narrator  #portrait:Default #layout:Default #background:TitaHouse_Inside #voiceover:default
 Luad visits their aunt or “Tita” to greet them and says they have already arrived in the community. 
-#speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
+#speaker:Narrator  #portrait:Default #layout:Default #background:TitaHouse_Inside #voiceover:default
 She is the sister of Luad’s mother, who also has a child, Luad’s cousin.
 
-#speaker:Tita Grace  #portrait:Tita_Talking  #layout:Default #voiceover:TG0
+#speaker:Tita Grace  #portrait:Tita_Talking  #layout:Default #background:TitaHouse_Inside #voiceover:TG0
 Oh Luad! You guys have moved in already! Come inside first to have some snacks and let's talk for a bit.
 +[Oh don't worry tita! It's fine, I don't want to bother you guys.]
     ~goodChoicesCounter += 1
@@ -29,36 +29,36 @@ Oh Luad! You guys have moved in already! Come inside first to have some snacks a
     
 === goodChoice0(choiceItem) ===
 ~playerChoice = choiceItem
-#speaker:Narrator  #portrait:Hiya #layout:Default #voiceover:default
+#speaker:Narrator  #portrait:Hiya #layout:Default #background:TitaHouse_Inside #voiceover:default
 You Have Obtained <color="blue"><b>HIYA!</b>
 
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG1
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #background:TitaHouse_Inside #voiceover:TG1
 Don't be shy! I consider you as my child too so come on in, just go inside.
     ->NextDialogue1
 
 === NextAngryDialogue0 ===
-#speaker:Tita Grace  #portrait:Tita_Angry_Talking #layout:Default #voiceover:TG2
+#speaker:Tita Grace  #portrait:Tita_Angry_Talking #layout:Default #background:TitaHouse_Inside #voiceover:TG2
 Don't be like that! Get in so that we can catch up and talk about how you guys are.
     ->NextDialogue1
     
 === NextDialogue0 ===
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG3
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #background:TitaHouse_Inside #voiceover:TG3
 Looks like you're still cheery as ever! Go on inside, don't be shy.
     ->NextDialogue1
     
 === NextDialogue1 ===
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG4
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #background:TitaHouse_Inside #voiceover:TG4
 Sorry for the mess, I've been kind of busy lately. 
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG5
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #background:TitaHouse_Inside #voiceover:TG5
 Anyway, Luad how are you? How is your mother? 
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:TG6
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #background:TitaHouse_Inside #voiceover:TG6
 You guys have moved already, you should have told me so that I could have helped you. You've grown so much!
 
 
 +[It's okay tita we can handle it ourselves. We also didn't want to bother you.]
     ~goodChoicesCounter += 1
     ->goodChoice1("choiceItem5")
-+[We're fine tita. How are you guys doing here? If you need anything, we're just nearby to help!]
++[We're fine tita. How are you guys doing here? If you need anything, we're just nearby to help!] 
     ~goodChoicesCounter += 1
     ->goodChoice2("choiceItem3")
 +[Mom just told me to come here to see you.]
@@ -66,13 +66,13 @@ You guys have moved already, you should have told me so that I could have helped
     ->NextDialogue2
 === goodChoice1(choiceItem) ===
 ~playerChoice = choiceItem
-#speaker:Narrator  #portrait:Hiya #layout:Default #voiceover:default
+#speaker:Narrator  #portrait:Hiya #layout:Default #background:TitaHouse_Inside #voiceover:default
 You Have Obtained <color="blue"><b>HIYA!</b>
     ->NextDialogue2
     
 === goodChoice2(choiceItem) ===
 ~playerChoice = choiceItem
-#speaker:Narrator  #portrait:CloseFamilyTies #layout:Default #voiceover:default
+#speaker:Narrator  #portrait:CloseFamilyTies #layout:Default #background:TitaHouse_Inside #voiceover:default
 You Have Obtained <color="blue"><b>CLOSE FAMILY TIES!</b>
     ->NextDialogue2
     
@@ -427,7 +427,7 @@ Always remember, our house is always open for you guys. Okay then, eat! Don't be
     
 === EndDialogue ===
 ~TitaHouseEnd = true
-#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #voiceover:default
+#speaker:Tita Grace  #portrait:Tita_Talking #layout:Default #background:TitaHouse_Inside #voiceover:default
 Go talk to other people to get know the area!
 
 ->END

@@ -45,8 +45,8 @@ public class EndCredits : MonoBehaviour
 
     private void ShowVideo()
     {
-            videoPlayer.Play();
             Manager.instance.PlaySong(2);
+            videoPlayer.Play();
             videoPlayer.loopPointReached += OnVideoFinished;
     }
 
@@ -62,7 +62,6 @@ public class EndCredits : MonoBehaviour
         videoPage.SetActive(false);
         GameData data = DataPersistenceManager.instance.GetGameData();
         UpdateStatsPage(data);
-        Manager.instance.StopSong(2);
         statsPage.SetActive(true);
         StartCoroutine(NextSceneButton());
             

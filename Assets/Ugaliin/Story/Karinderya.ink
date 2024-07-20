@@ -223,7 +223,7 @@ You got the wrong order Luad...
     ->Question5
 
 === Question5 ===
-#speaker:Gilbert  #portrait:MCBoy_Talking #layout:Quiz #voiceover:default
+#speaker:Gilbert  #portrait:Tambay #layout:Quiz #voiceover:default
 I would like to order 1 Adobo, 2 Sinigang and 2 Giniling
 
 You got that?
@@ -236,11 +236,11 @@ You got that?
 
 === RightAnswer5 ===
 ~playerPoints += 1
-#speaker:Gilbert  #portrait:MCGirl_Talking #layout:Quiz #voiceover:default
+#speaker:Gilbert  #portrait:Tambay #layout:Quiz #voiceover:default
 Nice it looks so good anyways goodluck at taking orders Luad!
     ->CheckScore
 === WrongAnswer5 ===
-#speaker:Gilbert  #portrait:MCBoy_Talking #layout:Quiz #voiceover:default
+#speaker:Gilbert  #portrait:Tambay #layout:Quiz #voiceover:default
 You got the wrong order Luad...
     ->CheckScore
     
