@@ -311,7 +311,6 @@ What do you think of our barangay now? We are going to have so much fun and I ca
 ~playerChoice = choiceItem
 #speaker:Item Received  #portrait:FiestaGrande #background:Player_Outside_House #layout:Default #voiceover:default
 You Have Obtained <color="blue"><b>Fiesta Grande!</b>
-~Ending = "Fiesta Grande"
     ->RollCredits2
 
 === RollCredits1 ===
@@ -336,7 +335,8 @@ WELCOME TO THE BARANGAY!
 ->END
 
 === RollCredits2 ===
-~EndGame = true
+~Ending = "Fiesta Grande"
+~FiestaEnding = true
 #speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
 Everyone they know in the barangay is here to greet them, and give them a warm welcome.
 

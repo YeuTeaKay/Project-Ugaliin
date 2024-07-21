@@ -1,6 +1,6 @@
-#speaker:Anxious Student   #portrait:Anxious #layout:OverWorld #voiceover:default
+#speaker:Anxious Student  #portrait:Anxious #background:BackGround_Default #layout:OverWorld #voiceover:default
 Hmmm...
-#speaker:Anxious Student   #portrait:Anxious #layout:OverWorld #voiceover:default
+#speaker:Anxious Student  #portrait:Anxious #layout:OverWorld #voiceover:default
 Hmmm...
 #speaker:Anxious Student  #portrait:Anxious #layout:OverWorld #voiceover:default
 Oh! I didn't see you there.

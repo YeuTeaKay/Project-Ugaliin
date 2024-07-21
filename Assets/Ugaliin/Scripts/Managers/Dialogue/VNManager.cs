@@ -473,6 +473,7 @@
         dialogueVAR.VAR["TitaHouseEnd"] = new Ink.Runtime.BoolValue(data.TitaHouseEnd);
         dialogueVAR.VAR["NearbyHouseEnd"] = new Ink.Runtime.BoolValue(data.NearbyHouseEnd);
         dialogueVAR.VAR["EndGame"] = new Ink.Runtime.BoolValue(data.EndGame);
+        dialogueVAR.VAR["FiestaEnding"] = new Ink.Runtime.BoolValue(data.FiestaEnding);
         dialogueVAR.VAR["Ending"] = new Ink.Runtime.StringValue(data.Ending);
     }
     
@@ -512,10 +513,16 @@
             data.EndGame = (bool)((Ink.Runtime.BoolValue)dialogueVAR.VAR["EndGame"]).value;
         }
 
+        if (dialogueVAR.VAR.ContainsKey("FiestaEnding"))
+        {
+            data.FiestaEnding = (bool)((Ink.Runtime.BoolValue)dialogueVAR.VAR["FiestaEnding"]).value;
+        }
+
         if (dialogueVAR.VAR.ContainsKey("Ending"))
         {
             data.Ending = (string)((Ink.Runtime.StringValue)dialogueVAR.VAR["Ending"]).value;
         }
+
 
 
         Debug.Log("Saved playerProgress: " + data.playerProgress);

@@ -1,4 +1,4 @@
-#speaker:Tambay  #portrait:Tambay #layout:OverWorld #voiceover:default
+#speaker:Tambay  #portrait:Tambay #background:BackGround_Default #layout:OverWorld #voiceover:default
 What's that kid? You need something? Stop bothering me, I have some important tambay matters to attend to.
 
 #speaker:Tambay  #portrait:Tambay #layout:OverWorld #voiceover:default

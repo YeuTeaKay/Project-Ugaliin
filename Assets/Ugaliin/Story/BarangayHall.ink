@@ -5,18 +5,18 @@ INCLUDE globals.ink
 { playerProgress >= 1: -> BarangayHall}
 
 === TalkToMother ===
-#speaker:Barangay Captain  #portrait:Barangay_Talking #background:Barangay_Hall #layout:Default #voiceover:default
+#speaker:Barangay Captain #portrait:Barangay_Talking #background:Barangay_Hall #layout:Default #voiceover:default
 Very busy right now, talk to me later kid.
 ->DONE
 
 === BarangayHall ===
-#speaker:Narrator  #portrait:Default #layout:Default #background:Barangay_Hall #voiceover:default
+#speaker:Narrator  #portrait:Default #background:Barangay_Hall #layout:Default  #voiceover:default
 Luad goes to the Barangay Hall to inform the Barangay Captain that they have arrived in the community. 
 
-#speaker:Narrator  #portrait:Default #layout:Default #background:Barangay_Hall #voiceover:default
+#speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
 He sees the people in there busy setting up banners for the upcoming fiesta. 
 
-#speaker:Narrator  #portrait:Default #layout:Default #background:Barangay_Hall #voiceover:default
+#speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
 Luad approaches the Barangay Captain who seems to have trouble putting up the banners in their office.
 
 +[Here captain! (hands out the banner)]

@@ -19,6 +19,8 @@ public class EndCredits : MonoBehaviour
     [SerializeField] private TextMeshProUGUI endingText;
 
     [SerializeField] private VideoPlayer videoPlayer;
+    [SerializeField] private VideoClip endGameVideoClip;
+    [SerializeField] private VideoClip fiestaEndingVideoClip;
 
     private void Start()
     {
@@ -34,7 +36,14 @@ public class EndCredits : MonoBehaviour
         GameData data = DataPersistenceManager.instance.GetGameData();
         if (data.EndGame == true)
         {
-            ShowVideo();
+            ShowVideo(endGameVideoClip);
+            screenPage.SetActive(true);
+            videoPage.SetActive(true);
+        }
+
+        if (data.FiestaEnding == true)
+        {
+            ShowVideo(fiestaEndingVideoClip);
             screenPage.SetActive(true);
             videoPage.SetActive(true);
         }
@@ -43,11 +52,12 @@ public class EndCredits : MonoBehaviour
 
     }
 
-    private void ShowVideo()
+    private void ShowVideo(VideoClip clip)
     {
-            Manager.instance.PlaySong(2);
-            videoPlayer.Play();
-            videoPlayer.loopPointReached += OnVideoFinished;
+        videoPlayer.clip = clip;
+        Manager.instance.PlaySong(2);
+        videoPlayer.Play();
+        videoPlayer.loopPointReached += OnVideoFinished;
     }
 
     private void OnVideoFinished(VideoPlayer vp)

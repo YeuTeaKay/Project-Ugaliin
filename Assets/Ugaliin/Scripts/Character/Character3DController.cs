@@ -92,23 +92,24 @@ public class Character3DController : MonoBehaviour, IDataPersistance
         switch (horizontalMovement)
         {
             case 0:
-                animationIndex = 3;
+                animationIndex = 2; // Forward
                 break;
             case 1:
-                animationIndex = -1;
+                animationIndex = -1; // Right
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
                 break;
             case -1:
-                animationIndex = 1;
+                animationIndex = 1; // Left
                 transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
                 break;
+            case 2:
+                animationIndex = 3; // Backward
+                break;
             default:
-                animationIndex = 2;
+                animationIndex = 0;
                 break;
         }
         playerAnimator.SetInteger("Anim", animationIndex);
-
     }
-
 
 }

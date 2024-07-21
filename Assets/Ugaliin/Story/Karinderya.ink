@@ -11,7 +11,7 @@ Very busy right now, talk to me later kid.
 ->DONE
 
 === Karinderya ===
-#speaker:Narrator  #portrait:Default #layout:Default #background:Karinderya #voiceover:default
+#speaker:Narrator  #portrait:Default #background:Karinderya #layout:Default  #voiceover:default
 Luad passes by the Karinderia where they can buy food if they have none at home, or where they can buy some snacks. 
 #speaker:Narrator  #portrait:Default #layout:Default #voiceover:default
 The place is popular in their neighborhood but the vendor looks troubled right now.

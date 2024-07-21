@@ -15,6 +15,7 @@ public class GameData
     public bool TitaHouseEnd; 
     public bool NearbyHouseEnd;
     public bool EndGame;
+    public bool FiestaEnding;
 
     public string Ending;
 
@@ -31,7 +32,9 @@ public class GameData
         this.NearbyHouseEnd = false;
         this.TitaHouseEnd = false;
         this.EndGame = false;
+        this.FiestaEnding = false;
         this.Ending = string.Empty;
+        
     }
 }
 

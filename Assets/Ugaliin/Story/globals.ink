@@ -4,6 +4,7 @@ VAR TitaHouseEnd = false
 VAR karinderyaEnd = false
 VAR NearbyHouseEnd = false
 VAR EndGame = false
+VAR FiestaEnding = false
 VAR Ending = ""
 VAR goodChoicesCounter = 0
 VAR badChoicesCounter = 0
