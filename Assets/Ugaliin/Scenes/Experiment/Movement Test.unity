@@ -27757,7 +27757,7 @@ MonoBehaviour:
   endingText: {fileID: 423263679}
   videoPlayer: {fileID: 693548723}
   endGameVideoClip: {fileID: 32900000, guid: 7cefbde555345b242b3311536eaa4a37, type: 3}
-  fiestaEndingVideoClip: {fileID: 32900000, guid: 370ac7dd79be26a4b8a8091bbd3dd96c, type: 3}
+  fiestaEndingVideoClip: {fileID: 32900000, guid: 991a7a30b5f53944d821baf763887b76, type: 3}
 --- !u!1001 &1275169929
 PrefabInstance:
   m_ObjectHideFlags: 0
