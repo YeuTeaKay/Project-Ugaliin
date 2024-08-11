@@ -317,6 +317,19 @@
         }
     }
 
+    public void SetVoiceVolume(float volume)
+    {
+        if (voicePrefab != null)
+        {
+            AudioSource voiceAudioSource = voicePrefab.GetComponent<AudioSource>();
+            if (voiceAudioSource != null)
+            {
+                voiceAudioSource.volume = volume;
+            }
+        }
+    }
+
+
     //MARK: Hide Choices
     private void HideChoices()
     {

@@ -136,6 +136,23 @@ namespace SimpleAudioManager
             _nextSource.Play();
         }
 
+        public void SetVolume(float volume)
+        {
+            maxVolume = volume;
+        
+            foreach (var source in sourcePool)
+            {
+                source.volume = maxVolume;
+            }
+        
+            // If there's a currently playing audio source, update its volume
+            if (_currentSource != null)
+            {
+                _currentSource.volume = maxVolume;
+            }
+        }
+        
+
         /// <summary>
         /// Play song options
         /// </summary>

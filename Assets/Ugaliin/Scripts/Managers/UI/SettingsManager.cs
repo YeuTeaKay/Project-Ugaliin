@@ -1,10 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
+
 
 public class SettingsManager : MonoBehaviour
 {
     public TMP_Dropdown resolutionDropdown;
+    public Slider volumeVoiceSlider;
+    public Slider volumeOSTSlider;
 
     private List<Resolution> availableResolutions;
 
@@ -46,6 +50,12 @@ public class SettingsManager : MonoBehaviour
         // Add a listener to handle when the user selects a new resolution
         resolutionDropdown.onValueChanged.AddListener(delegate { SetResolution(resolutionDropdown.value); });
 
+        volumeVoiceSlider.onValueChanged.AddListener(SetVoiceVolume);
+        volumeVoiceSlider.value = AudioListener.volume;
+
+        volumeOSTSlider.onValueChanged.AddListener(SetOSTVolume);
+        volumeOSTSlider.value = SimpleAudioManager.Manager.instance.maxVolume;
+
         // Automatically set the resolution to 1920x1080
         SetResolutionTo1920x1080();
     }
@@ -75,5 +85,20 @@ public class SettingsManager : MonoBehaviour
     public void SetFullscreen()
     {
         Screen.fullScreenMode = Screen.fullScreenMode == FullScreenMode.FullScreenWindow ? FullScreenMode.Windowed : FullScreenMode.FullScreenWindow;
+    }
+    
+    public void SetVoiceVolume(float volume)
+    {
+        // Set the global volume
+        VNManager vnManager = VNManager.GetInstance();
+        if (vnManager != null)
+        {
+            vnManager.SetVoiceVolume(volume);
+        }
+    }
+
+    public void SetOSTVolume(float volume)
+    {
+        SimpleAudioManager.Manager.instance.SetVolume(volume);
     }
 }
