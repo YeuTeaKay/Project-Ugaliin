@@ -15,7 +15,8 @@ MonoBehaviour:
   ID: beep_1
   npcTypingSFXs:
   - {fileID: 8300000, guid: cf9e93fee66480a4c9b79de4897cdd07, type: 3}
-  frequencyLevel: 2
+  frequencyLevel: 1
   minPitch: 0.5
-  maxPitch: 3
+  maxPitch: 1
   stopAudioSource: 1
+  volume: 0.1

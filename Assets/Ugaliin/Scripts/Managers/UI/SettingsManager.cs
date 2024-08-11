@@ -9,6 +9,7 @@ public class SettingsManager : MonoBehaviour
     public TMP_Dropdown resolutionDropdown;
     public Slider volumeVoiceSlider;
     public Slider volumeOSTSlider;
+    public Slider volumeSFXSlider;
 
     private List<Resolution> availableResolutions;
 
@@ -56,6 +57,9 @@ public class SettingsManager : MonoBehaviour
         volumeOSTSlider.onValueChanged.AddListener(SetOSTVolume);
         volumeOSTSlider.value = SimpleAudioManager.Manager.instance.maxVolume;
 
+        volumeSFXSlider.onValueChanged.AddListener(SetSFXVolume);
+        volumeVoiceSlider.value = AudioListener.volume;
+
         // Automatically set the resolution to 1920x1080
         SetResolutionTo1920x1080();
     }
@@ -100,5 +104,14 @@ public class SettingsManager : MonoBehaviour
     public void SetOSTVolume(float volume)
     {
         SimpleAudioManager.Manager.instance.SetVolume(volume);
+    }
+
+    public void SetSFXVolume(float volume)
+    {
+        VNManager vnManager = VNManager.GetInstance();
+        if (vnManager != null)
+        {
+            vnManager.SetSFXVolume(volume);
+        }
     }
 }
